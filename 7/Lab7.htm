@@ -1,0 +1,2221 @@
+
+
+<!DOCTYPE html>
+
+<html xml:lang="en-US" dir="ltr" lang="en-US">
+
+  <head>
+    
+    <!-- Slowly's Standard Webpage last updated 03-14-2018 -->
+        
+    <title>GSP 537 Sp 2018 Lab 7</title>
+
+    <meta name="generator" content="Dreamweaver CC 2015">
+    <meta name="author" content="John Bonifas">
+    <meta name="created" content="As the pyramids were being built">
+    <meta name="changedby" content="Slowly">
+    <meta name="changed" content="09-08-2017">
+    
+    <meta charset="utf-8">
+        
+    <meta name="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="content-language" content="en-us">
+    
+    <!-- for devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="800">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="cleartype" content="on">
+    
+    <!-- default - nosharing -->
+    <meta name="robots" content="noindex, nofollow, noarchive, nocache, nosnippet, noodp, noydir">
+    <meta name="Googlebot" content="noindex, nofollow, noarchive, nocache, nosnippet, noodp, noydir">
+    <meta name="google" content="notranslate">
+    
+    <!-- uncomment this and the next 2 comment lines for sharing  
+    <meta name="robots" content="index, follow, archive, cache, snippet, odp, ydir">
+    <meta name="googlebot" content="index, follow, archive, cache, snippet, odp, ydir">
+    <meta name="google" content="notranslate">
+    
+    <!-- 
+      Facebook/Google OpenGraph for sharing posts -- see ogp.me. og:url and canonical must be the same 
+      Facebook Sharing Debugger: https://developers.facebook.com/tools/debug/ 
+      all the og: properties can be found at: http://ogp.me/ns/ogp.me.ttl
+    
+    <meta property="fb:app_id"       content="874872455992127"
+    <link rel="canonical"            href="http://www.deckerd26354.net/shared/MyFonts.htm">
+    <meta property="og:url"          content="http://www.deckerd26354.net/shared/MyFonts.htm">
+    <meta property="og:site_name"    content="Pudnik's Virtual Server">
+    <meta property="og:type"         content="article">
+    <meta property="og:title"        content="My Online Fonts">
+    <meta property="og:description"  content="For web developers">
+    <meta property="og:image"        content="http://www.deckerd26354.net/shared/assets/canonical_graduate.png">
+    <meta property="og:image:type"   content="image/png">
+    <meta property="og:image:height" content="320">
+    <meta property="og:image:width"  content="200">
+    <meta property="og:locale"       content="en_US">
+    <meta property="article:author"  content="Slowly">
+    
+    <link rel="icon" type="image/x-icon"          href="http://www.deckerd26354.net/shared/assets/favicon_graduate.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="http://www.deckerd26354.net/shared/assets/favicon_graduate.ico">
+    <link rel="apple-touch-icon"                  href="http://www.deckerd26354.net/shared/assets/favicon_graduate.ico">     
+    <link rel="apple-touch-icon" sizes="48x48"    href="http://www.deckerd26354.net/shared/assets/favicon_graduate.ico"> 
+    <link rel="apple-touch-icon" sizes="76x76"    href=""> 
+    <link rel="apple-touch-icon" sizes="120x120"  href=""> 
+    <link rel="apple-touch-icon" sizes="152x152"  href=""> 
+    <link rel="apple-touch-icon" sizes="180x180"  href="">  
+    -->
+    
+    <!-- My OpenAuth...I'll fix this someday -->
+    <!-- <link rel="openid.server" href="http://www.myopenid.com/server"> -->
+    <!-- <link rel="openid.delegate" href="http://Pudnik.myopenid.com/"> -->
+    
+   <!-- ***************************************************************************** 
+    ONLINE DHTML EDITORS
+      pagedemos.com
+      codepen.io
+      jsfiddle.net
+  ******************************************************************************** -->
+    
+    
+   <!-- ***************************************************************************** 
+    FRAMEWORKS AND INCLUDES
+      servers
+        cdnjs.cloudflare.com
+        apis.google.com
+    NEW: ALL ARE COMMENTED OUT UNTIL SPECIFICALLY USED DUE TO SLOWNESS IN LOADING
+  ******************************************************************************** -->
+    
+  <!-- My Webfonts Collection for HTML 5 10-16-2016 -->
+  <link rel="stylesheet" type="text/css" href="http://www.deckerd26354.net/shared/MyFonts.css"> 
+  
+  <!-- Normalizer: 'normalizes' certain HTML tags to make it even better looking and printing. Crashes my Dreamweaver for OSX, and was removed.
+
+  <!-- bootstrap. NOTE: bootstrap.js will steal your fonts and font sizes; use IDs to override it. 
+       css crashes my Dreamweaver for OSX, and was removed. --> 
+
+  <!-- a much lighter CSS reset system than bootstrap. But it messes with my borders and puts an unwanted HR, and was removed. -->
+  <!-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/shoelace-css/1.0.0-beta9/shoelace.css"> -->
+  
+  <!-- Wenk: a tooltip API. Crashed my Dreamweaver for OSX, and was removed. -->
+  
+  <!-- Kute: an HTML5 animation API. Error in javascript version 1.6.2, so removed -->
+  
+  <!-- 
+    font-awesome: hundreds of icons and SVG fonts (current version as of 12-20-2017) 
+    HOM: http://fontawesome.[io|com]
+    
+    USAGE
+    -----
+    with version 5, a new recommended CDN https://use.fontawesome.com/releases/v5.0.2/css/all.css
+    with version 4, a new syntax for icon usage is presented, and is incompatible with version 3 syntax. It is:
+    <i class="fa {IconClassName} {modifier, i.e. fa-3x} {...}"></i> 
+    CDN = https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css
+  -->
+  <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
+
+  <!-- jQuery 
+  <script language="javascript" type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script> -->
+  
+  <!-- Angular JS: a huge, hugely popular front-end framework but has the best messageboxes in the world 
+  <script language="javascript" type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script> -->
+  
+  <!-- PushJs: Send notifications just like legit spammers and pavlov dogs do
+  <script language="javascript" type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/push.js/1.0.4/push.min.js"></script> -->
+  
+  <!-- fotorama jquery-based photo gallery instructions are at fotorama.io 
+  <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css">
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script> -->
+
+  <!-- Velocity: jQuery plugin for high performance animation . This has been replaced by propel. 
+  <script language="javascript" type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.min.js"></script> -->
+  
+  <!-- Vue: front-end framework. This has been replaced by Semantic-UI. 
+  <script language="javascript" type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.2/vue.min.js"></script> 
+  
+  <!-- ExtJS: front-end framework. This has been replaced by Semantic-UI.
+  <script language="javascript" type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/extjs/6.2.0/ext-all.js"></script>
+  
+  <!-- Ionic: mobile framework 
+  <script language="javascript" type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ionic/1.3.2/js/ionic.min.js"></script> -->
+  
+  <!-- Google+ 
+  <script language="javascript" type="application/javascript" src="https://apis.google.com/js/plusone.js"></script> -->
+  
+  <!-- mootools: An Object-Oriented JavaScript framework designed for the intermediate to advanced JavaScript developer 
+  <script language="javascript" type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mootools/1.6.0/mootools-core.js"></script> -->
+    
+  <!-- Gauge: HTML 5 canvas gauges 
+  <script language="javascript" type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gauge.js/1.2.1/gauge.min.js"></script> -->
+       
+  <!-- Three: HTML 5 WebGL 3D framework 
+  <script language="javascript" type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/three.js/87/three.min.js"></script> -->
+
+  <!-- Mathquill: equations in HTML   
+  <script language="javascript" type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathquill/0.10.1/mathquill.min.js"></script> -->
+
+  <!-- Mathjax: math equations in <span> nests   
+  <script language="javascript" type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js"></script> -->
+  
+  <!-- Propel: To see how easy it is to do scientific computing with this framework, see: http://propelml.org/ 
+  <script language="javascript" type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/propel/3.2.0/propel.js"></script> -->
+
+  <!-- Semantic-UI: said to be the most innnovative frontend CSS UI as of 3-14-2018. As of version 2.3 it includes FontAwesome. 
+       MAY CAUSE SLOWNESS IN LOADING INTO DREAMWEAVER
+       https://cdnjs.com/libraries/semantic-ui 
+  <script language="javascript" type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.0/semantic.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/semantic-ui-css@2.3.0/semantic.css"> -->
+	  
+  <!-- MY CUSTOM CSS ---------------------------------------------------------------------------------------------------------- -->
+     
+  <style type="text/css">
+   
+    /* last updated 03-13-2018 */
+    /* local css repository: ~/SourceCode/SourceAndProjects/CSS */
+    /* the HTML 5 140 reserved color names grouped by color: https://www.w3schools.com/colors/colors_groups.asp
+    @charset "utf-8";
+    
+    /* Redefines */
+    
+    BODY{font-family:Arial;max-width:800px;font-size:10pt;}
+    P, TD, TH{font-family:Arial;font-size:10pt;}
+    ASIDE{display:block;margin:15px;}
+    HEADER{display:block;text-align:center;}
+    NAV
+    {
+      display:block;
+      padding:10px;
+      font-size:10px;
+      margin:5px;
+      text-align:center;
+      background-color:transparent;
+    }
+    SECTION{max-width:98%;padding:10px;}
+    ARTICLE{margin: 10px;padding: 10px;border-radius: 10px;}
+    FOOTER{clear: both;display: block;padding: 15px;}
+    H1,H2,H3,H4,H5,H6{page-break-after:avoid;}
+    LI{padding:5px;}
+    CODE{font-family:courier;font-size:10pt;}
+    PRE{font-size:9pt; padding:2px;width:600px;}
+    FIGURE{padding:8px;}
+    FIGIMAGE{break-after:always;}
+    FIGCAPTION{margin: 2px;font-size: 11px;font-style:italic;color:#444;}
+    
+    A:LINK{}    /* normal */
+    A:VISITED{} /* visited */
+    A:HOVER{}   /* hovering */
+    A:ACTIVE{}  /* click */
+
+    /* IDs */
+    
+    #container{width: 1024px;}
+    #content{width: 99%; border: 1px solid green;}
+    #rootCell{ text-align:left; vertical-align:text-top;}
+    
+    /* 
+      The bootstrap framework steals your custom fonts and font sizes.
+      Using IDs here will override bootstrap's changes because IDs have
+      the highest CSS priority.
+    */
+    #bootstrap-font-override{font-family: Arial;}
+        
+    /* Classes */
+        
+    /* My classes that I've developed myself */
+    
+    /* classes I use all the time */
+    .acmnSnippet {font-weight:bold;font-style:italic;}
+    .acmnMyAssignment{border:1px green solid;font-weight:bold;}
+    .classDate{border:2px red solid;font-weight:bolder;text-decoration:underline;}
+    .acmnMyAnswer{border:1px black solid;}
+    .acmnDoneLight{background-color: LightGrey;}
+    .acmnDoneDark{background-color: DarkGrey;}
+    .acmnGroupProject{background-color: rgb(170, 255, 170);}
+    .acmnCodeIt{font-family:courier;}
+    .acmnUnderlineIt{text-decoration:underline;}
+    .acmnImportant1{color:red; font-weight:bold; font-size:12pt;font-family:sans-serif;}
+    .acmnImportant2{font-family:verdana;font-weight:bold;color:red;}
+    .acmnKeywords {color: #D31242;font-size: 14pt;}
+    
+    .redSmall{line-height:18.0pt;font-size:8pt;color:#A81817;}
+    .redLight{color:#ff3300;}
+    .greyBehind 
+    {
+      background-color: #555;
+      color: white;
+      display:block;
+      margin: 10px;
+      padding: 10px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      border-radius: 10px;
+      -webkit-box-shadow: 2px 2px 20px #888;
+      -webkit-transform: rotate(0deg);
+      -moz-box-shadow: 2px 2px 20px #888;
+      -moz-transform: rotate(0deg);
+    }
+
+    /* for backward compatibility only. Use figure and figcaption instead */
+    .acmnImageCaption{margin: 2px;font-size: 12px;font-style:italic;}  
+    .greyAddressNormal{font-size:8pt;color:gray;}
+    .greyAddressItalic{font-size:12px;font-weight: 300;color:gray;font-style:italic}
+    .LimeLine{border-bottom: 2px solid #0bce7e;width:200px;}
+    .pinkItalic{font-style:italic;color:#EF118C;}
+    .acmnCursiveHandwriting{font-family: 'Edwardian Script ITC'; font-size:18pt; color: Navy;}
+    .greenGreen1{font-weight:bold; color:#3B783B;}
+    .asideLeft{float:left;border:1px solid #999;}
+    .asideRight{float:right;border:1px solid #999;}
+    .blueCornflower{background-color: #8CA4D4;color: #2F2F65;font-weight: bold;font-size: 18px;}
+    
+    /* My header classes */
+    
+    .clsH0{font-size:72pt;font-weight:bolder;}
+    .clsH1{font-size:64pt;font-weight:bolder;}
+    .clsH2{font-size:48pt;font-weight:bolder;}
+    .clsH3{font-size:24pt;font-weight:bolder;}
+    .clsH4{font-size:18pt;font-weight:bolder;}
+    .clsH5{font-size:16pt;font-weight:bolder;}
+    .clsH6{font-size:14pt;font-weight:bold;}
+    .clsH7{font-size:12pt;font-weight:bold;}
+    .clsH8{font-size:10pt;font-weight:bold;}
+    .clsH9{font-size:8pt;font-weight:bold;}
+
+    /* stolen from CPI111 ASU Fall 2013 */
+    .greenLightBig{color: #92C500;font-family: serif;font-weight: bold;font-size: 18pt;}
+    .greenOliveForeground{color:#556B2F;}
+    .greenOliveBackground{color:white; background-color:#556B2F;}
+    .paleBackgroundPink{background-color:#ffe1ff;}
+    .paleBackgroundLightGrey{background-color:#eff0f1;}
+    .paleBackgroundGold{background-color:#fff7e5;}
+    .pinkyDashed{background-color:#ffe1ff;border:1px dashed fuchsia;}
+    
+    /* webkit complex style class-is-broken indicators */
+    .acmnDropShadow 
+    {
+      -moz-box-shadow: 3px 3px 4px #999; /* Firefox */
+      -webkit-box-shadow: 3px 3px 4px #999; /* Safari/Chrome */
+      box-shadow: 3px 3px 4px #999; /* Opera and other CSS3 supporting browsers */
+    }
+
+    .acmnRaisedBox1
+    {
+      -moz-box-shadow: 3px 3px 4px #999; /* Firefox */
+      -webkit-box-shadow: 3px 3px 4px #999; /* Safari/Chrome */
+      box-shadow: 3px 3px 4px #999; /* Opera and other CSS3 supporting browsers */
+      border-top: 1px solid #CCC;
+      border-left: 1px solid #CCC;
+    }
+
+    .SlapStamp
+    {
+      color: #F47D31;
+      background-color: #fff;
+      -webkit-box-shadow: 2px 2px 20px #888;
+      -webkit-transform: rotate(-45deg);
+      -moz-box-shadow: 2px 2px 20px #888;
+      -moz-transform: rotate(-45deg);
+      position: absolute;
+      padding: 0px 150px;
+      text-align:center;
+    }
+    
+    /* Stolen from Eric Meyer meyerweb.com */
+    .blueSky{background: #B4D5FF; font-weight: bold;}
+    .yellowWarning {background: #FF8; color: red; border: 2px solid; padding: 1em;}
+    .acmnYellowRedLining{background: #FF8; color: red; border: 1px solid red;}
+    
+    /* Stolen from Stack Overflow/Superuser */
+  kbd 
+    {
+      display: inline-block;
+      margin: 0 .1em;
+      padding: .1em .6em;
+      font-size: 11px;
+      line-height: 1.4;
+      color: #242729;
+      text-shadow: 0 1px 0 #FFF;
+      background-color: #e1e3e5;
+      border: 1px solid #adb3b9;
+      border-radius: 3px;
+      box-shadow: 0 1px 0 rgba(12, 13, 14, 0.2), 0 0 0 2px #FFF inset;
+      white-space: nowrap;
+    }
+    .acmnDashedAlert
+    {
+      padding:5px;
+      font-weight:bold;
+      margin-bottom:10px;
+      margin-top:5px;
+      border:2px dotted #AE0000;
+    }
+    .btn_StackOverflow
+    {
+      color:#3E6D8E;
+      background-color:#E0EAF1;
+      border-top: 1px solid #DDD;
+      border-left: 1px solid #DDD;
+      border-radius: 5px;
+      border-bottom:1px solid #3E6D8E;
+      border-right:1px solid #7F9FB6;
+      padding:3px 4px 3px 4px;
+      margin:2px 2px 2px 0;
+    }
+    .whiteBlack
+    {
+      color:#fff;
+      background-color:#333;
+      border:1px solid #333;
+      margin:0 3px 3px 0;
+      padding:0px 6px 0px 3px;
+      display:inline-block;
+    }
+    .orangeYellowBack{background-color:#ffefc6;}
+    .orangeLightBack{background-color:#ff9900;color:white;}
+    .orangeDarkBack{background-color:#df5c13;color:white;}
+    .orangeLightFore{color:#ff9900;}
+    .orangeDarkFore{color:#df5c13;}
+    
+    .redWarning
+    {
+      background-color:#E23535;
+      color:#FFFFFF;
+      font-size:10px;
+      padding:0 5px 1px;
+    }
+    
+    /* Stolen from javadoc */
+    .mauveDarkBack{background:#BBBBFF;}
+    .mauveLightBack{background:#DDDDFF;}
+    .mauveDarkFore{color:#5555FF;}
+    .mauveLightFore{color:#BBBBFF;}    
+    .blueDarkBack{background-color:#00008B;color:#FFFFFF;}
+    
+    /* Stolen from John Urbanek */
+    .blueBlack{background-color: #333333;color:#00CCFF;text-align:center;font-style:italic;}
+    .blueBold{color:#3366FF;font-weight:bolder;}
+    .navy{color:navy;}
+    .navyBold{color:navy;font-weight:bold;}
+    .aquaCyanNormal{color:#2b91af;}
+    .aquaCyanBold{color:#2b91af;font-weight:bold;}
+    .aquaNormal{color:#0078C0;}
+    .aquaBold{color:#0078C0;font-weight:bold;}
+    
+    /* Stolen from Adobe */
+    .adobe_s1 {color: #58595B;font-size: 6pt;}
+    .adobe_s2 {color: #58595B;font-size: 8pt;}
+    .adobe_s3 {color: #58595B;font-size: 12pt;}
+    .adobe_s4 {color: #58595B;font-size: 14pt;}
+    .adobe_s5 {color: #58595B;font-size: 18pt;}
+    .adobe_s6 {color: #D31242;font-size: 8pt;}
+    .adobe_s7 {color: #D31242;font-size: 12pt;}
+    .adobe_s8 {color: #D31242;font-size: 14pt;}
+    .adobe_s9 {color: #D31242;font-size: 18pt;}
+    .adobe_s10 {color: #BE2D00; font-size: 24pt;}
+    .adobe_s11 {color: #BE2D00; font-size: 32pt;}
+    .adobe_s12 {color: #007DC5;font-weight: bold;font-size: 6pt;}
+    .adobe_s13 {color: #007DC5;font-weight: bold;font-size: 8pt;}
+    .adobe_s14 { color: #40458C; font-size: 8pt; }
+    .adobe_s15 { color: #40458C; font-size: 10pt; }
+    .adobe_s16 { color: #40458C; font-size: 12pt; }
+    .adobe_s17 { color: #40458C; font-style: italic; font-weight: bold; font-size: 12pt; }
+    .adobe_s18 { color: #40458C; font-size: 18pt; }
+    .adobe_s31 {color: #231F20; font-weight: normal; font-size: 8pt; }
+    .adobe_s41 {color: #00ADEF; font-weight: normal; font-size: 10pt; }
+    .adobe_s51 {color: #00ADEF; font-weight: normal; font-size: 8pt; }
+    
+    /* stolen from Radek Suski and Protostar */
+    
+    .aqua1 {color:white;background-color:#61b6ff}
+    .aqua2 {color:white;background:#2892ff!important;}
+    .aqua3{color:yellow;background:#2e9fff;}
+    .aquaComplex
+    {
+      color:Yellow;
+      text-shadow:0 -1px 0 rgba(0,0,0,.25);
+      background-color:#49afcd;
+      background-image:-webkit-linear-gradient(to bottom, #5bc0de, #2f96b4);
+      background-image:linear-gradient(to bottom, #5bc0de, #2f96b4);
+      background-repeat:repeat-x;  
+      filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff5bc0de', endColorstr='#ff2f96b4', GradientType=0);
+      border-color:#2f96b4 #2f96b4 #1f6377;
+      border-color:rgba(0,0,0,.1) rgba(0,0,0,.1) rgba(0,0,0,.25);
+      filter:progid:DXImageTransform.Microsoft.gradient(enabled=false)
+    }
+    .aqua5{color:white;background-color:#2f96b4;}
+    .greenTeal1{background:#6fa42a;}
+    .greenTeal2{background-color:#51a351;}
+    .greenWhite1{color:white;background:#4bad00;}
+    .goldBlack{background:#ffc62e;}
+    .btn_Blue
+    {
+      text-shadow:0 -1px 0 rgba(0,0,0,.25);
+      color: #999;
+      border-radius: 5px;
+      background-color:#004cd6;
+      background-image:-webkit-linear-gradient(to bottom, #0069d6, #0022d6);
+      background-image:linear-gradient(to bottom, #0069d6, #0022d6);
+      background-repeat:repeat-x;
+      filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0069d6', endColorstr='#ff0022d6', GradientType=0);
+      border-color:#0022d6 #0022d6 #00168a;
+      border-color:rgba(0,0,0,.1) rgba(0,0,0,.1) rgba(0,0,0,.25);
+      filter:progid:DXImageTransform.Microsoft.gradient(enabled=false);
+      padding:3px 4px 3px 4px;
+    }
+
+    .btn_LightFlesh
+    {
+      text-shadow:0 -1px 0 rgba(0,0,0,.25);
+      border-radius: 5px;
+      background-color:#ff855c;
+      background-image:-webkit-linear-gradient(to bottom, #ff9c7b, #ff632e);
+      background-image:linear-gradient(to bottom, #ff9c7b, #ff632e);
+      background-repeat:repeat-x;
+      filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffff9c7b', endColorstr='#ffff632e', GradientType=0);
+      border-color:#ff632e #ff632e #e13900;
+      border-color:rgba(0,0,0,.1) rgba(0,0,0,.1) rgba(0,0,0,.25);
+      filter:progid:DXImageTransform.Microsoft.gradient(enabled=false);
+      padding:3px 4px 3px 4px;
+    }
+    .btn_DarkFlesh
+    {
+      text-shadow:0 -1px 0 rgba(0,0,0,.25);
+      border-radius: 5px;
+      background-color:#ff632e;
+      background-image:-webkit-linear-gradient(to bottom, #ff9c7b, #ff632e);
+      background-image:linear-gradient(to bottom, #ff9c7b, #ff632e);
+      background-repeat:repeat-x;
+      filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffff9c7b', endColorstr='#ffff632e', GradientType=0);
+      border-color:#ff632e #ff632e #e13900;
+      border-color:rgba(0,0,0,.1) rgba(0,0,0,.1) rgba(0,0,0,.25);
+      filter:progid:DXImageTransform.Microsoft.gradient(enabled=false);
+      padding:3px 4px 3px 4px;
+    }
+    .btn_Sunburn
+    {
+      text-shadow:0 -1px 0 rgba(0,0,0,.25);
+      background-color:#da4f49;
+      background-image:-webkit-linear-gradient(to bottom, #ee5f5b, #bd362f);
+      background-image:linear-gradient(to bottom, #ee5f5b, #bd362f);
+      background-repeat:repeat-x;
+      filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffee5f5b', endColorstr='#ffbd362f', GradientType=0);
+      border-color:#bd362f #bd362f #802420;
+      border-color:rgba(0,0,0,.1) rgba(0,0,0,.1) rgba(0,0,0,.25);
+      filter:progid:DXImageTransform.Microsoft.gradient(enabled=false);
+      padding:3px 4px 3px 4px;
+      border-radius: 5px;
+    }
+    .btn_Inverse
+    {
+      color: white;
+      text-shadow:0 -1px 0 rgba(0,0,0,.25);
+      background-color:#363636;
+      background-image:-webkit-linear-gradient(to bottom, #444, #222);
+      background-image:linear-gradient(to bottom, #444, #222);
+      background-repeat:repeat-x;
+      filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff444444', endColorstr='#ff222222', GradientType=0);
+      border-color:#222 #222 #000;
+      border-color:rgba(0,0,0,.1) rgba(0,0,0,.1) rgba(0,0,0,.25);
+      filter:progid:DXImageTransform.Microsoft.gradient(enabled=false);
+      padding:3px 4px 3px 4px;
+      border-radius: 5px;      
+    }
+    .btn_PinkDark
+    {
+      text-shadow:0 -1px 0 rgba(0,0,0,.25);
+      background-color:#bd362f;
+      background-image:-webkit-linear-gradient(to bottom, #ee5f5b, #bd362f);
+      background-image:linear-gradient(to bottom, #ee5f5b, #bd362f);
+      background-repeat:repeat-x;
+      filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffee5f5b', endColorstr='#ffbd362f', GradientType=0);
+      border-color:#bd362f #bd362f #802420;
+      border-color:rgba(0,0,0,.1) rgba(0,0,0,.1) rgba(0,0,0,.25);
+      filter:progid:DXImageTransform.Microsoft.gradient(enabled=false);
+      padding:3px 4px 3px 4px;
+      border-radius: 5px;
+    }
+    .btn_Darkie
+    {
+      color: white;
+      text-shadow:0 -1px 0 rgba(0,0,0,.25);
+      background-color:#222;
+      background-image:-webkit-linear-gradient(to bottom, #ee5f5b, #bd362f);
+      background-image:linear-gradient(to bottom, #ee5f5b, #bd362f);
+      background-repeat:repeat-x;
+      filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffee5f5b', endColorstr='#ffbd362f', GradientType=0);
+      border-color:#bd362f #bd362f #802420;
+      border-color:rgba(0,0,0,.1) rgba(0,0,0,.1) rgba(0,0,0,.25);
+      filter:progid:DXImageTransform.Microsoft.gradient(enabled=false);
+      padding:3px 4px 3px 4px;
+      border-radius: 5px;
+    }
+
+        
+    /* stolen from waves.com */
+    .fleshBox1
+    {
+      background-color: #ffc4c4;
+      border: 1px solid #7b0812;
+      border-radius: 5px;
+      color: #7b0812;
+      padding: 5px 10px;
+    }
+    
+    /* stolen from net-tuts */
+    .btn_BlueBlueBig
+    {
+      width:400px;
+      margin: 200px auto;
+      background: #014464;
+      background: -moz-linear-gradient(top, #0D658E, #0C577A 50%, #014D71 51%, #003E5C);
+      background: -webkit-gradient(linear, left top, left bottom, 
+                  color-stop(0, #0E658E), color-stop(.5, #0C577A), 
+                  color-stop(.5, #014D71), to(#003E5C));
+      -moz-border-radius: 10px;
+      -webkit-border-radius: 10px;
+      border-radius: 10px;
+      border: 1px solid #368DBE;
+      border-top: 1px solid #C3D6DF;
+      -moz-box-shadow: 0 1px 3px black;
+      -webkit-box-shadow: 0 1px 3px black;
+      -box-shadow: 0 1px 3px black;  
+      height: 100px;
+      text-align: center;
+      line-height: 100px;
+      color:blue;
+      font-size: 50px;
+      font-weight: bold;
+      text-shadow: 0 1px 0 #99FFFF;
+      padding:3px 4px 3px 4px;
+      border-radius: 5px;      
+    }
+    .btn_BlueYellowBig
+    {
+      width:400px;
+      margin: 200px auto;
+      background: #014464;
+      background: -moz-linear-gradient(top, #0D658E, #0C577A 50%, #014D71 51%, #003E5C);
+      background: -webkit-gradient(linear, left top, left bottom, 
+                  color-stop(0, #0E658E), color-stop(.5, #0C577A), 
+                  color-stop(.5, #014D71), to(#003E5C));
+      -moz-border-radius: 10px;
+      -webkit-border-radius: 10px;
+      border-radius: 10px;
+      border: 1px solid #368DBE;
+      border-top: 1px solid #22D6DF;
+      -moz-box-shadow: 0 1px 3px black;
+      -webkit-box-shadow: 0 1px 3px black;
+      -box-shadow: 0 1px 3px black;  
+      height: 100px;
+      text-align: center;
+      line-height: 100px;
+      color:Yellow;
+      font-size: 50px;
+      font-weight: bold;
+      text-shadow: 0 1px 0 #EE0000;
+      padding:3px 4px 3px 4px;
+      border-radius: 5px;      
+    }
+    .btn_BlueSmall 
+    {
+      line-height: 1;
+      padding: 7px 10px;
+      font-weight: bold;
+      color: white;
+      background-color: #39c;
+      -moz-border-radius: 5px;
+      -webkit-border-radius: 5px;
+      -khtml-border-radius: 5px;
+      border-radius: 5px;
+      -moz-box-shadow: 0 1px 3px black;
+      -webkit-box-shadow: 0 1px 3px black;
+      -khtml-box-shadow: 0 1px 3px black;
+      -box-shadow: 0 1px 3px black;  
+      text-shadow: 0 1px 0 black;
+    }
+     
+    /* stolen from ASU GPH 211 syllabus Spring 2014 Updated for NAU Fall 2016 */
+    
+    /* use with one of the two btn classes below */
+    .EstiloBtn 
+    {
+      border: 1px solid transparent;
+      border-radius: 4px;
+      cursor: pointer;
+      display: inline-block;
+      font-size: 16px;
+      line-height: 1.44;
+      margin-bottom: 0;
+      padding: 6px 19px;
+      text-align: center;
+      vertical-align: middle;
+      white-space: nowrap;
+    }
+
+    /* ASU official color: #8C1D40 */
+    
+    .Estilo29ASU {font-size: 30px;color: #F7C709;}
+    .Estilo31ASU {color: #8C1D40;}
+    .Estilo32ASU {font-size: 15px;color: #8C1D40;font-weight: bold;}
+    .Estilo34ASU {color: #8C1D40; font-weight: bold;}
+    .Estilo40ASU {font-size: 26px; color: #660000; font-weight: bold;}
+    .Estilo42ASU {color: #660000;}
+    .Estilo44ASU {color: #660000; font-weight: bold;}
+    .Estilo47ASU {color: #AA0000;}
+    .Estilo50ASU {font-size: 22px; color: #660000; font-weight: bold;}
+    .EstiloBtnASU{background-color: #8C1D40;color: white;}
+
+    /* NAU official color: #003E7E */
+    .Estilo29NAU {font-size: 30px;color: yellow;}
+    .Estilo31NAU {color: #003E7E;}
+    .Estilo32NAU {font-size: 15px;color: #003E7E;font-weight: bold;}
+    .Estilo34NAU {color: #003E7E; font-weight: bold;}
+    .Estilo40NAU {font-size: 26px; color: #003E7E; font-weight: bold;}
+    .Estilo42NAU {color: #003E7E;}
+    .Estilo44NAU {color: #003E7E; font-weight: bold;}
+    .Estilo47NAU {color: #AA0000;}
+    .Estilo50NAU {font-size: 22px; color: #003E7E; font-weight: bold;}
+    .EstiloBtnNAU{background-color: #003E7E;color: white;}
+    
+    /* stolen from Torrent Freak */
+    .pinky0{color:#ff4794;}
+    .pinky1{color:#e0005e;font-weight:bold;}
+    .pinky2{background:#ff7ab2;}
+    .pinky3{background:#ff4794;}
+    .pinky4{background:#e0005e;}
+    .pinky5{color:white;background-color:#ff4794;border-bottom:2px solid #ff4794;}
+    .pinky5bold{background:#ff4794;color:white;margin:0 0 1em;text-shadow:0px 1px 1px #ad0048;font-size:1.1em;font-weight:600;}
+    .pinky6{background:#ff1476;border-bottom:2px solid #ad0048;}
+    .pinky7{background:#ff4794;color:silver;}
+    .pinky8{background:#ff7ab2;color:yellow;}
+        
+    /* stolen from Scala */
+    .aquaSlider 
+    {
+      color:#666666;
+      text-shadow: 0 1px 2px rgba(0,0,0,.5);
+      background:url(http://scala-ide.org/resources/images/bg.jpg) no-repeat top center #a6e5ec;
+      padding-top:15px;padding-bottom:15px;
+      -webkit-box-shadow: inset 0 10px 60px rgba(0,0,0,.5);
+      -moz-box-shadow: inset 0 10px 60px rgba(0,0,0,.5);
+    }
+    
+    /* stolen from Paige Hector */
+    .orangeYellow2 {background-color: #f3de7e;}    
+    .greenDarkBig {color: #006300; font-size: 21.5pt;}
+
+    /* stolen from msn */
+    .greenGreen2{font-weight:bold; color:#4a844a; font-size:1.3rem; line-height:1.384;}
+    .greenGreen4{color:#0b893e;}
+    .greenGreen5{color:#3ab161;}
+    .greenWhite2{color: White; background:#00924d; height:4.4rem; font-size:1.3rem; line-height:1.384;}
+    .greenBlack1{ background:#00924d; width:100%; height:18rem;}
+    
+    /* stolen from ???  */
+    .btn_fancy_grey
+    {
+      background-image: -webkit-gradient(linear,left top,left bottom,from(#eee),to(#ccc));
+      background-image: -webkit-linear-gradient(top,#eee,#ccc);
+      background-image: -moz-linear-gradient(top,#eee,#ccc);
+      background-image: -o-linear-gradient(top,#eee,#ccc);
+      background-image: linear-gradient(top,#eee,#ccc);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#eeeeee', EndColorStr='#cccccc');
+      border: 1px solid #777;
+      padding: 0 1.5em;
+      margin: .5em;
+      font: 700 1em/2em Arial,Helvetica;
+      color: #333;
+      text-shadow: 0 1px 0 rgba(255,255,255,.8);
+      -webkit-border-radius: .2em;
+      border-radius: .2em;
+      -webkit-box-shadow: 0 0 1px 1px rgba(255,255,255,.8) inset,0 1px 0 rgba(0,0,0,.3);
+      box-shadow: 0 0 1px 1px rgba(255,255,255,.8) inset,0 1px 0 rgba(0,0,0,.3)
+    }
+    .btn_fancy_gold
+    {
+      background-image: -webkit-gradient(linear,left top,left bottom,from(#eee),to(#E5C06B));
+      background-image: -webkit-linear-gradient(top,#eee,#E5C06B);
+      background-image: -moz-linear-gradient(top,#eee,#E5C06B);
+      background-image: -o-linear-gradient(top,#eee,#E5C06B);
+      background-image: linear-gradient(top,#eee,#E5C06B);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#eeeeee', EndColorStr='#E5C06B');
+      border: 1px solid #777;
+      padding: 0 1.5em;
+      margin: .5em;
+      font: 700 1em/2em Arial,Helvetica;
+      color: #333;
+      text-shadow: 0 1px 0 rgba(255,255,255,.8);
+      -webkit-border-radius: .2em;
+      border-radius: .2em;
+      -webkit-box-shadow: 0 0 1px 1px rgba(255,255,255,.8) inset,0 1px 0 rgba(0,0,0,.3);
+      box-shadow: 0 0 1px 1px rgba(255,255,255,.8) inset,0 1px 0 rgba(0,0,0,.3)
+    }
+    .btn_fancy_teal
+    {
+      background-image: -webkit-gradient(linear,left top,left bottom,from(#eee),to(#2dbe60));
+      background-image: -webkit-linear-gradient(top,#eee,#2dbe60);
+      background-image: -moz-linear-gradient(top,#eee,#2dbe60);
+      background-image: -o-linear-gradient(top,#eee,#2dbe60);
+      background-image: linear-gradient(top,#eee,#2dbe60);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#eeeeee', EndColorStr='#2dbe60');
+      border: 1px solid #777;
+      padding: 0 1.5em;
+      margin: .5em;
+      font: 700 1em/2em Arial,Helvetica;
+      color: #333;
+      text-shadow: 0 1px 0 rgba(255,255,255,.8);
+      -webkit-border-radius: .2em;
+      border-radius: .2em;
+      -webkit-box-shadow: 0 0 1px 1px rgba(255,255,255,.8) inset,0 1px 0 rgba(0,0,0,.3);
+      box-shadow: 0 0 1px 1px rgba(255,255,255,.8) inset,0 1px 0 rgba(0,0,0,.3)
+    }
+    .btn_fancy_blue
+    {
+      background-image: -webkit-gradient(linear,left top,left bottom,from(#eee),to(#004cd6));
+      background-image: -webkit-linear-gradient(top,#eee,#004cd6);
+      background-image: -moz-linear-gradient(top,#eee,#004cd6);
+      background-image: -o-linear-gradient(top,#eee,#004cd6);
+      background-image: linear-gradient(top,#eee,#004cd6);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#eeeeee', EndColorStr='#004cd6');
+      border: 1px solid #777;
+      padding: 0 1.5em;
+      margin: .5em;
+      font: 700 1em/2em Arial,Helvetica;
+      color: #333;
+      text-shadow: 0 1px 0 rgba(255,255,255,.8);
+      -webkit-border-radius: .2em;
+      border-radius: .2em;
+      -webkit-box-shadow: 0 0 1px 1px rgba(255,255,255,.8) inset,0 1px 0 rgba(0,0,0,.3);
+      box-shadow: 0 0 1px 1px rgba(255,255,255,.8) inset,0 1px 0 rgba(0,0,0,.3)
+    }
+    .btn_fancy_flesh
+    {
+      background-image: -webkit-gradient(linear,left top,left bottom,from(#eee),to(#ff632e));
+      background-image: -webkit-linear-gradient(top,#eee,#ff632e);
+      background-image: -moz-linear-gradient(top,#eee,#ff632e);
+      background-image: -o-linear-gradient(top,#eee,#ff632e);
+      background-image: linear-gradient(top,#eee,#ff632e);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#eeeeee', EndColorStr='#ff632e');
+      border: 1px solid #777;
+      padding: 0 1.5em;
+      margin: .5em;
+      font: 700 1em/2em Arial,Helvetica;
+      color: #333;
+      text-shadow: 0 1px 0 rgba(255,255,255,.8);
+      -webkit-border-radius: .2em;
+      border-radius: .2em;
+      -webkit-box-shadow: 0 0 1px 1px rgba(255,255,255,.8) inset,0 1px 0 rgba(0,0,0,.3);
+      box-shadow: 0 0 1px 1px rgba(255,255,255,.8) inset,0 1px 0 rgba(0,0,0,.3)
+    }
+    .btn_fancy_redBlack
+    {
+      background-image: -webkit-gradient(linear,left top,left bottom,from(#000),to(red));
+      background-image: -webkit-linear-gradient(top,#000,red);
+      background-image: -moz-linear-gradient(top,#000,red);
+      background-image: -o-linear-gradient(top,#000,red);
+      background-image: linear-gradient(top,#000,red);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#000', EndColorStr='red');
+      border: 1px solid #777;
+      padding: 0 1.5em;
+      margin: .5em;
+      font: 700 1em/2em Arial,Helvetica;
+      color: #aaaaaa;
+      text-shadow: 0 1px 0 rgba(255,255,255,.8);
+      -webkit-border-radius: .2em;
+      border-radius: .2em;
+      -webkit-box-shadow: 0 0 1px 1px rgba(255,255,255,.8) inset,0 1px 0 rgba(0,0,0,.3);
+      box-shadow: 0 0 1px 1px rgba(255,255,255,.8) inset,0 1px 0 rgba(0,0,0,.3)
+    }
+    
+    .greyTitle{color: #666;font-size: 20px;font-weight: 700;}
+    .greenbox{background-color: #dcf5d7!important;border-top-color: #dcf5d7!important;}
+    .bluebox{background-color: #D6EFFE;}
+    .limeBanner
+    {
+      font-size: 12px;
+      background: #0f0;
+      color: black;
+      font-weight: 700;
+      text-align: center;
+    }
+    infoBoxHeading  
+    {
+      font-size: 12px;
+      font-weight: 700;
+      background: #bbc3d3;
+      color: #a52020
+    }
+    .aquaCyanDark
+    {
+      font-size: 14px;
+      color: #069;
+      font-weight: 700;
+    }
+    .navyOnYellow{color: #00F;background: #FF3;}
+    .greyBigHeading{font-size: 20px;font-weight: 700;color: #666;}
+    .orangeTiny{font-size: 10pt;font-weight: 700;color: #C60;}
+    .barInsideRed{color:#C00;background-color: #C00;}
+    .barInsideBlack{color:black;background-color: black;}
+    .barInsideYellow{color:gold;background-color:gold;}
+    .barInsideLime{color:#0f0;background-color:#0f0;}
+    .barInsideGrey{color: #595959;background-color: #595959;}
+    .barInsideBlue{color: blue;background-color:blue;}
+    .barInsideGreen{background: #2F9512;color: #2F9512;}
+    .barInsideGold{background: #ebb73d;color: #ebb73d;}
+
+    /* stolen from Ian Webster (textbelt)*/
+    .greyLightTinyMute {color: #909090;font-size: 10px;}
+
+    /* stolen from my committee chair, Dr. Huang */
+    .blueHuang{color: #00C;font-weight:bold;}
+    .blueHuangLight{color:#3366FF;}
+    
+    /* stolen from amethystwebsitedesign.com */
+    .acmnSteelDashedBox 
+    {
+      border: 4px dashed #046ca3;
+      padding: 10px;
+      box-shadow: inset 0 -1px 0 0 #046ca3, inset 0 1px 0 0 #046ca3, 0 1px 0 0 #046ca3, 0 -1px 0 0 #046ca3;
+    }
+    .acmnPurpleBorderSilver
+    {
+      border: 1px solid silver;
+      border-right: 1px solid darkgray;
+      border-bottom: 1px solid darkgray;
+      -moz-box-shadow: inset 0 0 0 3px #7b6dc0;
+      -webkit-box-shadow: inset 0 0 0 3px #7b6dc0;
+      box-shadow: inset 0 0 0 3px #7b6dc0; 
+      padding: 24px 20px;
+      margin: 24px 0;
+      
+    }
+    
+    /* Stolen from NBC News */
+    nav
+    {
+      background-color:transparent;
+      padding-bottom:.375em
+    }
+    .asidePullQuote
+    {
+      content:" ";
+      display:table;
+      float:right;
+      width:50%;
+      color:#232323;
+      font-family:'Lucida Console', Monaco, monospace;
+      line-height:1.0534979424;
+      margin-bottom:0;
+      margin-top:6px;
+      border-left: 1px solid grey;
+    }
+    .greyLightTiny
+    {
+      color:#969696;
+      font-size:10pt;
+    }
+    .pointerTriangleLeft
+    {
+      vertical-align:middle;
+      display:inline-block;
+      -webkit-transform:rotate(360deg);
+      -ms-transform:rotate(360deg);
+      transform:rotate(360deg);
+      border-width:1.0678710938em .5339355469em;
+      border-style:solid;
+      border-color:transparent;
+      border-left-color:#940006;
+      border-right-width:2;
+      height:0;
+    }
+    .bodyClassThemeDark
+    {
+      color:#ccc;
+      background-color:#111;
+      margin-bottom:1.125em;
+      padding-top:1.125em;
+      margin-top:-1.125em
+    }
+    .divClassThemeWeather
+    {
+      background:-webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,0)), color-stop(40%, #fff), to(rgba(197,209,228,.75)));
+      background:-webkit-linear-gradient(top, rgba(255,255,255,0)0, #fff 40%, rgba(197,209,228,.75)100%);
+      background:linear-gradient(to bottom, rgba(255,255,255,0)0, #fff 40%, rgba(197,209,228,.75)100%)
+    }
+    .divClassThemeNightly
+    {
+      color:#ccc;
+      padding-top:1.125em;
+      margin-top:-1.125em;
+      background:-webkit-gradient(linear, left top, left bottom, from(rgba(17,17,17,0)), color-stop(40%, #111), to(#111));
+      background:-webkit-linear-gradient(top, rgba(17,17,17,0)0, #111 40%, #111 100%);
+      background:linear-gradient(to bottom, rgba(17,17,17,0)0, #111 40%, #111 100%)
+    }
+    .divClassThemeFeature
+    {
+      background:#E9EDF0;
+      background:-webkit-gradient(linear, left top, left bottom, from(#FFF), color-stop(40%, #E9EDF0));
+      background:-webkit-linear-gradient(top, #FFF 0, #E9EDF0 40%);
+      background:linear-gradient(to bottom, #FFF 0, #E9EDF0 40%)
+    }
+    .blueSteelIndentDark
+    {
+      color:#5172a0;
+      padding-bottom:1.3333333333em;
+      padding-top:1.3333333333em;
+      font-size:1.125em;
+      line-height:1.6666666667
+    }
+    .blueSteelIndentLight
+    {
+      color:#4372b8;
+      margin-right:.474609375em;
+      font-size:.7901234568em;
+      line-height:1.8984375
+    }
+    .btn_Gold
+    {
+      margin-bottom:1.3333333333em;
+      font-weight:700;
+      padding-right:1.25em;
+      padding-left:1.25em;
+      padding-top:.46875em;
+      color:#1f1f1f;
+      background-color:#E5C06B;
+      -webkit-border-radius:0 0 5px 5px;
+      border-radius:0 0 5px 5px;
+      font-size:.7023319616em;
+      line-height:1.2013549805
+    }
+    
+    /* Stolen from Wordpress */
+    .btn_Green
+    {
+      background-color: #4DB24C;
+      color: white;
+      padding:3px 4px 3px 4px;
+      border-radius: 5px;      
+      font-weight: bold;
+      text-shadow: 0 0.05em 0.05em #1b7a1a;
+      border-left: solid 1px #49a346;
+      border-top: solid 1px #49a346;
+      border-right: solid 1px #1f7c1e;
+      border-bottom: solid 1px #1f7c1e;
+    }
+    .btn_Aqua
+    {
+      background-color: #4F97C9;
+      color: white;
+      padding:3px 4px 3px 4px;
+      border-radius: 5px;      
+      font-weight: bold;
+      text-shadow: 0 0.05em 0.05em #1b7a1a;
+      border-left: solid 1px #49a346;
+      border-top: solid 1px #49a346;
+      border-right: solid 1px #1f7c1e;
+      border-bottom: solid 1px #1f7c1e;
+    }
+    
+    /* stolen from Evernote */
+    .Btn_LightGreen
+    {
+      font-weight: 500;
+      color: White;
+      background-color: #2dbe60;
+      border-color: #1fae52;
+      padding:3px 4px 3px 4px;
+      border-radius: 5px;            
+    }
+    .fleshbox2
+    {
+      list-style: none;
+      border: 1px solid #b92219;
+      background-color: #ffd1d1;
+      padding: 8px;
+      overflow-wrap: break-word;
+      word-wrap: break-word;
+      word-break: break-word
+    }
+    .greenBlack2
+    {
+      background-color: #2dbe60;
+      width: 100%;
+      height: 48px;
+      border-bottom: 1px solid #259d4f
+    }
+    .navBarOneLetterLeft
+    {
+      filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe5f6fb', GradientType=0);
+      -webkit-border-radius: 50px;
+      -moz-border-radius: 50px;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: -moz-none;
+      -ms-user-select: none;
+      border: 1px solid #88b9c9;
+      border-radius: 50px;
+      color: #747474;
+      background-color: #f5fbfd;
+      background-image: -moz-linear-gradient(top, #fff, #e5f6fb);
+      background-repeat: repeat-x;
+      line-height: 1.41666667;
+      font-size: 1em;
+      font-weight: 400;
+      
+      text-overflow: clip;
+      padding: 0 4px;
+      width: 10px;
+      display: inline-block;
+    }
+    .greyDark
+    {
+      height: auto;
+      overflow: hidden;
+      background-color: #484848;
+      color:white;
+      margin-top: 60px
+    }
+    .greenOlive
+    {
+      background-color: #95d162;
+      border-color: #2b7143
+    }
+    .creamWarning
+    {
+      background-color: #fef4d1;
+      border: 1px solid #ebd174;
+      margin-bottom: 16px;
+      padding: 5px 16px 5px 16px;
+      color: red;
+      font-weight: bold;
+    }
+    .blueSteelCyanBold{color: #4183c4;font-weight: bold;}
+    .blueSteelNormal{color:#5172a0;}
+    .blueSteelUnderlineBorder
+    {
+      color: #5172a0;
+      text-decoration: underline;
+      outline: thin dotted #4a8db8;
+    }
+    .blueSteelUnderline
+    {
+      color: #5172a0;
+      text-decoration: underline;
+    }
+
+    /* Stolen from Microsoft */
+    .brownCodeBox
+    {
+      font-family: Consolas;
+      font-size:13px;
+      color: rgb(125, 39, 39); 
+      background-color: rgb(239, 240, 241);
+      display: block;
+      width:600px;
+    }
+    .purpleTextBold
+    {
+      color:#6621E5;
+      font-weight:bold;
+    }
+    
+    /* Stolen from it-ebooks */
+    .aquaHeading
+    {
+      font-family: Verdana, Geneva, sans-serif;
+      color: #08c;
+    }
+    
+    /* Stolen from Dana Mandino, NAU */
+    .purpleBig{font-size:20pt;color:#BD1398;}
+    .purpleMed{font-size:16pt;color:#BD1398;}
+    .purpleSml{font-size:12pt;color:#BD1398;}
+
+    /* stolen from github */
+    .purpleText{color: #6f42c1;}
+    .purpleOutline{padding: .9em 1.25em; color: #9f7be1; background: transparent; border: 1px solid purple; border-radius: .3em;}
+    .purpleDivBackground{color:white; background-color: #643ab0; background-image: linear-gradient(-180deg, #7e55c7 0%, #643ab0 90%); }
+    .purpleTextBackground{color:white; background-color: #6f42c1;}
+
+    /* stolen from Thibaut Courouble (http://www.cssflow.com) 
+       btnGlossyBlue is the master. You have to include it in order to use
+       the other colors.
+    */
+    
+    .btn_GlossyBlue
+    {
+      display: inline-block;
+      vertical-align: top;
+      overflow: hidden;
+      min-width: 96px;
+      line-height: 46px;
+      padding: 0 24px;
+      font-size: 14px;
+      color: white;
+      text-align: center;
+      text-shadow: 0 1px #154c86;
+      background-color: #247edd;
+      background-clip: padding-box;
+      border: 1px solid;
+      border-color: #1c65b2 #18589c #18589c;
+      border-radius: 4px;
+      -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.4), 0 1px 2px rgba(0, 0, 0, 0.2);
+      box-shadow: inset 0 1px rgba(255, 255, 255, 0.4), 0 1px 2px rgba(0, 0, 0, 0.2);
+      background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.12) 51%, rgba(0, 0, 0, 0.04));
+      background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.12) 51%, rgba(0, 0, 0, 0.04));
+      background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.12) 51%, rgba(0, 0, 0, 0.04));
+      background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.12) 51%, rgba(0, 0, 0, 0.04)); 
+    }
+    .btn_GlossyBlue:before  
+    {
+      content: '';
+      position: absolute;
+      top: -25%;
+      bottom: -25%;
+      left: -20%;
+      right: -20%;
+      border-radius: 50%;
+      background: transparent;
+      -webkit-box-shadow: inset 0 0 38px rgba(255, 255, 255, 0.5);
+      box-shadow: inset 0 0 38px rgba(255, 255, 255, 0.5);
+    }
+    
+    .btn_GlossyBlue:hover { background-color: #1a74d3; }
+    
+    .btn_GlossyBlue:active 
+    {
+      color: rgba(255, 255, 255, 0.9);
+      text-shadow: 0 -1px #154c86;
+      background: #1f71c8;
+      border-color: #113f70 #154c86 #1c65b2;
+      -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2), 0 1px rgba(255, 255, 255, 0.4);
+      box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2), 0 1px rgba(255, 255, 255, 0.4);
+      background-image: -webkit-linear-gradient(top, #1a5da5, #3a8be0);
+      background-image: -moz-linear-gradient(top, #1a5da5, #3a8be0);
+      background-image: -o-linear-gradient(top, #1a5da5, #3a8be0);
+      background-image: linear-gradient(to bottom, #1a5da5, #3a8be0);
+    }
+    
+    .btn_GlossyBlue:active:before 
+    {
+      top: -50%;
+      bottom: -125%;
+      left: -15%;
+      right: -15%;
+      -webkit-box-shadow: inset 0 0 96px rgba(0, 0, 0, 0.2);
+      box-shadow: inset 0 0 96px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* Green */
+    .btn_GlossyGreen
+    {
+      text-shadow: 0 1px #0d4d09;
+      background-color: #1ca913;
+      border-color: #147b0e #11640b #11640b;
+    }
+    
+    .btn_GlossyGreen:hover { background-color: #159b0d; }
+    
+    .btn_GlossyGreen:active 
+    {
+      text-shadow: 0 -1px #0d4d09;
+      background: #189210;
+      border-color: #093606 #0d4d09 #147b0e;
+      background-image: -webkit-linear-gradient(top, #126d0c, #20c016);
+      background-image: -moz-linear-gradient(top, #126d0c, #20c016);
+      background-image: -o-linear-gradient(top, #126d0c, #20c016);
+      background-image: linear-gradient(to bottom, #126d0c, #20c016);
+    }
+    
+    /* Red */
+    .btn_GlossyRed 
+    {
+      text-shadow: 0 1px #72100d;
+      background-color: #cd1d18;
+      border-color: #9f1713 #891310 #891310;
+    }
+    
+    .btn_GlossyRed:hover { background-color: #c01511; }
+    
+    .btn_GlossyRed:active
+    {
+      text-shadow: 0 -1px #72100d;
+      background: #b61a15;
+      border-color: #5b0d0b #72100d #9f1713;
+      background-image: -webkit-linear-gradient(top, #921511, #e4201b);
+      background-image: -moz-linear-gradient(top, #921511, #e4201b);
+    }
+    
+    /* stolen from foliovision.com */
+    
+    .blackCircle 
+    {
+      background-color: #000;
+      color: #fff;
+      width: 120px;
+      height: 120px;
+      display: block;
+      margin: 0 auto 18px;
+      text-align: center;
+      overflow: hidden;
+      -webkit-border-radius: 60px;
+      -moz-border-radius: 60px;
+      border-radius: 60px;
+      position: relative
+    }
+    
+    .fleshBackgroundPale
+    {
+      color: #a94442;
+      background-color: #f2dede;
+      border-color: #ebccd1
+    }
+    .aquaBackgroundPale 
+    {
+      color: #31708f;
+      background-color: #d9edf7;
+      border-color: #bce8f1
+    }
+    .greenBackgroundPale  
+    {
+      background-color: #dff0d8;
+      border-color: #d6e9c6;
+      color: #3c763d
+    }
+    .creamBackgroundPale
+    {
+      color: #8a6d3b;
+      background-color: #fcf8e3;
+      border-color: #faebcc
+    }
+    .btn_Cyan 
+    {
+      padding:3px 4px 3px 4px;
+      border-radius: 5px;      
+      font-size: 14px;
+      border: 1px solid #046a9e;
+      background: #9ecce2;
+      color: #333;
+      margin: 8px 0;
+    }
+    .greenBannerPale
+    {
+      padding: 6px 9px;
+      margin: 0 auto 25px;
+      box-sizing: border-box;
+      background: #e7f7d3;
+      border: 1px solid #6c3;
+      color: green;
+    }
+    .redBannerPale
+    {
+      padding: 6px 9px;
+      margin: 0 auto 25px;
+      box-sizing: border-box;
+      background: #ffebe8;
+      border: 1px solid #C00;
+      color: red; 
+    }
+    .redBannerPalePlusBlue
+    {
+      padding: 6px 9px;
+      margin: 0 auto 25px;
+      box-sizing: border-box;
+      background: #ffebe8;
+      border: 1px solid #C00;
+      color: #007acc;
+    }
+    
+    /* stolen from slashdot */
+    
+    .greenWhite3 
+    {
+      height: 30px;
+      color: white;
+      background-color: #004d4d;
+      z-index: 4; 
+      padding: 0 5px;
+      line-height: 20px;
+      border-radius: 4px;
+      transition: background-color 0.2s ease-in-out; 
+    }
+    .orangeDarkerBack 
+    {
+      height: 30px;
+      color: white;
+      z-index: 4; 
+      padding: 0 5px;
+      line-height: 20px;
+      border-radius: 4px;
+      transition: background-color 0.2s ease-in-out; 
+      background-color: #b7590b; 
+    }
+      
+    /* Stolen from Fabien Sanglard */
+        
+    .acmnRaisedBox2 
+    {
+      padding: 5px ;
+      background-color: white;
+      box-shadow: rgb(119, 119, 119) 3px 3px 3px;
+      border-style:solid;
+      border-width:1px;
+      border-color:#aaaaaa ;
+    }
+    
+    /* Stolen from Amazon */
+    
+    .btn_Amazon_Orange
+    {
+      background-color:#FD8;
+      background:-moz-linear-gradient(top,#FD8 15%,#F49D00 85%);
+      background:-webkit-gradient(linear,left top,left bottom,color-stop(0.15,#FD8),color-stop(0.85,#F49D00));
+      background:-webkit-linear-gradient(top,#FD8 15%,#F49D00 85%);
+      border:1px solid #2164A6;
+      margin-left:15px;
+      padding:5px 10px 4px 10px;
+      border-radius:4px;
+      -moz-border-radius:4px;
+      -webkit-border-radius:4px;
+      box-shadow:inset 0 0 2px #FFF;
+      -webkit-box-shadow:inset 0 0 2px #FFF;
+      -moz-box-shadow:inset 0 0 2px #FFF;
+    }
+            
+  </style>
+  
+  <!-- blinking text (must be in its own style tag) -->
+  <style>   
+    .blinkMe 
+    {
+      animation-duration: 1s;
+      animation-name: blink;
+      animation-iteration-count: infinite;
+      animation-timing-function: steps(2, start);
+    }
+    @keyframes blink 
+    {
+      80% 
+      {
+        visibility: hidden;
+      }
+    }
+  </style>
+  
+  <!-- strobing effect fill. The class to get it to work is called "thumb", it only works when this stylesheet is enabled, and it's only in grey color -->  
+  <!--<link rel="stylesheet" type="text/css" href="http://cdn.gatehousemedia.com/assets/css/20170705-1707/default.min.css"> -->
+
+</head>
+    
+<body>
+  
+  <table id="container">
+  <tr><td>
+  <table id="content">
+  <tr><td id="rootCell">
+  
+  
+    <!-- <i class="fa fa-check" style="color:green;"></i> -->
+    
+    <header>
+      <h1>GSP 537</h1>
+      <h2>Lab 7: ASTER Data and NDVI<i class="fa fa-check" style="color:green;"></i></h2>
+      <table border="1" align="center" cellpadding="5" cellspacing="10" class="acmnDashedAlert">
+        <tr>
+          <td rowspan="2" align="center" class="aquaBold">Submission to BBlearn</td>
+          <td align="center">To the Dropbox</td>
+          <td align="center">Lab7_answers_xxx.docx</td>
+        </tr>
+        <tr>
+          <td align="center">To the Poster folder</td>
+          <td align="center">completed  project poster PDF</td>
+        </tr>
+        <tr>
+          <td colspan="2" align="center" class="aquaBold">Due date</td>
+          <td align="center">Sunday, April 22, 2018, Midnight</td>
+        </tr>
+      </table>
+    </header>
+    
+    <article>
+      
+      <div class="acmnDashedAlert">
+        <h2>Deliverables</h2>
+        <ul type="disc">
+          <li>Your turd document, including answers, screen captures, and python scripts</li>
+          <li>Also paste screenshots and python scripts to Blackboard 'Dropbox'</li>
+          <li>Poster to the blog area</li>
+        </ul>
+      </div>
+      
+      <div class="acmnPurpleBorderSilver">
+        <span class="clsH6">Scenario</span><br><br>
+        A human induced wildfire broke out at 10:09 a.m. on June 20, 2010 near the Schultz Pass in the Coconino National Forest. The fire burned over 15,000 
+        acres in ten days and it was contained on June 30. The burn area was covered by two consecutive passes by the Advanced Spaceborne Thermal Emission and Reflection 
+        Radiometer (ASTER,) satellite on June 18 and July 4, 2010 before and after the fire respectively. 
+      </div>
+      
+      <div>
+        <span class="clsH6">Prep</span><i class="fa fa-check" style="color:green;"></i><br><br>
+        Download the <code class="blueHuang">Lab7.zip</code> file on the <span class="blueHuang">R drive</span>.  
+        It contains the data for this lab. 
+      </div>
+      
+      <br><br>
+      
+      <div>
+        <span class="clsH6">Abstract</span><i class="fa fa-check" style="color:green;"></i><br><br>
+        This lab will allow you to estimate the change in vegetation cover caused by the fire by alculating Normalized difference Vegetation Index (NDVI). It will guide you 
+        through the entire process from downloading ASTER imagery data, processing the data, and computing NDVI.
+      </div>
+      
+      <br><br>
+      
+      <div>
+        <span class="clsH6">Review</span><i class="fa fa-check" style="color:green;"></i><br><br>        
+        <ul type="disc">
+          <li><a href="http://earthobservatory.nasa.gov/Features/MeasuringVegetation/measuring_vegetation_2.php" target="_blank">NASA Remote Sensing</a></li>
+          <li><a href="http://desktop.arcgis.com/en/arcmap/latest/manage-data/raster-and-images/ndvi-function.htm" target="_blank">ESRI NDVI function</a></li>
+          <li><a href="https://asterweb.jpl.nasa.gov/" target="_blank">ASTER at the JPL</a></li>
+          <li><a href="http://en.wikipedia.org/wiki/Advanced_Spaceborne_Thermal_Emission_and_Reflection_Radiometer" target="_blank">ASTER WIKI</a><br><br>
+        </li>
+        </ul>
+        <div class="acmnDashedAlert">
+          Answer the following questions. <br><br>
+          <div>
+            <span class="greenGreen1">Question 1</span>: What is ASTER, and what is the satellite on which ASTER is onboard?
+            <br><br>
+            <div class="acmnMyAnswer blueBold">
+              ASTER is an acronym for  <strong>Advanced Spaceborne Thermal Emission and Reflection Radiometer</strong>. It is a  Japanese sensor which is one of five <a href="https://en.wikipedia.org/wiki/Remote_sensing" title="Remote sensing">remote sensory devices</a> on board the <a href="https://en.wikipedia.org/wiki/Terra_(satellite)" title="Terra (satellite)">Terra</a> satellite launched into <a href="https://en.wikipedia.org/wiki/Earth_orbit" title="Earth orbit">Earth orbit</a> by <a href="https://en.wikipedia.org/wiki/NASA" title="NASA">NASA</a> in 1999.</div>
+          </div>
+          <br><br>
+          <div>
+            <span class="greenGreen1">Question 2</span>: What are the wavelength ranges of ASTER imagery bands 1 through  4, and what ASTER bands are appropriate for 
+            calculating NDVI?
+            <br><br>
+            <div class="acmnMyAnswer blueBold">
+              <table width="99%" border="1">
+                <tbody>
+                  <tr>
+                    <th>Band</th>
+                    <th>Label</th>
+                    <th>Wavelength (<a href="https://en.wikipedia.org/wiki/Micrometre" target="_blank">µm</a>)</th>
+                    <th>Description (green is appropriate for NDVI)</th>
+                  </tr>
+                  <tr>
+                    <td>B1</td>
+                    <td>VNIR_Band1</td>
+                    <td>0.200-0,475</td>
+                    <td align="center">Visible green/yellow</td>
+                  </tr>
+                  <tr>
+                    <td>B2</td>
+                    <td>VNIR_Band2</td>
+                    <td>420-420</td>
+                    <td align="center" class="greenGreen1">
+                      Visible red<sup><a href="http://desktop.arcgis.com/en/arcmap/latest/manage-data/raster-and-images/ndvi-function.htm" title="This index takes advantage of the contrast of characteristics between two bands from a multispectral raster dataset—the chlorophyll pigment absorption in the red band and the high reflectivity of plant material in the near-infrared (NIR) band." target="_blank">1</a></sup></td>
+                  </tr>
+                  <tr>
+                    <td>B3N</td>
+                    <td>VNIR_Band3N</td>
+                    <td>0.760–0.860</td>
+                    <td rowspan="2" align="center" class="greenGreen1">Near infrared<sup><a href="http://desktop.arcgis.com/en/arcmap/latest/manage-data/raster-and-images/ndvi-function.htm" title="This index takes advantage of the contrast of characteristics between two bands from a multispectral raster dataset—the chlorophyll pigment absorption in the red band and the high reflectivity of plant material in the near-infrared (NIR) band." target="_blank">1</a></sup></td>
+                  </tr>
+                  <tr>
+                    <td>B3B</td>
+                    <td>VNIR_Band3B</td>
+                    <td>0.760–0.860</td>
+                    </tr>
+                  <tr>
+                    <td colspan="4"></td>
+                  </tr>
+                  <tr>
+                    <td>B4</td>
+                    <td>SWIR_Band4</td>
+                    <td>1.600–1.700</td>
+                    <td rowspan="6" align="center">Sho</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <br><br>
+          <div> 
+            <span class="greenGreen1">Question 3</span>: What are the wavelength ranges of visible red light and near infrared?
+            <br><br>
+            <div class="acmnMyAnswer blueBold">
+              <table width="99%" border="1">
+                <tbody>
+                  <tr>
+                    <th>Radiation</th>
+                    <th><a href="https://en.wikipedia.org/wiki/Wavelength" title="Wavelength" target="_blank">Wavelength</a></th>
+                    <th><a href="https://en.wikipedia.org/wiki/Frequency" title="Frequency" target="_blank">Frequency</a></th>
+                    </tr>
+                  <tr>
+                    <td align="center"><strong><a href="https://en.wikipedia.org/wiki/Red" title="Red" target="_blank">Visibed Red</a></strong></td>
+                    <td align="center">620–750 <em>n</em>m</td>
+                    <td align="center">400–484 <a href="https://en.wikipedia.org/wiki/Terahertz_(unit)" title="Terahertz (unit)" target="_blank">THz</a></td>
+                    </tr>
+                  <tr>
+                    <td align="center">Near Infrared</td>
+                    <td align="center">0.75–1.4 um</td>
+                    <td align="center">214–400 <a href="https://en.wikipedia.org/wiki/Terahertz_(unit)" title="Terahertz (unit)" target="_blank">THz</a></td>
+                    </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <br><br>
+          <div>
+            <span class="greenGreen1">Question 4</span>: What does NDVI measure, how is it calculated, and how does the ArcGIS NDVI function differ from the 
+            general NDVI formula?
+            <br><br>
+            <div class="acmnMyAnswer blueBold">
+              NDVI measures the density of plant life on an area of land. The pigment in plant leaves, chlorophyll, strongly absorbs visible (red) light (from 
+              0.4 to 0.7 µm) for use in photosynthesis. The cell structure of the leaves, on the other hand, strongly reflects near-infrared light (from 
+              0.7 to 1.1 µm). NDVI exploits this phenomena using the following general formula:
+              <blockquote><code>NDVI = (NIR - VISR)/(NIR + VISR)</code></blockquote>The ArcGIS NDVI formula was defined to better fit within an 8-bit data 
+              structure, which can easily be rendered with a specific color ramp or color map: 
+              <blockquote><code>NDVI = ((NIR - VISR)/(NIR + VISR)) * 100 + 100</code></blockquote>
+            </div>
+          </div>
+          <br><br>
+          <div> 
+            <span class="greenGreen1">Question 5</span>: What is the NDVI value range, and what do high values of NDVI mean?
+            <br><br>
+            <div class="acmnMyAnswer blueBold">
+              NDVI has a value range of 0 to 200. The higher the value, the higher the density of plant life there is on the land being measured.
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <br>
+      
+      <ol type="I">
+          
+        <li>
+          
+          <span class="clsH6">Part One: Obtaining the ASTER Data</span><i class="fa fa-check" style="color:green;"></i><br><br>
+          
+          <div class="acmnPurpleBorderSilver">
+            <em class="pinky1">The ASTER data source seems to have made some policy changes, and ArcGIS 10.x seems not to work with HDF data format (although the Esri website still 
+            states the format is supported by 10.x). If you run into problems in downloading data from the website or have trouble in opening HDF data downloaded 
+            (I doubt you can even download it), please find a new zip file at R:\GSP537\Lab7\ASTER.gdb.zip. Please copy this file to your local drive 
+            (NEVER use Z drive) and unzip it to get the ASTER.gdb file geodatabase, then continue to work on Lab 7 by starting from <strong>Part Three</strong>. You may also try <a href="https://search.earthdata.nasa.gov/search/granules?p=C1000000320-LPDAAC_ECS&g=G1021671107-LPDAAC_ECS&m=34.857421875!-112.21435546875!7!1!0!0%2C2&tl=1278072000!4!1277942400!1280620799&q=ASTER&ok=ASTER&sp=-111.6%2C35.32" target="_blank">this url</a>. </em></div>
+          
+          <br><br>
+          
+          <ol type="1">
+            <li>Go to the <a href="http://reverb.echo.nasa.gov/reverb/" target="_blank">NASA Reverb website.</a></li>
+            <li>Register an account for the site, then login.</li>
+            <li>
+              Change the <span class="blueHuang">Bounding Box</span> option above the map to <span class="blueHuang">Point</span>, then click in the 
+              coordinate box to enter a pair of coordinates <code class="blueHuang">(35.32, -111.6)</code>. A <span class="blueBold">blue</span> marker 
+              (<span><img src="Lab7/Image_003.png" width="16"></span>) will be placed at the location so you can zoom and pan to the study area. Make 
+              sure you can see the San Francisco Peaks, Sunset Crater, and part of the City of Flagstaff Urban Area.
+              <br><br><div><img src="Lab7/Image_001.png" width="800"></div>
+            </li>
+            <li>
+              In the Search Term box enter keyword <span class="blueHuang">ASTER</span>, and in the <span class="blueHuang">Temporal Search area</span> 
+              enter a date range between June 18, 2010 and July 4, 2010.
+              <br><br><div>
+                <table>
+                  <tr><td><img src="Lab7/Image_004.png"></td></tr><tr><td><img src="Lab7/Image_005.png"></td></tr>
+                </table>
+              </div>
+            </li>
+            <li>
+              It may take awhile to bring up results. After it comes back,  available datasets satisfying the criteria are listed below the map area. 
+              Click the <span class="blueHuang">ASTER Level 1 precision terrain corrected registered at-sensor radiance V003</span> item.
+              <br><br><div><img src="Lab7/Image_006.png"></div>
+            </li>
+            <li>
+              It will load the  available granules of the dataset. Click the green <span class="greenWhite2">download data</span> button.
+              <br><br><div><img src="Lab7/Image_007.png" width="720"></div>
+            </li>
+            <li>
+              On the next page, click direct download, then click the <span class="btn_Blue">submit</span> button. 
+              <br><br><div><img src="Lab7/Image_008.png" width="720"></div><br><br>
+            </li>
+            <li>
+              A page with several URLs will come up. In your working folder for this lab, create a subfolder named ASTER. Then right-click on each url 
+              and download the file to that folder. Once the download is complete, you should have two HDF format images. The 
+              <span class="blueHuang">117818.hdf</span> image was taken on June 18 (pre-fire), and the <span class="blueHuang">29726.hdf</span> image 
+              was taken on July 4 (post-fire).
+            </li>
+            <li>
+              It might be a good idea to import the rasters into a file geodatabase you will be creating in Step 6 of Part II.. If you want, create a file 
+              geodatabase called <span class="blueHuang">ASTER.GDB</span> in your working folder&nbsp;now, and import the rasters. Help on the import 
+              rasters (multiple) function can be found 
+              <a href="http://desktop.arcgis.com/en/arcmap/10.5/tools/conversion-toolbox/raster-to-geodatabase-multiple-.htm" target="_blank">here</a>.
+              <br><br><div class="acmnMyAnswer"> Python:
+                <blockquote>
+                  <pre>
+import arcpy
+
+ HDF117818 = "X:\\Hostgator\\homework\\Courses\\GSP537\\labs\\7\\data\\ASTER\\
+             AST_L1T_00306182010182058_20150601213428_117818.hdf"
+TIFT117818 = "X:\\Hostgator\\homework\\Courses\\GSP537\\labs\\7\\data\\ASTER\\
+             AST_L1T_00306182010182058_20150601213428_117818_T.tif"
+TIFV117818 = "X:\\Hostgator\\homework\\Courses\\GSP537\\labs\\7\\data\\ASTER\\
+             AST_L1T_00306182010182058_20150601213428_117818_V.tif"
+  HDF29726 = "X:\\Hostgator\\homework\\Courses\\GSP537\\labs\\7\\data\\ASTER\\
+             AST_L1T_00307032010053534_20170725140636_29726.hdf"
+ TIFT29726 = "X:\\Hostgator\\homework\\Courses\\GSP537\\labs\\7\\data\\ASTER\\
+             AST_L1T_00307032010053534_20170725140636_29726_T.tif"
+ ASTER_gdb = "X:\\Hostgator\\homework\\Courses\\GSP537\\labs\\7\\data\\ASTER.gdb"
+
+ASTER_gdb_File_Geodatabase = ASTER_gdb
+arcpy.env.workspace = ASTER_gdb
+
+arcpy.RasterToGeodatabase_conversion("X:\\Hostgator\\homework\\Courses\\GSP537\\labs\\7\\data\\
+ASTER\\AST_L1T_00306182010182058_20150601213428_117818.hdf;X:\\Hostgator\\homework\\Courses\\
+GSP537\\labs\\7\\data\\ASTER\\AST_L1T_00306182010182058_20150601213428_117818_T.tif;
+X:\\Hostgator\\homework\\Courses\\GSP537\\labs\\7\\data\\ASTER\\
+AST_L1T_00306182010182058_20150601213428_117818_V.tif;
+X:\\Hostgator\\homework\\Courses\\GSP537\\labs\\7\\data\\ASTER\\
+AST_L1T_00307032010053534_20170725140636_29726.hdf;
+X:\\Hostgator\\homework\\Courses\\GSP537\\labs\\7\\data\\ASTER\\
+AST_L1T_00307032010053534_20170725140636_29726_T.tif", ASTER_gdb, "")</pre>
+                </blockquote>
+              </div>
+            </li>
+          </ol>
+        </li>
+        
+        <br><br>
+        
+        <li>
+          
+          <span class="clsH6">Part Two: Redefining The Projection</span><i class="fa fa-check" style="color:green;"></i><br><br>
+          
+          Open ArcMap, and create a new MXD document for this part. Set the layer's spatial reference to GCS_WGS_1984. Load the HDF images into the map. When you select an HDF image, it will contain many sub-datasets. Each is a band of the ASTER data. Sub-datasets 0 to 3 are 
+          band 1 through band 4 respectively. You can find more information about these bands on the 
+          <a href="http://en.wikipedia.org/wiki/Advanced_Spaceborne_Thermal_Emission_and_Reflection_Radiometer" target="_blank">ASTER WIKI</a>.
+          <br>
+          <br><div><img src="Lab7/Image_006.jpg"></div><br><br>
+          Note that if you do not see this dialog box and the dataset is added as a single band, ArcMap is to blame. If this happens, a workaround is to extract necessary bands 
+          using the <code class="blueHuang">ArcToolbox | Data Management Tools | Raster | Raster Processing |</code>&nbsp;&nbsp; 
+          <a href="http://desktop.arcgis.com/en/arcmap/10.5/tools/data-management-toolbox/extract-subdataset.htm" target="_blank">Extract Subdataset</a> tool.
+          <br><br>
+          <div><img src="Lab7/Image_014.png"></div>
+          <br>
+          <div class="acmnMyAnswer"> Python:
+            <blockquote>
+              <pre>
+import arcpy
+arcpy.env.workspace = "X:\Hostgator\homework\Courses\GSP537\labs\7\data\ASTER.gdb"
+
+HDF117818 = "X:\\Hostgator\\homework\\Courses\\GSP537\\labs\\7\\data\\ASTER\\
+            AST_L1T_00306182010182058_20150601213428_117818.hdf"
+Output_Rasters_117818 = "HDF117818"
+HDF29726 = "X:\\Hostgator\\homework\\Courses\\GSP537\\labs\\7\\data\\ASTER\\
+           AST_L1T_00307032010053534_20170725140636_29726.hdf"
+Output_Rasters_29726 = "HDF29726"
+
+arcpy.ExtractSubDataset_management(HDF117818, Output_Rasters_117818, "0;1;2;3;4;5;6;7")
+arcpy.ExtractSubDataset_management(HDF29726, Output_Rasters_29726, "0;1;2;3;4")</pre>
+            </blockquote>
+          </div>
+          <br>
+          Once the raster layers (bands) are added, check their spatial reference. These layers have been defined as <span class="blueHuang">UTM_Zone_12_Northern_Hemisphere</span>, 
+          which is wrong. If you use the ArcMap <span class="blueHuang">distance measuring tool</span> to measure a distance on the image, you will find the result is 
+          ridiculously wrong. This may be an ArcMap error in interpreting metadata of the registered ASTER datasets, but it could be other errors. The <em>true</em> spatial reference 
+          of these images is <span class="blueHuang">GCS on World Geodetic System 1984</span> (<span class="blueHuang">GCS_WGS_1984</span> in ArcMap). <br><br>
+          Until ESRI fixes this bug, every time you work with this data you must redefine the projection for each subdataset (band 1 to band 4) of the two images in ArcMap.<br><br>
+          To do so:
+          <ol type="1">
+            <li>
+              Open the <code class="blueHuang">ArcToolbox | Data Management Tools | Projections and Transformations |</code>&nbsp;&nbsp; 
+              <a href="http://desktop.arcgis.com/en/arcmap/10.5/tools/data-management-toolbox/define-projection.htm" target="_blank">Define Projection</a> tool.
+            </li>
+            <li>
+              Drag an ASTER band (layer) from the <span class="blueHuang">Table of Contents</span> into the <span class="blueHuang">Input Dataset</span> box of the tool. You will 
+              see the incorrect coordinate system <code class="blueHuang">UTM_Zone_12_Northern_Hemisphere</code> in the tool.
+              <br><br><div><img src="Lab7/Image_007.jpg"></div>
+            </li>
+            <li>
+              Select the correct coordinate system in the tool and click OK to redefine the projection.
+              <br><br><div><img src="Lab7/Image_008.jpg"></div>
+              <br><br><div class="acmnMyAnswer"> Python:
+                <blockquote>
+                  <pre>
+import arcpy
+HDF1 = "AST_L1T_00307032010053534_20170725140636_29726.hdf:0"
+HDF2 = "AST_L1T_00306182010182058_20150601213428_117818.hdf:0"
+GCS_WGS_1984 = "GEOGCS['GCS_WGS_1984',DATUM['D_WGS_1984', \
+               SPHEROID['WGS_1984',6378137.0,298.257223563]], \
+               PRIMEM['Greenwich',0.0],UNIT['Degree',0.0174532925199433]]"
+arcpy.DefineProjection_management(HDF1, GCS_WGS_1984)
+arcpy.DefineProjection_management(HDF2, GCS_WGS_1984)</pre>
+                </blockquote>
+              </div>
+            </li>
+            <br>
+            <li>
+              Redefine the correct coordinate system for the first four bands of both downloaded images. Then use the <span class="blueHuang">distance measuring tool</span> to 
+              verify the distances on the images. 
+            </li>
+            <li class="acmnDashedAlert">
+              <span class="greenGreen1">Question 6</span>: what are the width and height of the images?
+              <br><br>
+              <div class="acmnMyAnswer">
+                <table width="99%" border="1" class="blueBold">
+                    <tr>
+                      <th class="blueHuang">Image</th>
+                      <th class="blueHuang">Width</th>
+                      <th class="blueHuang">Height</th>
+                    </tr>
+                    <tr>
+                      <td width="54%">AST_L1T_00307032010053534_20170725140636_29726.hdf:0</td>
+                      <td width="43%">&nbsp;</td>
+                      <td width="3%">&nbsp;</td>
+                    </tr>
+                    <tr>
+                      <td>AST_L1T_00306182010182058_20150601213428_117818.hdf:0</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                    </tr>
+                  </table>
+              </div>
+            </li>
+            <li>
+              In ArcCatalog, create a file geodatabase named <code class="blueHuang">ASTER.gdb</code> in your working folder, and export the eight ASTER bands from ArcMap into it 
+              with the following names:
+              <br>
+              <table width="350">
+                <tr><td>AST17042B1</td><td>Band 1 of pre-fire image</td><td>117818</td></tr>
+                <tr><td>AST17042B2</td><td>Band 2 of pre-fire image</td><td>117818</td></tr>
+                <tr><td>AST17042B3</td><td>Band 3 of pre-fire image</td><td>117818</td></tr>
+                <tr><td>AST17042B4</td><td>Band 4 of pre-fire image</td><td>117818</td></tr>
+                <tr><td>AST14506B1</td><td>Band 1 of post-fire image</td>
+                  <td>29726</td></tr>
+                <tr><td>AST14506B2</td><td>Band 2 of post-fire image</td><td>29726</td></tr>
+                <tr><td>AST14506B3</td><td>Band 3 of post-fire image</td><td>29726</td></tr>
+                <tr><td>AST14506B4</td><td>Band 4 of post-fire image</td><td>29726</td></tr>
+              </table><br>
+              To export a raster layer:
+              <ol type="a">
+                <li>Right click on the layer in the <code class="blueHuang">Table of Contents &gt;&gt; Data &gt;&gt; Export Data...</code></li>
+                <li>Specify your <span class="blueHuang">ASTER.gdb</span> geodatabase as the target location</li>
+                <li>Enter a correct name in the name box</li>
+                <li>Click OK to finish<br><br>
+                  <div><img src="Lab7/Image_009.jpg"></div>
+                </li>
+              </ol>
+            </li>
+          </ol>
+          
+        </li>
+        
+        <br><br>
+        
+        <li>
+          
+          <span class="clsH6">Part Three: Projecting to UTM and Clipping to MBR</span><i class="fa fa-check" style="color:green;"></i><br><br>
+          
+          In this part, you will create a model and a python script to perform the following operations on all the rasters in one run:
+          <ol type="a">
+            <li>
+              Re-project the raster datasets in your <span class="blueHuang">ASTER.gdb</span> from <code class="blueHuang">GCS_WGS_1984</code> to 
+              <span class="blueHuang">UTM zone 12N</span> on <span class="blueHuang">NAD 1983 (NAD_1983_UTM_Zone_12N)</span>
+            </li>
+            <li>Clip all rasters to the Minimum Bounding Rectangle in the Schultz.gdb of the project area</li>
+          </ol>
+          
+          John, you have more than enough programming skill and experience, and I expect you to find this part *dirt simple*, so I'm not going to provide you with step-by-step 
+          instructions on how to do it. But to be fair to the other students in the course, I will provide a few requirements and tips below. Please refer to 
+          <a href="http://dec.deckerd26354.net/homework/Courses/GSP537/labs/6/Lab6.htm" target="_blank">Lab 6</a> if you need help in using ModelBuilder.
+          
+          <ol type="1">
+            <li>Create a toolbox in your ASTER.gdb and save your model with the name <span class="blueHuang">Project_and_clip</span></li>
+            <li>Use an iterator to iterate over all the rasters in your ASTER.gdb which can be set as a workspace variable in the model</li>
+            <li>
+              Use the <code class="blueHuang">ArcToolbox | Data Management Tools | Projections and Transformations | Raster |</code>&nbsp;&nbsp; 
+              <a href="http://desktop.arcgis.com/en/arcmap/10.5/tools/data-management-toolbox/project-raster.htm" target="_blank">Project Raster</a> tool
+              to project the rasters.
+            </li>
+            <li>
+              Save each projected raster in the same geodatabase with a name that is the same as the input raster, but with <span class="blueHuang">_UTM</span> appended to the 
+              end. For example, the projected <span class="blueHuang">AST17042B1</span> will be saved as <span class="blueHuang">AST17042B1_UTM</span>. Therefore, you need to 
+              set the output raster name as <code class="blueHuang">%Name%_UTM</code> when you configure the Project Raster tool.
+            </li>
+            <li>
+              Make sure to set the output coordinate system to <code class="blueHuang">NAD_1983_UTM_Zone_12N</code> and the output cell size to 
+              <span class="blueHuang">15 (meters)</span> in both X and Y directions.
+            </li>
+            <li>
+              Use the <code class="blueHuang">ArcToolbox | Data Management Tools | Raster | Raster Processing |</code>&nbsp;&nbsp; 
+              <a href="http://desktop.arcgis.com/en/arcmap/10.5/tools/data-management-toolbox/clip.htm" target="_blank">Clip</a> tool to clip each UTM raster.
+              <br>Use the <span class="blueHuang">polygon feature class MBR</span> in the <span class="blueHuang">Schultz.gdb</span> geodatabase to define the tool's 
+              output extent.
+            </li>
+            <li>
+              Save the clip output of each raster into the <span class="blueHuang">Schultz.gdb</span> geodatabase with a same name same as its original raster (without the "_UTM"). 
+              For example, raster <span class="blueHuang">AST17042B1</span> in <span class="blueHuang">ASTER.gdb</span> will be saved as the same name in Schultz.gdb. Therefore, 
+              you can set the output name as <code class="blueHuang">%Name%</code> when you configure the clip tool.
+            </li>
+            <li class="acmnDashedAlert">
+              <ul type="disc">
+                <li>
+                  <span class="greenGreen1">Screenshot 1</span>: Take a screenshot of your model and paste it in your turd document
+                  <br><br><div><img src="Lab7/Screenshot1.png" width="1124"></div>
+                </li>
+                <li>
+                  <span class="greenGreen1">Python script 1</span>: Export the python script in the model to a file named <span class="blueHuang">project_and_clip.py</span>
+                  <br><br><div class="acmnMyAnswer"> Python:
+                    <blockquote>
+                      <pre>
+# Import arcpy module
+import arcpy
+
+# Load required toolboxes
+arcpy.ImportToolbox("Model Functions")
+
+# Local variables:
+ASTER_gdb = "X:\\Hostgator\\homework\\Courses\\GSP537\\labs\\7\\data\\ASTER.gdb"
+Name = "AST17042B1"
+AST17042B1 = "X:\\Hostgator\\homework\\Courses\\GSP537\\labs\\7\\data\\ASTER.gdb\\AST17042B1"
+v_Name__UTM = "X:\\Hostgator\\homework\\Courses\\GSP537\\labs\\7\\data\\ASTER.gdb\\%Name%_UTM"
+MBR = "X:\\Hostgator\\homework\\Courses\\GSP537\\labs\\7\\data\\Schultz.gdb\\UTM12N\\MBR"
+v_Name_ = "X:\\Hostgator\\homework\\Courses\\GSP537\\labs\\7\\data\\Schultz.gdb\\%Name%"
+
+# Process: Iterate Rasters
+arcpy.IterateRasters_mb(ASTER_gdb, "AST*", "", "NOT_RECURSIVE")
+
+# Process: Project Raster
+arcpy.ProjectRaster_management(AST17042B1, 
+                               v_Name__UTM, 
+"PROJCS['NAD_1983_UTM_Zone_12N',
+GEOGCS['GCS_North_American_1983',
+DATUM['D_North_American_1983',
+SPHEROID['GRS_1980',
+6378137.0,298.257222101]],
+PRIMEM['Greenwich',0.0],
+UNIT['Degree',0.0174532925199433]],
+PROJECTION['Transverse_Mercator'],
+PARAMETER['False_Easting',500000.0],
+PARAMETER['False_Northing',0.0],
+PARAMETER['Central_Meridian',-111.0],
+PARAMETER['Scale_Factor',0.9996],
+PARAMETER['Latitude_Of_Origin',0.0],UNIT['Meter',1.0]]", 
+"NEAREST", "15 15", "WGS_1984_(ITRF00)_To_NAD_1983", "", 
+"GEOGCS['GCS_WGS_1984',DATUM['D_WGS_1984',SPHEROID['WGS_1984',6378137.0,298.257223563]],
+PRIMEM['Greenwich',0.0],UNIT['Degree',0.0174532925199433]]")
+
+# Process: Clip
+arcpy.Clip_management(v_Name__UTM, "435026.1841 3898226.1314 455134.5576 3919045.5741", v_Name_, MBR, "", "NONE", "NO_MAINTAIN_EXTENT")</pre>
+                    </blockquote>
+                  </div>
+                </li>
+                <li>
+                  <span class="greenGreen1">Question 7</span>: Use the <span class="blueHuang">distance measure</span> tool to measure the width and height of the projected 
+                  full images (before clipping). What are the width and height of the images?
+                  <br><br>
+                  <div class="acmnMyAnswer">
+                    &nbsp;20.04182 X 7.492 km</div>
+                </li>
+              </ul>
+            </li>
+          </ol>
+          
+        </li>
+        
+        <li>
+          
+          <span class="clsH6">Part Four: Creating Composite Band Images</span><i class="fa fa-check" style="color:green;"></i><br><br>
+          
+          Use bands 1, 2, and 3 to create a composite band image for each of the (pre-fire / post-fire) datasets. To do this, use the 
+          <code class="blueHuang">ArcToolbox | Data Management Tools | Raster | Raster Processing |</code>&nbsp;&nbsp; 
+          <a href="http://desktop.arcgis.com/en/arcmap/10.5/tools/data-management-toolbox/composite-bands.htm" target="_blank">Composite Bands</a> tool. 
+          When you add input rasters into the tool, please note that the <em>order matters</em>: you should place band 1 at the bottom and band 3 on top. 
+          Save the output rasters in TIF image format with file names <span class="blueHuang">Prefire_composite.tif</span> and 
+          <span class="blueHuang">Postfire_composite.tif</span> in your working folder.
+          <br><br><div>
+            <table>
+              <tr>
+                <td><img src="Lab7/Image_010.jpg"></td>
+                <td><img src="Lab7/Image_011.jpg"></td>
+                <td><img src="Lab7/Image_012.jpg"></td>
+              </tr>
+              <tr>
+                <td>Composite Bands Tool Dialog Box</td>
+                <td>Pre-fire composite image</td>
+                <td>Post-fire composite image</td>
+              </tr>
+            </table>
+          </div>
+          <br><br>In the resulting composite images, red color indicates the amount of reflection of band 1 (green). The more red in the image, the more green in 
+          the real world. The amount of red is an indication of the well-being of vegetation cover.
+          <div class="acmnDashedAlert">
+            <span class="greenGreen1">Screenshots 2 and 3</span>: Create a screenshot for each composite image and paste it in your turd document.
+            <br><br><div>
+              <table>
+                <tr><td><img src="data/Prefire_composite.png" width="1024"></td></tr>
+                <tr>
+                  <td>Pre-fire composite image</td>
+                </tr>
+                <tr><td><img src="data/Postfire_composite.png" width="1024"></td></tr>
+                <tr><td>Post-fire composite image</td></tr>
+              </table>
+              <div class="acmnMyAnswer"> Python:
+                    <blockquote>
+                      <pre>
+import arcpy
+from arcpy import CompositeBands_management
+ 
+AST17042B4 = "X:\\Hostgator\\homework\\Courses\\GSP537\\labs\\7\\data\\Schultz.gdb\\AST17042B4"
+AST17042B3 = "X:\\Hostgator\\homework\\Courses\\GSP537\\labs\\7\\data\\Schultz.gdb\\AST17042B3"
+AST17042B2 = "X:\\Hostgator\\homework\\Courses\\GSP537\\labs\\7\\data\\Schultz.gdb\\AST17042B2"
+AST17042B1 = "X:\\Hostgator\\homework\\Courses\\GSP537\\labs\\7\\data\\Schultz.gdb\\AST17042B1"
+Prefire_composite_tif = "X:\\Hostgator\\homework\\Courses\\GSP537\\labs\\7\\data\\Prefire_composite.tif"
+
+AST14506B4 = "X:\\Hostgator\\homework\\Courses\\GSP537\\labs\\7\\data\\Schultz.gdb\\AST14506B4"
+AST14506B1 = "X:\\Hostgator\\homework\\Courses\\GSP537\\labs\\7\\data\\Schultz.gdb\\AST14506B1"
+AST14506B2 = "X:\\Hostgator\\homework\\Courses\\GSP537\\labs\\7\\data\\Schultz.gdb\\AST14506B2"
+AST14506B3 = "X:\\Hostgator\\homework\\Courses\\GSP537\\labs\\7\\data\\Schultz.gdb\\AST14506B3"
+Postfire_composite_tif = "X:\\Hostgator\\homework\\Courses\\GSP537\\labs\\7\\data\\Postfire_composite.tif"
+
+# Process the prefire bands
+CompositeBands_management("X:\\Hostgator\\homework\\Courses\\GSP537\\labs\\7\\data\\Schultz.gdb\\AST17042B4;
+                           X:\\Hostgator\\homework\\Courses\\GSP537\\labs\\7\\data\\Schultz.gdb\\AST17042B3;
+                           X:\\Hostgator\\homework\\Courses\\GSP537\\labs\\7\\data\\Schultz.gdb\\AST17042B2;
+                           X:\\Hostgator\\homework\\Courses\\GSP537\\labs\\7\\data\\Schultz.gdb\\AST17042B1", 
+                           Prefire_composite_tif
+                         )
+
+# Process the postfire bands
+CompositeBands_management("X:\\Hostgator\\homework\\Courses\\GSP537\\labs\\7\\data\\Schultz.gdb\\AST14506B4;
+                           X:\\Hostgator\\homework\\Courses\\GSP537\\labs\\7\\data\\Schultz.gdb\\AST14506B1;
+                           X:\\Hostgator\\homework\\Courses\\GSP537\\labs\\7\\data\\Schultz.gdb\\AST14506B2;
+                           X:\\Hostgator\\homework\\Courses\\GSP537\\labs\\7\\data\\Schultz.gdb\\AST14506B3", 
+                           Postfire_composite_tif
+                         )</pre>
+                    </blockquote>
+                  </div>
+            </div>         
+          </div>
+        </li>
+        
+        <li>
+          
+          <span class="clsH6">Part Five: Computing NDVI</span><i class="fa fa-check" style="color:green;"></i><br><br>
+          
+          NDVI is an easy and popular index of vegetation in remote sensing. With the data obtained from the <span class="blueHuang">ASTER</span> dataset, 
+          you are ready to calculate the NDVI just before and just after the fire. NDVI is calculated using the following formula:
+          <blockquote><code>
+           
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18.079ex" height="5.318ex" viewBox="0 -1437.2 7784 2289.7" role="img" focusable="false" style="vertical-align: -1.98ex;" aria-hidden="true">
+<defs id="MathJax_SVG_glyphs"><path stroke-width="1" id="MJMATHI-78" d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z"></path><path stroke-width="1" id="MJMAIN-3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"></path><path stroke-width="1" id="MJMAIN-73" d="M295 316Q295 356 268 385T190 414Q154 414 128 401Q98 382 98 349Q97 344 98 336T114 312T157 287Q175 282 201 278T245 269T277 256Q294 248 310 236T342 195T359 133Q359 71 321 31T198 -10H190Q138 -10 94 26L86 19L77 10Q71 4 65 -1L54 -11H46H42Q39 -11 33 -5V74V132Q33 153 35 157T45 162H54Q66 162 70 158T75 146T82 119T101 77Q136 26 198 26Q295 26 295 104Q295 133 277 151Q257 175 194 187T111 210Q75 227 54 256T33 318Q33 357 50 384T93 424T143 442T187 447H198Q238 447 268 432L283 424L292 431Q302 440 314 448H322H326Q329 448 335 442V310L329 304H301Q295 310 295 316Z"></path><path stroke-width="1" id="MJMAIN-69" d="M69 609Q69 637 87 653T131 669Q154 667 171 652T188 609Q188 579 171 564T129 549Q104 549 87 564T69 609ZM247 0Q232 3 143 3Q132 3 106 3T56 1L34 0H26V46H42Q70 46 91 49Q100 53 102 60T104 102V205V293Q104 345 102 359T88 378Q74 385 41 385H30V408Q30 431 32 431L42 432Q52 433 70 434T106 436Q123 437 142 438T171 441T182 442H185V62Q190 52 197 50T232 46H255V0H247Z"></path><path stroke-width="1" id="MJMAIN-6E" d="M41 46H55Q94 46 102 60V68Q102 77 102 91T102 122T103 161T103 203Q103 234 103 269T102 328V351Q99 370 88 376T43 385H25V408Q25 431 27 431L37 432Q47 433 65 434T102 436Q119 437 138 438T167 441T178 442H181V402Q181 364 182 364T187 369T199 384T218 402T247 421T285 437Q305 442 336 442Q450 438 463 329Q464 322 464 190V104Q464 66 466 59T477 49Q498 46 526 46H542V0H534L510 1Q487 2 460 2T422 3Q319 3 310 0H302V46H318Q379 46 379 62Q380 64 380 200Q379 335 378 343Q372 371 358 385T334 402T308 404Q263 404 229 370Q202 343 195 315T187 232V168V108Q187 78 188 68T191 55T200 49Q221 46 249 46H265V0H257L234 1Q210 2 183 2T145 3Q42 3 33 0H25V46H41Z"></path><path stroke-width="1" id="MJMATHI-3C0" d="M132 -11Q98 -11 98 22V33L111 61Q186 219 220 334L228 358H196Q158 358 142 355T103 336Q92 329 81 318T62 297T53 285Q51 284 38 284Q19 284 19 294Q19 300 38 329T93 391T164 429Q171 431 389 431Q549 431 553 430Q573 423 573 402Q573 371 541 360Q535 358 472 358H408L405 341Q393 269 393 222Q393 170 402 129T421 65T431 37Q431 20 417 5T381 -10Q370 -10 363 -7T347 17T331 77Q330 86 330 121Q330 170 339 226T357 318T367 358H269L268 354Q268 351 249 275T206 114T175 17Q164 -11 132 -11Z"></path><path stroke-width="1" id="MJMAIN-2F" d="M423 750Q432 750 438 744T444 730Q444 725 271 248T92 -240Q85 -250 75 -250Q68 -250 62 -245T56 -231Q56 -221 230 257T407 740Q411 750 423 750Z"></path><path stroke-width="1" id="MJMATHI-75" d="M21 287Q21 295 30 318T55 370T99 420T158 442Q204 442 227 417T250 358Q250 340 216 246T182 105Q182 62 196 45T238 27T291 44T328 78L339 95Q341 99 377 247Q407 367 413 387T427 416Q444 431 463 431Q480 431 488 421T496 402L420 84Q419 79 419 68Q419 43 426 35T447 26Q469 29 482 57T512 145Q514 153 532 153Q551 153 551 144Q550 139 549 130T540 98T523 55T498 17T462 -8Q454 -10 438 -10Q372 -10 347 46Q345 45 336 36T318 21T296 6T267 -6T233 -11Q189 -11 155 7Q103 38 103 113Q103 170 138 262T173 379Q173 380 173 381Q173 390 173 393T169 400T158 404H154Q131 404 112 385T82 344T65 302T57 280Q55 278 41 278H27Q21 284 21 287Z"></path><path stroke-width="1" id="MJMATHI-68" d="M137 683Q138 683 209 688T282 694Q294 694 294 685Q294 674 258 534Q220 386 220 383Q220 381 227 388Q288 442 357 442Q411 442 444 415T478 336Q478 285 440 178T402 50Q403 36 407 31T422 26Q450 26 474 56T513 138Q516 149 519 151T535 153Q555 153 555 145Q555 144 551 130Q535 71 500 33Q466 -10 419 -10H414Q367 -10 346 17T325 74Q325 90 361 192T398 345Q398 404 354 404H349Q266 404 205 306L198 293L164 158Q132 28 127 16Q114 -11 83 -11Q69 -11 59 -2T48 16Q48 30 121 320L195 616Q195 629 188 632T149 637H128Q122 643 122 645T124 664Q129 683 137 683Z"></path><path stroke-width="1" id="MJMATHI-6E" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z"></path><path stroke-width="1" id="MJMATHI-64" d="M366 683Q367 683 438 688T511 694Q523 694 523 686Q523 679 450 384T375 83T374 68Q374 26 402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487H491Q506 153 506 145Q506 140 503 129Q490 79 473 48T445 8T417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157Q33 205 53 255T101 341Q148 398 195 420T280 442Q336 442 364 400Q369 394 369 396Q370 400 396 505T424 616Q424 629 417 632T378 637H357Q351 643 351 645T353 664Q358 683 366 683ZM352 326Q329 405 277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q233 26 290 98L298 109L352 326Z"></path><path stroke-width="1" id="MJMATHI-76" d="M173 380Q173 405 154 405Q130 405 104 376T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Q21 294 29 316T53 368T97 419T160 441Q202 441 225 417T249 361Q249 344 246 335Q246 329 231 291T200 202T182 113Q182 86 187 69Q200 26 250 26Q287 26 319 60T369 139T398 222T409 277Q409 300 401 317T383 343T365 361T357 383Q357 405 376 424T417 443Q436 443 451 425T467 367Q467 340 455 284T418 159T347 40T241 -11Q177 -11 139 22Q102 54 102 117Q102 148 110 181T151 298Q173 362 173 380Z"></path><path stroke-width="1" id="MJMATHI-69" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path><path stroke-width="1" id="MJMATHI-4E" d="M234 637Q231 637 226 637Q201 637 196 638T191 649Q191 676 202 682Q204 683 299 683Q376 683 387 683T401 677Q612 181 616 168L670 381Q723 592 723 606Q723 633 659 637Q635 637 635 648Q635 650 637 660Q641 676 643 679T653 683Q656 683 684 682T767 680Q817 680 843 681T873 682Q888 682 888 672Q888 650 880 642Q878 637 858 637Q787 633 769 597L620 7Q618 0 599 0Q585 0 582 2Q579 5 453 305L326 604L261 344Q196 88 196 79Q201 46 268 46H278Q284 41 284 38T282 19Q278 6 272 0H259Q228 2 151 2Q123 2 100 2T63 2T46 1Q31 1 31 10Q31 14 34 26T39 40Q41 46 62 46Q130 49 150 85Q154 91 221 362L289 634Q287 635 234 637Z"></path><path stroke-width="1" id="MJMATHI-49" d="M43 1Q26 1 26 10Q26 12 29 24Q34 43 39 45Q42 46 54 46H60Q120 46 136 53Q137 53 138 54Q143 56 149 77T198 273Q210 318 216 344Q286 624 286 626Q284 630 284 631Q274 637 213 637H193Q184 643 189 662Q193 677 195 680T209 683H213Q285 681 359 681Q481 681 487 683H497Q504 676 504 672T501 655T494 639Q491 637 471 637Q440 637 407 634Q393 631 388 623Q381 609 337 432Q326 385 315 341Q245 65 245 59Q245 52 255 50T307 46H339Q345 38 345 37T342 19Q338 6 332 0H316Q279 2 179 2Q143 2 113 2T65 2T43 1Z"></path><path stroke-width="1" id="MJMATHI-52" d="M230 637Q203 637 198 638T193 649Q193 676 204 682Q206 683 378 683Q550 682 564 680Q620 672 658 652T712 606T733 563T739 529Q739 484 710 445T643 385T576 351T538 338L545 333Q612 295 612 223Q612 212 607 162T602 80V71Q602 53 603 43T614 25T640 16Q668 16 686 38T712 85Q717 99 720 102T735 105Q755 105 755 93Q755 75 731 36Q693 -21 641 -21H632Q571 -21 531 4T487 82Q487 109 502 166T517 239Q517 290 474 313Q459 320 449 321T378 323H309L277 193Q244 61 244 59Q244 55 245 54T252 50T269 48T302 46H333Q339 38 339 37T336 19Q332 6 326 0H311Q275 2 180 2Q146 2 117 2T71 2T50 1Q33 1 33 10Q33 12 36 24Q41 43 46 45Q50 46 61 46H67Q94 46 127 49Q141 52 146 61Q149 65 218 339T287 628Q287 635 230 637ZM630 554Q630 586 609 608T523 636Q521 636 500 636T462 637H440Q393 637 386 627Q385 624 352 494T319 361Q319 360 388 360Q466 361 492 367Q556 377 592 426Q608 449 619 486T630 554Z"></path><path stroke-width="1" id="MJMAIN-2212" d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"></path><path stroke-width="1" id="MJMAIN-2B" d="M56 237T56 250T70 270H369V420L370 570Q380 583 389 583Q402 583 409 568V270H707Q722 262 722 250T707 230H409V-68Q401 -82 391 -82H389H387Q375 -82 369 -68V230H70Q56 237 56 250Z"></path></defs>
+<g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#MJMATHI-6E" x="0" y="0"></use><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#MJMATHI-64" x="600" y="0"></use><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#MJMATHI-76" x="1124" y="0"></use><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#MJMATHI-69" x="1609" y="0"></use><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#MJMAIN-3D" x="2232" y="0"></use><g transform="translate(3011,0)"><g transform="translate(397,0)"><rect stroke="none" width="4254" height="60" x="0" y="220"></rect><g transform="translate(60,676)"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#MJMATHI-4E" x="0" y="0"></use><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#MJMATHI-49" x="888" y="0"></use><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#MJMATHI-52" x="1393" y="0"></use><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#MJMAIN-2212" x="2374" y="0"></use><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#MJMATHI-52" x="3375" y="0"></use></g><g transform="translate(60,-686)"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#MJMATHI-4E" x="0" y="0"></use><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#MJMATHI-49" x="888" y="0"></use><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#MJMATHI-52" x="1393" y="0"></use><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#MJMAIN-2B" x="2374" y="0"></use><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#MJMATHI-52" x="3375" y="0"></use></g></g></g></g>
+</svg>
+            </code></blockquote>
+          Where NIR is the amount of near infrared and R is the amount of red light. With the ASTER data in this lab, you will <span class="blueHuang">use band 3 for NIR and use 
+          band 2 for R to compute NDVI</span>. <br><br>
+          The following procedure guides you through the calculation of NDVI for the pre-fire and post-fire conditions using Python scripting.
+          <br><br>
+          <ol type="1">
+            <li>Load the two bands of each dataset into ArcMap and make sure the Spatial Analyst extension is checked.<i class="fa fa-check" style="color:green;"></i></li>
+            <li>
+              Take a look at the geoprocessing environment: menu Geoprocessing &gt;&gt; Environments… Pay attention to output workspace, extent, and cell 
+              size etc. You may not need to make changes to the environment.
+              </li>
+            <li>
+              Open a python window and enter the following commands.
+              <br>
+              <br>
+              <div class="acmnMyAnswer"> Python:
+                <blockquote>
+                  <pre>
+import arcpy
+from arcpy import env
+from arcpy.sa import *
+
+env.workspace = "X:\Hostgator\homework\Courses\GSP537\labs\7\data\Schultz.gdb"
+env.overwriteOutput = True</pre>
+                </blockquote>
+              </div>
+              <i class="fa fa-check" style="color:green;"></i>
+            </li>
+            <li>
+              Use the following four lines of code to compute the pre-fire NDVI. The first two lines create a raster object each and assign it to a 
+              variable. Therefore, variable <i>prered </i>holds a raster object for band 2 and variable <i>prenir </i>holds a raster object for band 3 of 
+              the pre-fire dataset.
+              <br><br><div class="acmnMyAnswer"> Python:
+                <blockquote>
+                  <pre>
+import arcpy
+from arcpy import env
+from arcpy.sa import *
+
+env.workspace = "X:\Hostgator\homework\Courses\GSP537\labs\7\data\Schultz.gdb"
+env.overwriteOutput = True
+
+prered = Raster("AST17042B2")
+prenir = Raster("AST17042B3")
+prendvi = (prenir * 1.0 - prered) / (prenir + prered)
+prendvi.save("prendvi")</pre>
+                </blockquote>
+              </div>
+              <br>
+              The third line performs calculation. In Python, when an integer number is divided by an integer number, the result is an integer. For 
+              example, 5 / 3 results 1. Since cell values of both input rasters are integers, any arithmetic operation with these rasters would produce 
+              integer results. In order to obtain floating-point NDVI values, the first raster layer <i>prenir </i>is multiplied by a floating-point 
+              number 1.0 to make cell values floating point numbers – a workaround that cheats Python.<br><br>
+              After executing the third line, an NDVI raster layer will be created and added into ArcMap. The raster is temporarily hold by variable 
+              <i>prendvi</i>. To permanently save the resulting NDVI raster, the last line calls the Save method of the raster object to save it as a name 
+              specified in the parentheses ("prendvi"). The name to save does not have to be same as the variable name, but it must be double quoted. After 
+              saving the raster, check your workspace to see if the raster exists (you may need to refresh the geodatabase).
+              <i class="fa fa-check" style="color:green;"></i>
+              </li>
+            <li>
+              Follow example of the last four lines of code to calculate NDVI for the post-fire dataset and save the result raster as "postndvi" in your 
+              workspace. If there is any issue in displaying the resulting rasters, you may have to close ArcMap and reopen it.
+              <br><br><div class="acmnMyAnswer"> Python:
+                <blockquote>
+                  <pre>
+import arcpy
+from arcpy import env
+from arcpy.sa import *
+
+env.workspace = "X:\Hostgator\homework\Courses\GSP537\labs\7\data\Schultz.gdb"
+env.overwriteOutput = True
+
+postred = Raster("AST14506B2")
+postnir = Raster("AST14506B3")
+postndvi = (postnir * 1.0 - postred) / (postnir + postred)
+postndvi.save("postndvi")</pre>
+                </blockquote>
+              </div>
+            <i class="fa fa-check" style="color:green;"></i>
+            </li>
+            <li>
+              In the Properties window of the post-fire NDVI raster layer, symbolize the layer by classifying it into five classes using Natural Breaks 
+              (Jenks) method and render it by color ramp from green to red. The post-fire NDVI raster layer should look similar to the following.
+              <br><br><div>
+                <table>
+                  <tr>
+                    <td><img width="420" height="435" alt="image" src="Lab7/Image_016.png"></td>
+                    <td><img src="Lab7/Screenshot4.png" width="370"></td>
+                    <td><img src="Lab7/Postndvi.png" width="370"></td>
+                  </tr>
+                  <tr>
+                    <td align="center">Example</td>
+                    <td align="center">Pre-fire</td>
+                    <td align="center">Post-fire</td>
+                  </tr>
+                </table>
+              </div>
+              <i class="fa fa-check" style="color:green;"></i>
+            </li>
+            <li class=" acmnDashedAlert">
+              <span class="greenGreen1">Screenshot</span> 4: Create a screenshot of the pre-fire NDVI raster classified into five classes by Natural 
+              Breaks (Jenks) and rendered by color ramp from green to red (similar to the post-fire NDVI raster above).
+              <i class="fa fa-check" style="color:green;"></i>
+            </li>
+            <li>
+              To find vegetation changes caused by the fire, a differential NDVI between the pre-fire and post- fire NDVI can be calculated by 
+              subtracting the post-fire NDVI from the pre-fire NDVI. Perform the operation in Python and save the result as raster "diffndvi" in 
+              Schultz.gdb.
+              <blockquote><code>
+                dndvi = prendvi - postndvi
+              </code></blockquote>
+                            Follow example of the last four lines of code to calculate NDVI for the post-fire dataset and save the result raster as "postndvi" in your 
+              workspace. If there is any issue in displaying the resulting rasters, you may have to close ArcMap and reopen it.
+              <br><br><div class="acmnMyAnswer"> Python:
+                <blockquote>
+                  <pre>
+import arcpy
+from arcpy import env
+from arcpy.sa import *
+
+env.workspace = "i:\Documents\ArcGIS\Default.gdb"
+env.overwriteOutput = True
+
+prendvi  = Raster("SHULTZ/prendvi")
+postndvi = Raster("SHULTZ/postndvi")
+
+dndvi = prendvi - postndvi
+
+dndvi.save("diffndvi")</pre>
+                </blockquote>
+              </div>
+            <i class="fa fa-check" style="color:green;"></i>
+            </li>
+            <li class="acmnDashedAlert">
+              <span class="greenGreen1">Screenshot 5</span>: Create a screenshot of the resulting differential NDVI raster rendered in a gray tone 
+              color ramp.
+              <br><br>
+              <div><img src="Lab7\Diffndvi.png" width="1024"></div>
+              <br><br>
+              <span class="greenGreen1">Question 8</span>: What does bright tone in the differential NDVI raster indicate?
+              <br><br>
+              <div class="acmnMyAnswer">
+                Lack of vegetation, burned by the fire
+              </div>
+            </li>
+            <li>
+              Export your python code and save it to file 
+                <span class="blueHuang">compute_ndvi.py</span> in your working folder. After exporting the script, edit the script with Python IDLE to remove any unnecessary line and 
+              add the following code as the third line in the script:
+<blockquote><code>arcpy.CheckOutExtension("Spatial")</code></blockquote>
+              This line checks out the Spatial Analyst extension so your script to work independent of ArcMap.
+              </li>
+            <li class="acmnDashedAlert">
+              <span class="greenGreen1">Python script 2</span>: submit python script <span class="blueHuang">compute_ndvi.py</span> along with other required items. 
+              <br><br><div class="acmnMyAnswer"> Python:
+                <blockquote>
+                  <pre>
+import arcpy
+from arcpy import env
+from arcpy.sa import *
+
+arcpy.CheckOutExtension("Spatial")
+
+env.workspace = "X:\Hostgator\homework\Courses\GSP537\labs\7\data\Schultz.gdb"
+env.overwriteOutput = True
+
+prered = Raster("AST17042B2")
+prenir = Raster("AST17042B3")
+prendvi = (prenir * 1.0 - prered) / (prenir + prered)
+prendvi.save("prendvi")
+
+postred = Raster("AST14506B2")
+postnir = Raster("AST14506B3")
+postndvi = (postnir * 1.0 - postred) / (postnir + postred)
+postndvi.save("postndvi")
+
+prendvi  = Raster("SHULTZ/prendvi")
+postndvi = Raster("SHULTZ/postndvi")
+
+dndvi = prendvi - postndvi
+
+dndvi.save("diffndvi")</pre>
+                </blockquote>
+              </div>
+            </li>
+          </ol>
+          
+        </li>
+        
+        <li class="acmnDashedAlert">
+          
+          <span class="clsH6 greenGreen1">Part Six: The Poster</span><i class="fa fa-check" style="color:green;"></i><br><br>
+
+          Create a poster in PDF format to present your work in this lab. Include in your poster an introduction to NDVI, data acquisition and data 
+          processing, results and result interpretation.
+        </li>
+        
+      </ol>
+      
+    </article>
+    
+  </td></tr></table>
+  </td></tr></table>
+        
+  </body>
+  </html>
