@@ -1,0 +1,2035 @@
+
+
+<!DOCTYPE html>
+
+<html xml:lang="en-US" dir="ltr" lang="en-US">
+
+  <head>
+    
+    <!-- Slowly's Standard Webpage last updated 03-14-2018 -->
+        
+    <title>GSP 537 Sp 2018 Lab 6</title>
+
+    <meta name="generator" content="Dreamweaver CC 2015">
+    <meta name="author" content="John Bonifas">
+    <meta name="created" content="As the pyramids were being built">
+    <meta name="changedby" content="Slowly">
+    <meta name="changed" content="09-08-2017">
+    
+    <meta charset="utf-8">
+        
+    <meta name="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="content-language" content="en-us">
+    
+    <!-- for devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="800">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="cleartype" content="on">
+    
+    <!-- default - nosharing -->
+    <meta name="robots" content="noindex, nofollow, noarchive, nocache, nosnippet, noodp, noydir">
+    <meta name="Googlebot" content="noindex, nofollow, noarchive, nocache, nosnippet, noodp, noydir">
+    <meta name="google" content="notranslate">
+    
+    <!-- uncomment this and the next 2 comment lines for sharing  
+    <meta name="robots" content="index, follow, archive, cache, snippet, odp, ydir">
+    <meta name="googlebot" content="index, follow, archive, cache, snippet, odp, ydir">
+    <meta name="google" content="notranslate">
+    
+    <!-- 
+      Facebook/Google OpenGraph for sharing posts -- see ogp.me. og:url and canonical must be the same 
+      Facebook Sharing Debugger: https://developers.facebook.com/tools/debug/ 
+      all the og: properties can be found at: http://ogp.me/ns/ogp.me.ttl
+    
+    <meta property="fb:app_id"       content="874872455992127"
+    <link rel="canonical"            href="http://www.deckerd26354.net/shared/MyFonts.htm">
+    <meta property="og:url"          content="http://www.deckerd26354.net/shared/MyFonts.htm">
+    <meta property="og:site_name"    content="Pudnik's Virtual Server">
+    <meta property="og:type"         content="article">
+    <meta property="og:title"        content="My Online Fonts">
+    <meta property="og:description"  content="For web developers">
+    <meta property="og:image"        content="http://www.deckerd26354.net/shared/assets/canonical_graduate.png">
+    <meta property="og:image:type"   content="image/png">
+    <meta property="og:image:height" content="320">
+    <meta property="og:image:width"  content="200">
+    <meta property="og:locale"       content="en_US">
+    <meta property="article:author"  content="Slowly">
+    
+    <link rel="icon" type="image/x-icon"          href="http://www.deckerd26354.net/shared/assets/favicon_graduate.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="http://www.deckerd26354.net/shared/assets/favicon_graduate.ico">
+    <link rel="apple-touch-icon"                  href="http://www.deckerd26354.net/shared/assets/favicon_graduate.ico">     
+    <link rel="apple-touch-icon" sizes="48x48"    href="http://www.deckerd26354.net/shared/assets/favicon_graduate.ico"> 
+    <link rel="apple-touch-icon" sizes="76x76"    href=""> 
+    <link rel="apple-touch-icon" sizes="120x120"  href=""> 
+    <link rel="apple-touch-icon" sizes="152x152"  href=""> 
+    <link rel="apple-touch-icon" sizes="180x180"  href="">  
+    -->
+    
+    <!-- My OpenAuth...I'll fix this someday -->
+    <!-- <link rel="openid.server" href="http://www.myopenid.com/server"> -->
+    <!-- <link rel="openid.delegate" href="http://Pudnik.myopenid.com/"> -->
+    
+   <!-- ***************************************************************************** 
+    ONLINE DHTML EDITORS
+      pagedemos.com
+      codepen.io
+      jsfiddle.net
+  ******************************************************************************** -->
+    
+    
+   <!-- ***************************************************************************** 
+    FRAMEWORKS AND INCLUDES
+      servers
+        cdnjs.cloudflare.com
+        apis.google.com
+    NEW: ALL ARE COMMENTED OUT UNTIL SPECIFICALLY USED DUE TO SLOWNESS IN LOADING
+  ******************************************************************************** -->
+    
+  <!-- My Webfonts Collection for HTML 5 10-16-2016 -->
+  <link rel="stylesheet" type="text/css" href="http://www.deckerd26354.net/shared/MyFonts.css"> 
+  
+  <!-- Normalizer: 'normalizes' certain HTML tags to make it even better looking and printing. Crashes my Dreamweaver for OSX, and was removed.
+
+  <!-- bootstrap. NOTE: bootstrap.js will steal your fonts and font sizes; use IDs to override it. 
+       css crashes my Dreamweaver for OSX, and was removed. --> 
+
+  <!-- a much lighter CSS reset system than bootstrap. But it messes with my borders and puts an unwanted HR, and was removed. -->
+  <!-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/shoelace-css/1.0.0-beta9/shoelace.css"> -->
+  
+  <!-- Wenk: a tooltip API. Crashed my Dreamweaver for OSX, and was removed. -->
+  
+  <!-- Kute: an HTML5 animation API. Error in javascript version 1.6.2, so removed -->
+  
+  <!-- 
+    font-awesome: hundreds of icons and SVG fonts (current version as of 12-20-2017) 
+    HOM: http://fontawesome.[io|com]
+    
+    USAGE
+    -----
+    with version 5, a new recommended CDN https://use.fontawesome.com/releases/v5.0.2/css/all.css
+    with version 4, a new syntax for icon usage is presented, and is incompatible with version 3 syntax. It is:
+    <i class="fa {IconClassName} {modifier, i.e. fa-3x} {...}"></i> 
+    CDN = https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css
+  -->
+  <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
+
+  <!-- jQuery 
+  <script language="javascript" type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script> -->
+  
+  <!-- Angular JS: a huge, hugely popular front-end framework but has the best messageboxes in the world 
+  <script language="javascript" type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script> -->
+  
+  <!-- PushJs: Send notifications just like legit spammers and pavlov dogs do
+  <script language="javascript" type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/push.js/1.0.4/push.min.js"></script> -->
+  
+  <!-- fotorama jquery-based photo gallery instructions are at fotorama.io 
+  <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css">
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script> -->
+
+  <!-- Velocity: jQuery plugin for high performance animation . This has been replaced by propel. 
+  <script language="javascript" type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.min.js"></script> -->
+  
+  <!-- Vue: front-end framework. This has been replaced by Semantic-UI. 
+  <script language="javascript" type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.2/vue.min.js"></script> 
+  
+  <!-- ExtJS: front-end framework. This has been replaced by Semantic-UI.
+  <script language="javascript" type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/extjs/6.2.0/ext-all.js"></script>
+  
+  <!-- Ionic: mobile framework 
+  <script language="javascript" type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ionic/1.3.2/js/ionic.min.js"></script> -->
+  
+  <!-- Google+ 
+  <script language="javascript" type="application/javascript" src="https://apis.google.com/js/plusone.js"></script> -->
+  
+  <!-- mootools: An Object-Oriented JavaScript framework designed for the intermediate to advanced JavaScript developer 
+  <script language="javascript" type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mootools/1.6.0/mootools-core.js"></script> -->
+    
+  <!-- Gauge: HTML 5 canvas gauges 
+  <script language="javascript" type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gauge.js/1.2.1/gauge.min.js"></script> -->
+       
+  <!-- Three: HTML 5 WebGL 3D framework 
+  <script language="javascript" type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/three.js/87/three.min.js"></script> -->
+
+  <!-- Mathquill: equations in HTML   
+  <script language="javascript" type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathquill/0.10.1/mathquill.min.js"></script> -->
+
+  <!-- Mathjax: math equations in <span> nests   
+  <script language="javascript" type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js"></script> -->
+  
+  <!-- Propel: To see how easy it is to do scientific computing with this framework, see: http://propelml.org/ 
+  <script language="javascript" type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/propel/3.2.0/propel.js"></script> -->
+
+  <!-- Semantic-UI: said to be the most innnovative frontend CSS UI as of 3-14-2018. As of version 2.3 it includes FontAwesome. 
+       MAY CAUSE SLOWNESS IN LOADING INTO DREAMWEAVER
+       https://cdnjs.com/libraries/semantic-ui 
+  <script language="javascript" type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.0/semantic.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/semantic-ui-css@2.3.0/semantic.css"> -->
+	  
+  <!-- MY CUSTOM CSS ---------------------------------------------------------------------------------------------------------- -->
+     
+  <style type="text/css">
+   
+    /* last updated 03-13-2018 */
+    /* local css repository: ~/SourceCode/SourceAndProjects/CSS */
+    /* the HTML 5 140 reserved color names grouped by color: https://www.w3schools.com/colors/colors_groups.asp
+    @charset "utf-8";
+    
+    /* Redefines */
+    
+    BODY{font-family:Arial;max-width:800px;font-size:10pt;}
+    P, TD, TH{font-family:Arial;font-size:10pt;}
+    ASIDE{display:block;margin:15px;}
+    HEADER{display:block;text-align:center;}
+    NAV
+    {
+      display:block;
+      padding:10px;
+      font-size:10px;
+      margin:5px;
+      text-align:center;
+      background-color:transparent;
+    }
+    SECTION{max-width:98%;padding:10px;}
+    ARTICLE{margin: 10px;padding: 10px;border-radius: 10px;}
+    FOOTER{clear: both;display: block;padding: 15px;}
+    H1,H2,H3,H4,H5,H6{page-break-after:avoid;}
+    LI{padding:5px;}
+    CODE{font-family:courier;font-size:10pt;}
+    PRE{font-size:9pt; padding:2px;width:600px;}
+    FIGURE{padding:8px;}
+    FIGIMAGE{break-after:always;}
+    FIGCAPTION{margin: 2px;font-size: 11px;font-style:italic;color:#444;}
+    
+    A:LINK{}    /* normal */
+    A:VISITED{} /* visited */
+    A:HOVER{}   /* hovering */
+    A:ACTIVE{}  /* click */
+
+    /* IDs */
+    
+    #container{width: 1024px;}
+    #content{width: 99%; border: 1px solid green;}
+    #rootCell{ text-align:left; vertical-align:text-top;}
+    
+    /* 
+      The bootstrap framework steals your custom fonts and font sizes.
+      Using IDs here will override bootstrap's changes because IDs have
+      the highest CSS priority.
+    */
+    #bootstrap-font-override{font-family: Arial;}
+        
+    /* Classes */
+        
+    /* My classes that I've developed myself */
+    
+    /* classes I use all the time */
+    .acmnSnippet {font-weight:bold;font-style:italic;}
+    .acmnMyAssignment{border:1px green solid;font-weight:bold;}
+    .classDate{border:2px red solid;font-weight:bolder;text-decoration:underline;}
+    .acmnMyAnswer{border:1px black solid;}
+    .acmnDoneLight{background-color: LightGrey;}
+    .acmnDoneDark{background-color: DarkGrey;}
+    .acmnGroupProject{background-color: rgb(170, 255, 170);}
+    .acmnCodeIt{font-family:courier;}
+    .acmnUnderlineIt{text-decoration:underline;}
+    .acmnImportant1{color:red; font-weight:bold; font-size:12pt;font-family:sans-serif;}
+    .acmnImportant2{font-family:verdana;font-weight:bold;color:red;}
+    .acmnKeywords {color: #D31242;font-size: 14pt;}
+    
+    .redSmall{line-height:18.0pt;font-size:8pt;color:#A81817;}
+    .redLight{color:#ff3300;}
+    .greyBehind 
+    {
+      background-color: #555;
+      color: white;
+      display:block;
+      margin: 10px;
+      padding: 10px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      border-radius: 10px;
+      -webkit-box-shadow: 2px 2px 20px #888;
+      -webkit-transform: rotate(0deg);
+      -moz-box-shadow: 2px 2px 20px #888;
+      -moz-transform: rotate(0deg);
+    }
+
+    /* for backward compatibility only. Use figure and figcaption instead */
+    .acmnImageCaption{margin: 2px;font-size: 12px;font-style:italic;}  
+    .greyAddressNormal{font-size:8pt;color:gray;}
+    .greyAddressItalic{font-size:12px;font-weight: 300;color:gray;font-style:italic}
+    .LimeLine{border-bottom: 2px solid #0bce7e;width:200px;}
+    .pinkItalic{font-style:italic;color:#EF118C;}
+    .acmnCursiveHandwriting{font-family: 'Edwardian Script ITC'; font-size:18pt; color: Navy;}
+    .greenGreen1{font-weight:bold; color:#3B783B;}
+    .asideLeft{float:left;border:1px solid #999;}
+    .asideRight{float:right;border:1px solid #999;}
+    .blueCornflower{background-color: #8CA4D4;color: #2F2F65;font-weight: bold;font-size: 18px;}
+    
+    /* My header classes */
+    
+    .clsH0{font-size:72pt;font-weight:bolder;}
+    .clsH1{font-size:64pt;font-weight:bolder;}
+    .clsH2{font-size:48pt;font-weight:bolder;}
+    .clsH3{font-size:24pt;font-weight:bolder;}
+    .clsH4{font-size:18pt;font-weight:bolder;}
+    .clsH5{font-size:16pt;font-weight:bolder;}
+    .clsH6{font-size:14pt;font-weight:bold;}
+    .clsH7{font-size:12pt;font-weight:bold;}
+    .clsH8{font-size:10pt;font-weight:bold;}
+    .clsH9{font-size:8pt;font-weight:bold;}
+
+    /* stolen from CPI111 ASU Fall 2013 */
+    .greenLightBig{color: #92C500;font-family: serif;font-weight: bold;font-size: 18pt;}
+    .greenOliveForeground{color:#556B2F;}
+    .greenOliveBackground{color:white; background-color:#556B2F;}
+    .paleBackgroundPink{background-color:#ffe1ff;}
+    .paleBackgroundLightGrey{background-color:#eff0f1;}
+    .paleBackgroundGold{background-color:#fff7e5;}
+    .pinkyDashed{background-color:#ffe1ff;border:1px dashed fuchsia;}
+    
+    /* webkit complex style class-is-broken indicators */
+    .acmnDropShadow 
+    {
+      -moz-box-shadow: 3px 3px 4px #999; /* Firefox */
+      -webkit-box-shadow: 3px 3px 4px #999; /* Safari/Chrome */
+      box-shadow: 3px 3px 4px #999; /* Opera and other CSS3 supporting browsers */
+    }
+
+    .acmnRaisedBox1
+    {
+      -moz-box-shadow: 3px 3px 4px #999; /* Firefox */
+      -webkit-box-shadow: 3px 3px 4px #999; /* Safari/Chrome */
+      box-shadow: 3px 3px 4px #999; /* Opera and other CSS3 supporting browsers */
+      border-top: 1px solid #CCC;
+      border-left: 1px solid #CCC;
+    }
+
+    .SlapStamp
+    {
+      color: #F47D31;
+      background-color: #fff;
+      -webkit-box-shadow: 2px 2px 20px #888;
+      -webkit-transform: rotate(-45deg);
+      -moz-box-shadow: 2px 2px 20px #888;
+      -moz-transform: rotate(-45deg);
+      position: absolute;
+      padding: 0px 150px;
+      text-align:center;
+    }
+    
+    /* Stolen from Eric Meyer meyerweb.com */
+    .blueSky{background: #B4D5FF; font-weight: bold;}
+    .yellowWarning {background: #FF8; color: red; border: 2px solid; padding: 1em;}
+    .acmnYellowRedLining{background: #FF8; color: red; border: 1px solid red;}
+    
+    /* Stolen from Stack Overflow/Superuser */
+  kbd 
+    {
+      display: inline-block;
+      margin: 0 .1em;
+      padding: .1em .6em;
+      font-size: 11px;
+      line-height: 1.4;
+      color: #242729;
+      text-shadow: 0 1px 0 #FFF;
+      background-color: #e1e3e5;
+      border: 1px solid #adb3b9;
+      border-radius: 3px;
+      box-shadow: 0 1px 0 rgba(12, 13, 14, 0.2), 0 0 0 2px #FFF inset;
+      white-space: nowrap;
+    }
+    .acmnDashedAlert
+    {
+      padding:5px;
+      font-weight:bold;
+      margin-bottom:10px;
+      margin-top:5px;
+      border:2px dotted #AE0000;
+    }
+    .btn_StackOverflow
+    {
+      color:#3E6D8E;
+      background-color:#E0EAF1;
+      border-top: 1px solid #DDD;
+      border-left: 1px solid #DDD;
+      border-radius: 5px;
+      border-bottom:1px solid #3E6D8E;
+      border-right:1px solid #7F9FB6;
+      padding:3px 4px 3px 4px;
+      margin:2px 2px 2px 0;
+    }
+    .whiteBlack
+    {
+      color:#fff;
+      background-color:#333;
+      border:1px solid #333;
+      margin:0 3px 3px 0;
+      padding:0px 6px 0px 3px;
+      display:inline-block;
+    }
+    .orangeYellowBack{background-color:#ffefc6;}
+    .orangeLightBack{background-color:#ff9900;color:white;}
+    .orangeDarkBack{background-color:#df5c13;color:white;}
+    .orangeLightFore{color:#ff9900;}
+    .orangeDarkFore{color:#df5c13;}
+    
+    .redWarning
+    {
+      background-color:#E23535;
+      color:#FFFFFF;
+      font-size:10px;
+      padding:0 5px 1px;
+    }
+    
+    /* Stolen from javadoc */
+    .mauveDarkBack{background:#BBBBFF;}
+    .mauveLightBack{background:#DDDDFF;}
+    .mauveDarkFore{color:#5555FF;}
+    .mauveLightFore{color:#BBBBFF;}    
+    .blueDarkBack{background-color:#00008B;color:#FFFFFF;}
+    
+    /* Stolen from John Urbanek */
+    .blueBlack{background-color: #333333;color:#00CCFF;text-align:center;font-style:italic;}
+    .blueBold{color:#3366FF;font-weight:bolder;}
+    .navy{color:navy;}
+    .navyBold{color:navy;font-weight:bold;}
+    .aquaCyanNormal{color:#2b91af;}
+    .aquaCyanBold{color:#2b91af;font-weight:bold;}
+    .aquaNormal{color:#0078C0;}
+    .aquaBold{color:#0078C0;font-weight:bold;}
+    
+    /* Stolen from Adobe */
+    .adobe_s1 {color: #58595B;font-size: 6pt;}
+    .adobe_s2 {color: #58595B;font-size: 8pt;}
+    .adobe_s3 {color: #58595B;font-size: 12pt;}
+    .adobe_s4 {color: #58595B;font-size: 14pt;}
+    .adobe_s5 {color: #58595B;font-size: 18pt;}
+    .adobe_s6 {color: #D31242;font-size: 8pt;}
+    .adobe_s7 {color: #D31242;font-size: 12pt;}
+    .adobe_s8 {color: #D31242;font-size: 14pt;}
+    .adobe_s9 {color: #D31242;font-size: 18pt;}
+    .adobe_s10 {color: #BE2D00; font-size: 24pt;}
+    .adobe_s11 {color: #BE2D00; font-size: 32pt;}
+    .adobe_s12 {color: #007DC5;font-weight: bold;font-size: 6pt;}
+    .adobe_s13 {color: #007DC5;font-weight: bold;font-size: 8pt;}
+    .adobe_s14 { color: #40458C; font-size: 8pt; }
+    .adobe_s15 { color: #40458C; font-size: 10pt; }
+    .adobe_s16 { color: #40458C; font-size: 12pt; }
+    .adobe_s17 { color: #40458C; font-style: italic; font-weight: bold; font-size: 12pt; }
+    .adobe_s18 { color: #40458C; font-size: 18pt; }
+    .adobe_s31 {color: #231F20; font-weight: normal; font-size: 8pt; }
+    .adobe_s41 {color: #00ADEF; font-weight: normal; font-size: 10pt; }
+    .adobe_s51 {color: #00ADEF; font-weight: normal; font-size: 8pt; }
+    
+    /* stolen from Radek Suski and Protostar */
+    
+    .aqua1 {color:white;background-color:#61b6ff}
+    .aqua2 {color:white;background:#2892ff!important;}
+    .aqua3{color:yellow;background:#2e9fff;}
+    .aquaComplex
+    {
+      color:Yellow;
+      text-shadow:0 -1px 0 rgba(0,0,0,.25);
+      background-color:#49afcd;
+      background-image:-webkit-linear-gradient(to bottom, #5bc0de, #2f96b4);
+      background-image:linear-gradient(to bottom, #5bc0de, #2f96b4);
+      background-repeat:repeat-x;  
+      filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff5bc0de', endColorstr='#ff2f96b4', GradientType=0);
+      border-color:#2f96b4 #2f96b4 #1f6377;
+      border-color:rgba(0,0,0,.1) rgba(0,0,0,.1) rgba(0,0,0,.25);
+      filter:progid:DXImageTransform.Microsoft.gradient(enabled=false)
+    }
+    .aqua5{color:white;background-color:#2f96b4;}
+    .greenTeal1{background:#6fa42a;}
+    .greenTeal2{background-color:#51a351;}
+    .greenWhite1{color:white;background:#4bad00;}
+    .goldBlack{background:#ffc62e;}
+    .btn_Blue
+    {
+      text-shadow:0 -1px 0 rgba(0,0,0,.25);
+      color: #999;
+      border-radius: 5px;
+      background-color:#004cd6;
+      background-image:-webkit-linear-gradient(to bottom, #0069d6, #0022d6);
+      background-image:linear-gradient(to bottom, #0069d6, #0022d6);
+      background-repeat:repeat-x;
+      filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0069d6', endColorstr='#ff0022d6', GradientType=0);
+      border-color:#0022d6 #0022d6 #00168a;
+      border-color:rgba(0,0,0,.1) rgba(0,0,0,.1) rgba(0,0,0,.25);
+      filter:progid:DXImageTransform.Microsoft.gradient(enabled=false);
+      padding:3px 4px 3px 4px;
+    }
+
+    .btn_LightFlesh
+    {
+      text-shadow:0 -1px 0 rgba(0,0,0,.25);
+      border-radius: 5px;
+      background-color:#ff855c;
+      background-image:-webkit-linear-gradient(to bottom, #ff9c7b, #ff632e);
+      background-image:linear-gradient(to bottom, #ff9c7b, #ff632e);
+      background-repeat:repeat-x;
+      filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffff9c7b', endColorstr='#ffff632e', GradientType=0);
+      border-color:#ff632e #ff632e #e13900;
+      border-color:rgba(0,0,0,.1) rgba(0,0,0,.1) rgba(0,0,0,.25);
+      filter:progid:DXImageTransform.Microsoft.gradient(enabled=false);
+      padding:3px 4px 3px 4px;
+    }
+    .btn_DarkFlesh
+    {
+      text-shadow:0 -1px 0 rgba(0,0,0,.25);
+      border-radius: 5px;
+      background-color:#ff632e;
+      background-image:-webkit-linear-gradient(to bottom, #ff9c7b, #ff632e);
+      background-image:linear-gradient(to bottom, #ff9c7b, #ff632e);
+      background-repeat:repeat-x;
+      filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffff9c7b', endColorstr='#ffff632e', GradientType=0);
+      border-color:#ff632e #ff632e #e13900;
+      border-color:rgba(0,0,0,.1) rgba(0,0,0,.1) rgba(0,0,0,.25);
+      filter:progid:DXImageTransform.Microsoft.gradient(enabled=false);
+      padding:3px 4px 3px 4px;
+    }
+    .btn_Sunburn
+    {
+      text-shadow:0 -1px 0 rgba(0,0,0,.25);
+      background-color:#da4f49;
+      background-image:-webkit-linear-gradient(to bottom, #ee5f5b, #bd362f);
+      background-image:linear-gradient(to bottom, #ee5f5b, #bd362f);
+      background-repeat:repeat-x;
+      filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffee5f5b', endColorstr='#ffbd362f', GradientType=0);
+      border-color:#bd362f #bd362f #802420;
+      border-color:rgba(0,0,0,.1) rgba(0,0,0,.1) rgba(0,0,0,.25);
+      filter:progid:DXImageTransform.Microsoft.gradient(enabled=false);
+      padding:3px 4px 3px 4px;
+      border-radius: 5px;
+    }
+    .btn_Inverse
+    {
+      color: white;
+      text-shadow:0 -1px 0 rgba(0,0,0,.25);
+      background-color:#363636;
+      background-image:-webkit-linear-gradient(to bottom, #444, #222);
+      background-image:linear-gradient(to bottom, #444, #222);
+      background-repeat:repeat-x;
+      filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff444444', endColorstr='#ff222222', GradientType=0);
+      border-color:#222 #222 #000;
+      border-color:rgba(0,0,0,.1) rgba(0,0,0,.1) rgba(0,0,0,.25);
+      filter:progid:DXImageTransform.Microsoft.gradient(enabled=false);
+      padding:3px 4px 3px 4px;
+      border-radius: 5px;      
+    }
+    .btn_PinkDark
+    {
+      text-shadow:0 -1px 0 rgba(0,0,0,.25);
+      background-color:#bd362f;
+      background-image:-webkit-linear-gradient(to bottom, #ee5f5b, #bd362f);
+      background-image:linear-gradient(to bottom, #ee5f5b, #bd362f);
+      background-repeat:repeat-x;
+      filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffee5f5b', endColorstr='#ffbd362f', GradientType=0);
+      border-color:#bd362f #bd362f #802420;
+      border-color:rgba(0,0,0,.1) rgba(0,0,0,.1) rgba(0,0,0,.25);
+      filter:progid:DXImageTransform.Microsoft.gradient(enabled=false);
+      padding:3px 4px 3px 4px;
+      border-radius: 5px;
+    }
+    .btn_Darkie
+    {
+      color: white;
+      text-shadow:0 -1px 0 rgba(0,0,0,.25);
+      background-color:#222;
+      background-image:-webkit-linear-gradient(to bottom, #ee5f5b, #bd362f);
+      background-image:linear-gradient(to bottom, #ee5f5b, #bd362f);
+      background-repeat:repeat-x;
+      filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffee5f5b', endColorstr='#ffbd362f', GradientType=0);
+      border-color:#bd362f #bd362f #802420;
+      border-color:rgba(0,0,0,.1) rgba(0,0,0,.1) rgba(0,0,0,.25);
+      filter:progid:DXImageTransform.Microsoft.gradient(enabled=false);
+      padding:3px 4px 3px 4px;
+      border-radius: 5px;
+    }
+
+        
+    /* stolen from waves.com */
+    .fleshBox1
+    {
+      background-color: #ffc4c4;
+      border: 1px solid #7b0812;
+      border-radius: 5px;
+      color: #7b0812;
+      padding: 5px 10px;
+    }
+    
+    /* stolen from net-tuts */
+    .btn_BlueBlueBig
+    {
+      width:400px;
+      margin: 200px auto;
+      background: #014464;
+      background: -moz-linear-gradient(top, #0D658E, #0C577A 50%, #014D71 51%, #003E5C);
+      background: -webkit-gradient(linear, left top, left bottom, 
+                  color-stop(0, #0E658E), color-stop(.5, #0C577A), 
+                  color-stop(.5, #014D71), to(#003E5C));
+      -moz-border-radius: 10px;
+      -webkit-border-radius: 10px;
+      border-radius: 10px;
+      border: 1px solid #368DBE;
+      border-top: 1px solid #C3D6DF;
+      -moz-box-shadow: 0 1px 3px black;
+      -webkit-box-shadow: 0 1px 3px black;
+      -box-shadow: 0 1px 3px black;  
+      height: 100px;
+      text-align: center;
+      line-height: 100px;
+      color:blue;
+      font-size: 50px;
+      font-weight: bold;
+      text-shadow: 0 1px 0 #99FFFF;
+      padding:3px 4px 3px 4px;
+      border-radius: 5px;      
+    }
+    .btn_BlueYellowBig
+    {
+      width:400px;
+      margin: 200px auto;
+      background: #014464;
+      background: -moz-linear-gradient(top, #0D658E, #0C577A 50%, #014D71 51%, #003E5C);
+      background: -webkit-gradient(linear, left top, left bottom, 
+                  color-stop(0, #0E658E), color-stop(.5, #0C577A), 
+                  color-stop(.5, #014D71), to(#003E5C));
+      -moz-border-radius: 10px;
+      -webkit-border-radius: 10px;
+      border-radius: 10px;
+      border: 1px solid #368DBE;
+      border-top: 1px solid #22D6DF;
+      -moz-box-shadow: 0 1px 3px black;
+      -webkit-box-shadow: 0 1px 3px black;
+      -box-shadow: 0 1px 3px black;  
+      height: 100px;
+      text-align: center;
+      line-height: 100px;
+      color:Yellow;
+      font-size: 50px;
+      font-weight: bold;
+      text-shadow: 0 1px 0 #EE0000;
+      padding:3px 4px 3px 4px;
+      border-radius: 5px;      
+    }
+    .btn_BlueSmall 
+    {
+      line-height: 1;
+      padding: 7px 10px;
+      font-weight: bold;
+      color: white;
+      background-color: #39c;
+      -moz-border-radius: 5px;
+      -webkit-border-radius: 5px;
+      -khtml-border-radius: 5px;
+      border-radius: 5px;
+      -moz-box-shadow: 0 1px 3px black;
+      -webkit-box-shadow: 0 1px 3px black;
+      -khtml-box-shadow: 0 1px 3px black;
+      -box-shadow: 0 1px 3px black;  
+      text-shadow: 0 1px 0 black;
+    }
+     
+    /* stolen from ASU GPH 211 syllabus Spring 2014 Updated for NAU Fall 2016 */
+    
+    /* use with one of the two btn classes below */
+    .EstiloBtn 
+    {
+      border: 1px solid transparent;
+      border-radius: 4px;
+      cursor: pointer;
+      display: inline-block;
+      font-size: 16px;
+      line-height: 1.44;
+      margin-bottom: 0;
+      padding: 6px 19px;
+      text-align: center;
+      vertical-align: middle;
+      white-space: nowrap;
+    }
+
+    /* ASU official color: #8C1D40 */
+    
+    .Estilo29ASU {font-size: 30px;color: #F7C709;}
+    .Estilo31ASU {color: #8C1D40;}
+    .Estilo32ASU {font-size: 15px;color: #8C1D40;font-weight: bold;}
+    .Estilo34ASU {color: #8C1D40; font-weight: bold;}
+    .Estilo40ASU {font-size: 26px; color: #660000; font-weight: bold;}
+    .Estilo42ASU {color: #660000;}
+    .Estilo44ASU {color: #660000; font-weight: bold;}
+    .Estilo47ASU {color: #AA0000;}
+    .Estilo50ASU {font-size: 22px; color: #660000; font-weight: bold;}
+    .EstiloBtnASU{background-color: #8C1D40;color: white;}
+
+    /* NAU official color: #003E7E */
+    .Estilo29NAU {font-size: 30px;color: yellow;}
+    .Estilo31NAU {color: #003E7E;}
+    .Estilo32NAU {font-size: 15px;color: #003E7E;font-weight: bold;}
+    .Estilo34NAU {color: #003E7E; font-weight: bold;}
+    .Estilo40NAU {font-size: 26px; color: #003E7E; font-weight: bold;}
+    .Estilo42NAU {color: #003E7E;}
+    .Estilo44NAU {color: #003E7E; font-weight: bold;}
+    .Estilo47NAU {color: #AA0000;}
+    .Estilo50NAU {font-size: 22px; color: #003E7E; font-weight: bold;}
+    .EstiloBtnNAU{background-color: #003E7E;color: white;}
+    
+    /* stolen from Torrent Freak */
+    .pinky0{color:#ff4794;}
+    .pinky1{color:#e0005e;font-weight:bold;}
+    .pinky2{background:#ff7ab2;}
+    .pinky3{background:#ff4794;}
+    .pinky4{background:#e0005e;}
+    .pinky5{color:white;background-color:#ff4794;border-bottom:2px solid #ff4794;}
+    .pinky5bold{background:#ff4794;color:white;margin:0 0 1em;text-shadow:0px 1px 1px #ad0048;font-size:1.1em;font-weight:600;}
+    .pinky6{background:#ff1476;border-bottom:2px solid #ad0048;}
+    .pinky7{background:#ff4794;color:silver;}
+    .pinky8{background:#ff7ab2;color:yellow;}
+        
+    /* stolen from Scala */
+    .aquaSlider 
+    {
+      color:#666666;
+      text-shadow: 0 1px 2px rgba(0,0,0,.5);
+      background:url(http://scala-ide.org/resources/images/bg.jpg) no-repeat top center #a6e5ec;
+      padding-top:15px;padding-bottom:15px;
+      -webkit-box-shadow: inset 0 10px 60px rgba(0,0,0,.5);
+      -moz-box-shadow: inset 0 10px 60px rgba(0,0,0,.5);
+    }
+    
+    /* stolen from Paige Hector */
+    .orangeYellow2 {background-color: #f3de7e;}    
+    .greenDarkBig {color: #006300; font-size: 21.5pt;}
+
+    /* stolen from msn */
+    .greenGreen2{font-weight:bold; color:#4a844a; font-size:1.3rem; line-height:1.384;}
+    .greenGreen4{color:#0b893e;}
+    .greenGreen5{color:#3ab161;}
+    .greenWhite2{color: White; background:#00924d; height:4.4rem; font-size:1.3rem; line-height:1.384;}
+    .greenBlack1{ background:#00924d; width:100%; height:18rem;}
+    
+    /* stolen from ???  */
+    .btn_fancy_grey
+    {
+      background-image: -webkit-gradient(linear,left top,left bottom,from(#eee),to(#ccc));
+      background-image: -webkit-linear-gradient(top,#eee,#ccc);
+      background-image: -moz-linear-gradient(top,#eee,#ccc);
+      background-image: -o-linear-gradient(top,#eee,#ccc);
+      background-image: linear-gradient(top,#eee,#ccc);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#eeeeee', EndColorStr='#cccccc');
+      border: 1px solid #777;
+      padding: 0 1.5em;
+      margin: .5em;
+      font: 700 1em/2em Arial,Helvetica;
+      color: #333;
+      text-shadow: 0 1px 0 rgba(255,255,255,.8);
+      -webkit-border-radius: .2em;
+      border-radius: .2em;
+      -webkit-box-shadow: 0 0 1px 1px rgba(255,255,255,.8) inset,0 1px 0 rgba(0,0,0,.3);
+      box-shadow: 0 0 1px 1px rgba(255,255,255,.8) inset,0 1px 0 rgba(0,0,0,.3)
+    }
+    .btn_fancy_gold
+    {
+      background-image: -webkit-gradient(linear,left top,left bottom,from(#eee),to(#E5C06B));
+      background-image: -webkit-linear-gradient(top,#eee,#E5C06B);
+      background-image: -moz-linear-gradient(top,#eee,#E5C06B);
+      background-image: -o-linear-gradient(top,#eee,#E5C06B);
+      background-image: linear-gradient(top,#eee,#E5C06B);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#eeeeee', EndColorStr='#E5C06B');
+      border: 1px solid #777;
+      padding: 0 1.5em;
+      margin: .5em;
+      font: 700 1em/2em Arial,Helvetica;
+      color: #333;
+      text-shadow: 0 1px 0 rgba(255,255,255,.8);
+      -webkit-border-radius: .2em;
+      border-radius: .2em;
+      -webkit-box-shadow: 0 0 1px 1px rgba(255,255,255,.8) inset,0 1px 0 rgba(0,0,0,.3);
+      box-shadow: 0 0 1px 1px rgba(255,255,255,.8) inset,0 1px 0 rgba(0,0,0,.3)
+    }
+    .btn_fancy_teal
+    {
+      background-image: -webkit-gradient(linear,left top,left bottom,from(#eee),to(#2dbe60));
+      background-image: -webkit-linear-gradient(top,#eee,#2dbe60);
+      background-image: -moz-linear-gradient(top,#eee,#2dbe60);
+      background-image: -o-linear-gradient(top,#eee,#2dbe60);
+      background-image: linear-gradient(top,#eee,#2dbe60);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#eeeeee', EndColorStr='#2dbe60');
+      border: 1px solid #777;
+      padding: 0 1.5em;
+      margin: .5em;
+      font: 700 1em/2em Arial,Helvetica;
+      color: #333;
+      text-shadow: 0 1px 0 rgba(255,255,255,.8);
+      -webkit-border-radius: .2em;
+      border-radius: .2em;
+      -webkit-box-shadow: 0 0 1px 1px rgba(255,255,255,.8) inset,0 1px 0 rgba(0,0,0,.3);
+      box-shadow: 0 0 1px 1px rgba(255,255,255,.8) inset,0 1px 0 rgba(0,0,0,.3)
+    }
+    .btn_fancy_blue
+    {
+      background-image: -webkit-gradient(linear,left top,left bottom,from(#eee),to(#004cd6));
+      background-image: -webkit-linear-gradient(top,#eee,#004cd6);
+      background-image: -moz-linear-gradient(top,#eee,#004cd6);
+      background-image: -o-linear-gradient(top,#eee,#004cd6);
+      background-image: linear-gradient(top,#eee,#004cd6);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#eeeeee', EndColorStr='#004cd6');
+      border: 1px solid #777;
+      padding: 0 1.5em;
+      margin: .5em;
+      font: 700 1em/2em Arial,Helvetica;
+      color: #333;
+      text-shadow: 0 1px 0 rgba(255,255,255,.8);
+      -webkit-border-radius: .2em;
+      border-radius: .2em;
+      -webkit-box-shadow: 0 0 1px 1px rgba(255,255,255,.8) inset,0 1px 0 rgba(0,0,0,.3);
+      box-shadow: 0 0 1px 1px rgba(255,255,255,.8) inset,0 1px 0 rgba(0,0,0,.3)
+    }
+    .btn_fancy_flesh
+    {
+      background-image: -webkit-gradient(linear,left top,left bottom,from(#eee),to(#ff632e));
+      background-image: -webkit-linear-gradient(top,#eee,#ff632e);
+      background-image: -moz-linear-gradient(top,#eee,#ff632e);
+      background-image: -o-linear-gradient(top,#eee,#ff632e);
+      background-image: linear-gradient(top,#eee,#ff632e);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#eeeeee', EndColorStr='#ff632e');
+      border: 1px solid #777;
+      padding: 0 1.5em;
+      margin: .5em;
+      font: 700 1em/2em Arial,Helvetica;
+      color: #333;
+      text-shadow: 0 1px 0 rgba(255,255,255,.8);
+      -webkit-border-radius: .2em;
+      border-radius: .2em;
+      -webkit-box-shadow: 0 0 1px 1px rgba(255,255,255,.8) inset,0 1px 0 rgba(0,0,0,.3);
+      box-shadow: 0 0 1px 1px rgba(255,255,255,.8) inset,0 1px 0 rgba(0,0,0,.3)
+    }
+    .btn_fancy_redBlack
+    {
+      background-image: -webkit-gradient(linear,left top,left bottom,from(#000),to(red));
+      background-image: -webkit-linear-gradient(top,#000,red);
+      background-image: -moz-linear-gradient(top,#000,red);
+      background-image: -o-linear-gradient(top,#000,red);
+      background-image: linear-gradient(top,#000,red);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#000', EndColorStr='red');
+      border: 1px solid #777;
+      padding: 0 1.5em;
+      margin: .5em;
+      font: 700 1em/2em Arial,Helvetica;
+      color: #aaaaaa;
+      text-shadow: 0 1px 0 rgba(255,255,255,.8);
+      -webkit-border-radius: .2em;
+      border-radius: .2em;
+      -webkit-box-shadow: 0 0 1px 1px rgba(255,255,255,.8) inset,0 1px 0 rgba(0,0,0,.3);
+      box-shadow: 0 0 1px 1px rgba(255,255,255,.8) inset,0 1px 0 rgba(0,0,0,.3)
+    }
+    
+    .greyTitle{color: #666;font-size: 20px;font-weight: 700;}
+    .greenbox{background-color: #dcf5d7!important;border-top-color: #dcf5d7!important;}
+    .bluebox{background-color: #D6EFFE;}
+    .limeBanner
+    {
+      font-size: 12px;
+      background: #0f0;
+      color: black;
+      font-weight: 700;
+      text-align: center;
+    }
+    infoBoxHeading  
+    {
+      font-size: 12px;
+      font-weight: 700;
+      background: #bbc3d3;
+      color: #a52020
+    }
+    .aquaCyanDark
+    {
+      font-size: 14px;
+      color: #069;
+      font-weight: 700;
+    }
+    .navyOnYellow{color: #00F;background: #FF3;}
+    .greyBigHeading{font-size: 20px;font-weight: 700;color: #666;}
+    .orangeTiny{font-size: 10pt;font-weight: 700;color: #C60;}
+    .barInsideRed{color:#C00;background-color: #C00;}
+    .barInsideBlack{color:black;background-color: black;}
+    .barInsideYellow{color:gold;background-color:gold;}
+    .barInsideLime{color:#0f0;background-color:#0f0;}
+    .barInsideGrey{color: #595959;background-color: #595959;}
+    .barInsideBlue{color: blue;background-color:blue;}
+    .barInsideGreen{background: #2F9512;color: #2F9512;}
+    .barInsideGold{background: #ebb73d;color: #ebb73d;}
+
+    /* stolen from Ian Webster (textbelt)*/
+    .greyLightTinyMute {color: #909090;font-size: 10px;}
+
+    /* stolen from my committee chair, Dr. Huang */
+    .blueHuang{color: #00C;font-weight:bold;}
+    .blueHuangLight{color:#3366FF;}
+    
+    /* stolen from amethystwebsitedesign.com */
+    .acmnSteelDashedBox 
+    {
+      border: 4px dashed #046ca3;
+      padding: 10px;
+      box-shadow: inset 0 -1px 0 0 #046ca3, inset 0 1px 0 0 #046ca3, 0 1px 0 0 #046ca3, 0 -1px 0 0 #046ca3;
+    }
+    .acmnPurpleBorderSilver
+    {
+      border: 1px solid silver;
+      border-right: 1px solid darkgray;
+      border-bottom: 1px solid darkgray;
+      -moz-box-shadow: inset 0 0 0 3px #7b6dc0;
+      -webkit-box-shadow: inset 0 0 0 3px #7b6dc0;
+      box-shadow: inset 0 0 0 3px #7b6dc0; 
+      padding: 24px 20px;
+      margin: 24px 0;
+      text-align: left;
+    }
+    
+    /* Stolen from NBC News */
+    nav
+    {
+      background-color:transparent;
+      padding-bottom:.375em
+    }
+    .asidePullQuote
+    {
+      content:" ";
+      display:table;
+      float:right;
+      width:50%;
+      color:#232323;
+      font-family:'Lucida Console', Monaco, monospace;
+      line-height:1.0534979424;
+      margin-bottom:0;
+      margin-top:6px;
+      border-left: 1px solid grey;
+    }
+    .greyLightTiny
+    {
+      color:#969696;
+      font-size:10pt;
+    }
+    .pointerTriangleLeft
+    {
+      vertical-align:middle;
+      display:inline-block;
+      -webkit-transform:rotate(360deg);
+      -ms-transform:rotate(360deg);
+      transform:rotate(360deg);
+      border-width:1.0678710938em .5339355469em;
+      border-style:solid;
+      border-color:transparent;
+      border-left-color:#940006;
+      border-right-width:2;
+      height:0;
+    }
+    .bodyClassThemeDark
+    {
+      color:#ccc;
+      background-color:#111;
+      margin-bottom:1.125em;
+      padding-top:1.125em;
+      margin-top:-1.125em
+    }
+    .divClassThemeWeather
+    {
+      background:-webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,0)), color-stop(40%, #fff), to(rgba(197,209,228,.75)));
+      background:-webkit-linear-gradient(top, rgba(255,255,255,0)0, #fff 40%, rgba(197,209,228,.75)100%);
+      background:linear-gradient(to bottom, rgba(255,255,255,0)0, #fff 40%, rgba(197,209,228,.75)100%)
+    }
+    .divClassThemeNightly
+    {
+      color:#ccc;
+      padding-top:1.125em;
+      margin-top:-1.125em;
+      background:-webkit-gradient(linear, left top, left bottom, from(rgba(17,17,17,0)), color-stop(40%, #111), to(#111));
+      background:-webkit-linear-gradient(top, rgba(17,17,17,0)0, #111 40%, #111 100%);
+      background:linear-gradient(to bottom, rgba(17,17,17,0)0, #111 40%, #111 100%)
+    }
+    .divClassThemeFeature
+    {
+      background:#E9EDF0;
+      background:-webkit-gradient(linear, left top, left bottom, from(#FFF), color-stop(40%, #E9EDF0));
+      background:-webkit-linear-gradient(top, #FFF 0, #E9EDF0 40%);
+      background:linear-gradient(to bottom, #FFF 0, #E9EDF0 40%)
+    }
+    .blueSteelIndentDark
+    {
+      color:#5172a0;
+      padding-bottom:1.3333333333em;
+      padding-top:1.3333333333em;
+      font-size:1.125em;
+      line-height:1.6666666667
+    }
+    .blueSteelIndentLight
+    {
+      color:#4372b8;
+      margin-right:.474609375em;
+      font-size:.7901234568em;
+      line-height:1.8984375
+    }
+    .btn_Gold
+    {
+      margin-bottom:1.3333333333em;
+      font-weight:700;
+      padding-right:1.25em;
+      padding-left:1.25em;
+      padding-top:.46875em;
+      color:#1f1f1f;
+      background-color:#E5C06B;
+      -webkit-border-radius:0 0 5px 5px;
+      border-radius:0 0 5px 5px;
+      font-size:.7023319616em;
+      line-height:1.2013549805
+    }
+    
+    /* Stolen from Wordpress */
+    .btn_Green
+    {
+      background-color: #4DB24C;
+      color: white;
+      padding:3px 4px 3px 4px;
+      border-radius: 5px;      
+      font-weight: bold;
+      text-shadow: 0 0.05em 0.05em #1b7a1a;
+      border-left: solid 1px #49a346;
+      border-top: solid 1px #49a346;
+      border-right: solid 1px #1f7c1e;
+      border-bottom: solid 1px #1f7c1e;
+    }
+    .btn_Aqua
+    {
+      background-color: #4F97C9;
+      color: white;
+      padding:3px 4px 3px 4px;
+      border-radius: 5px;      
+      font-weight: bold;
+      text-shadow: 0 0.05em 0.05em #1b7a1a;
+      border-left: solid 1px #49a346;
+      border-top: solid 1px #49a346;
+      border-right: solid 1px #1f7c1e;
+      border-bottom: solid 1px #1f7c1e;
+    }
+    
+    /* stolen from Evernote */
+    .Btn_LightGreen
+    {
+      font-weight: 500;
+      color: White;
+      background-color: #2dbe60;
+      border-color: #1fae52;
+      padding:3px 4px 3px 4px;
+      border-radius: 5px;            
+    }
+    .fleshbox2
+    {
+      list-style: none;
+      border: 1px solid #b92219;
+      background-color: #ffd1d1;
+      padding: 8px;
+      overflow-wrap: break-word;
+      word-wrap: break-word;
+      word-break: break-word
+    }
+    .greenBlack2
+    {
+      background-color: #2dbe60;
+      width: 100%;
+      height: 48px;
+      border-bottom: 1px solid #259d4f
+    }
+    .navBarOneLetterLeft
+    {
+      filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe5f6fb', GradientType=0);
+      -webkit-border-radius: 50px;
+      -moz-border-radius: 50px;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: -moz-none;
+      -ms-user-select: none;
+      border: 1px solid #88b9c9;
+      border-radius: 50px;
+      color: #747474;
+      background-color: #f5fbfd;
+      background-image: -moz-linear-gradient(top, #fff, #e5f6fb);
+      background-repeat: repeat-x;
+      line-height: 1.41666667;
+      font-size: 1em;
+      font-weight: 400;
+      text-align: left;
+      text-overflow: clip;
+      padding: 0 4px;
+      width: 10px;
+      display: inline-block;
+    }
+    .greyDark
+    {
+      height: auto;
+      overflow: hidden;
+      background-color: #484848;
+      color:white;
+      margin-top: 60px
+    }
+    .greenOlive
+    {
+      background-color: #95d162;
+      border-color: #2b7143
+    }
+    .creamWarning
+    {
+      background-color: #fef4d1;
+      border: 1px solid #ebd174;
+      margin-bottom: 16px;
+      padding: 5px 16px 5px 16px;
+      color: red;
+      font-weight: bold;
+    }
+    .blueSteelCyanBold{color: #4183c4;font-weight: bold;}
+    .blueSteelNormal{color:#5172a0;}
+    .blueSteelUnderlineBorder
+    {
+      color: #5172a0;
+      text-decoration: underline;
+      outline: thin dotted #4a8db8;
+    }
+    .blueSteelUnderline
+    {
+      color: #5172a0;
+      text-decoration: underline;
+    }
+
+    /* Stolen from Microsoft */
+    .brownCodeBox
+    {
+      font-family: Consolas;
+      font-size:13px;
+      color: rgb(125, 39, 39); 
+      background-color: rgb(239, 240, 241);
+      display: block;
+      width:600px;
+    }
+    .purpleTextBold
+    {
+      color:#6621E5;
+      font-weight:bold;
+    }
+    
+    /* Stolen from it-ebooks */
+    .aquaHeading
+    {
+      font-family: Verdana, Geneva, sans-serif;
+      color: #08c;
+    }
+    
+    /* Stolen from Dana Mandino, NAU */
+    .purpleBig{font-size:20pt;color:#BD1398;}
+    .purpleMed{font-size:16pt;color:#BD1398;}
+    .purpleSml{font-size:12pt;color:#BD1398;}
+
+    /* stolen from github */
+    .purpleText{color: #6f42c1;}
+    .purpleOutline{padding: .9em 1.25em; color: #9f7be1; background: transparent; border: 1px solid purple; border-radius: .3em;}
+    .purpleDivBackground{color:white; background-color: #643ab0; background-image: linear-gradient(-180deg, #7e55c7 0%, #643ab0 90%); }
+    .purpleTextBackground{color:white; background-color: #6f42c1;}
+
+    /* stolen from Thibaut Courouble (http://www.cssflow.com) 
+       btnGlossyBlue is the master. You have to include it in order to use
+       the other colors.
+    */
+    
+    .btn_GlossyBlue
+    {
+      display: inline-block;
+      vertical-align: top;
+      overflow: hidden;
+      min-width: 96px;
+      line-height: 46px;
+      padding: 0 24px;
+      font-size: 14px;
+      color: white;
+      text-align: center;
+      text-shadow: 0 1px #154c86;
+      background-color: #247edd;
+      background-clip: padding-box;
+      border: 1px solid;
+      border-color: #1c65b2 #18589c #18589c;
+      border-radius: 4px;
+      -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.4), 0 1px 2px rgba(0, 0, 0, 0.2);
+      box-shadow: inset 0 1px rgba(255, 255, 255, 0.4), 0 1px 2px rgba(0, 0, 0, 0.2);
+      background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.12) 51%, rgba(0, 0, 0, 0.04));
+      background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.12) 51%, rgba(0, 0, 0, 0.04));
+      background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.12) 51%, rgba(0, 0, 0, 0.04));
+      background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.12) 51%, rgba(0, 0, 0, 0.04)); 
+    }
+    .btn_GlossyBlue:before  
+    {
+      content: '';
+      position: absolute;
+      top: -25%;
+      bottom: -25%;
+      left: -20%;
+      right: -20%;
+      border-radius: 50%;
+      background: transparent;
+      -webkit-box-shadow: inset 0 0 38px rgba(255, 255, 255, 0.5);
+      box-shadow: inset 0 0 38px rgba(255, 255, 255, 0.5);
+    }
+    
+    .btn_GlossyBlue:hover { background-color: #1a74d3; }
+    
+    .btn_GlossyBlue:active 
+    {
+      color: rgba(255, 255, 255, 0.9);
+      text-shadow: 0 -1px #154c86;
+      background: #1f71c8;
+      border-color: #113f70 #154c86 #1c65b2;
+      -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2), 0 1px rgba(255, 255, 255, 0.4);
+      box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2), 0 1px rgba(255, 255, 255, 0.4);
+      background-image: -webkit-linear-gradient(top, #1a5da5, #3a8be0);
+      background-image: -moz-linear-gradient(top, #1a5da5, #3a8be0);
+      background-image: -o-linear-gradient(top, #1a5da5, #3a8be0);
+      background-image: linear-gradient(to bottom, #1a5da5, #3a8be0);
+    }
+    
+    .btn_GlossyBlue:active:before 
+    {
+      top: -50%;
+      bottom: -125%;
+      left: -15%;
+      right: -15%;
+      -webkit-box-shadow: inset 0 0 96px rgba(0, 0, 0, 0.2);
+      box-shadow: inset 0 0 96px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* Green */
+    .btn_GlossyGreen
+    {
+      text-shadow: 0 1px #0d4d09;
+      background-color: #1ca913;
+      border-color: #147b0e #11640b #11640b;
+    }
+    
+    .btn_GlossyGreen:hover { background-color: #159b0d; }
+    
+    .btn_GlossyGreen:active 
+    {
+      text-shadow: 0 -1px #0d4d09;
+      background: #189210;
+      border-color: #093606 #0d4d09 #147b0e;
+      background-image: -webkit-linear-gradient(top, #126d0c, #20c016);
+      background-image: -moz-linear-gradient(top, #126d0c, #20c016);
+      background-image: -o-linear-gradient(top, #126d0c, #20c016);
+      background-image: linear-gradient(to bottom, #126d0c, #20c016);
+    }
+    
+    /* Red */
+    .btn_GlossyRed 
+    {
+      text-shadow: 0 1px #72100d;
+      background-color: #cd1d18;
+      border-color: #9f1713 #891310 #891310;
+    }
+    
+    .btn_GlossyRed:hover { background-color: #c01511; }
+    
+    .btn_GlossyRed:active
+    {
+      text-shadow: 0 -1px #72100d;
+      background: #b61a15;
+      border-color: #5b0d0b #72100d #9f1713;
+      background-image: -webkit-linear-gradient(top, #921511, #e4201b);
+      background-image: -moz-linear-gradient(top, #921511, #e4201b);
+    }
+    
+    /* stolen from foliovision.com */
+    
+    .blackCircle 
+    {
+      background-color: #000;
+      color: #fff;
+      width: 120px;
+      height: 120px;
+      display: block;
+      margin: 0 auto 18px;
+      text-align: center;
+      overflow: hidden;
+      -webkit-border-radius: 60px;
+      -moz-border-radius: 60px;
+      border-radius: 60px;
+      position: relative
+    }
+    
+    .fleshBackgroundPale
+    {
+      color: #a94442;
+      background-color: #f2dede;
+      border-color: #ebccd1
+    }
+    .aquaBackgroundPale 
+    {
+      color: #31708f;
+      background-color: #d9edf7;
+      border-color: #bce8f1
+    }
+    .greenBackgroundPale  
+    {
+      background-color: #dff0d8;
+      border-color: #d6e9c6;
+      color: #3c763d
+    }
+    .creamBackgroundPale
+    {
+      color: #8a6d3b;
+      background-color: #fcf8e3;
+      border-color: #faebcc
+    }
+    .btn_Cyan 
+    {
+      padding:3px 4px 3px 4px;
+      border-radius: 5px;      
+      font-size: 14px;
+      border: 1px solid #046a9e;
+      background: #9ecce2;
+      color: #333;
+      margin: 8px 0;
+    }
+    .greenBannerPale
+    {
+      padding: 6px 9px;
+      margin: 0 auto 25px;
+      box-sizing: border-box;
+      background: #e7f7d3;
+      border: 1px solid #6c3;
+      color: green;
+    }
+    .redBannerPale
+    {
+      padding: 6px 9px;
+      margin: 0 auto 25px;
+      box-sizing: border-box;
+      background: #ffebe8;
+      border: 1px solid #C00;
+      color: red; 
+    }
+    .redBannerPalePlusBlue
+    {
+      padding: 6px 9px;
+      margin: 0 auto 25px;
+      box-sizing: border-box;
+      background: #ffebe8;
+      border: 1px solid #C00;
+      color: #007acc;
+    }
+    
+    /* stolen from slashdot */
+    
+    .greenWhite3 
+    {
+      height: 30px;
+      color: white;
+      background-color: #004d4d;
+      z-index: 4; 
+      padding: 0 5px;
+      line-height: 20px;
+      border-radius: 4px;
+      transition: background-color 0.2s ease-in-out; 
+    }
+    .orangeDarkerBack 
+    {
+      height: 30px;
+      color: white;
+      z-index: 4; 
+      padding: 0 5px;
+      line-height: 20px;
+      border-radius: 4px;
+      transition: background-color 0.2s ease-in-out; 
+      background-color: #b7590b; 
+    }
+      
+    /* Stolen from Fabien Sanglard */
+        
+    .acmnRaisedBox2 
+    {
+      padding: 5px ;
+      background-color: white;
+      box-shadow: rgb(119, 119, 119) 3px 3px 3px;
+      border-style:solid;
+      border-width:1px;
+      border-color:#aaaaaa ;
+    }
+    
+    /* Stolen from Amazon */
+    
+    .btn_Amazon_Orange
+    {
+      background-color:#FD8;
+      background:-moz-linear-gradient(top,#FD8 15%,#F49D00 85%);
+      background:-webkit-gradient(linear,left top,left bottom,color-stop(0.15,#FD8),color-stop(0.85,#F49D00));
+      background:-webkit-linear-gradient(top,#FD8 15%,#F49D00 85%);
+      border:1px solid #2164A6;
+      margin-left:15px;
+      padding:5px 10px 4px 10px;
+      border-radius:4px;
+      -moz-border-radius:4px;
+      -webkit-border-radius:4px;
+      box-shadow:inset 0 0 2px #FFF;
+      -webkit-box-shadow:inset 0 0 2px #FFF;
+      -moz-box-shadow:inset 0 0 2px #FFF;
+    }
+            
+  </style>
+  
+  <!-- blinking text (must be in its own style tag) -->
+  <style>   
+    .blinkMe 
+    {
+      animation-duration: 1s;
+      animation-name: blink;
+      animation-iteration-count: infinite;
+      animation-timing-function: steps(2, start);
+    }
+    @keyframes blink 
+    {
+      80% 
+      {
+        visibility: hidden;
+      }
+    }
+  </style>
+  
+  <!-- strobing effect fill. The class to get it to work is called "thumb", it only works when this stylesheet is enabled, and it's only in grey color -->  
+  <!--<link rel="stylesheet" type="text/css" href="http://cdn.gatehousemedia.com/assets/css/20170705-1707/default.min.css"> -->
+
+</head>
+    
+<body>
+  
+  <table id="container">
+  <tr><td>
+  <table id="content">
+  <tr><td id="rootCell">
+  
+  
+      <!-- <i class="fa fa-check" style="color:green;"></i> -->
+    
+    <header>
+      <h1>GSP 537</h1>
+      <h2>Lab 6: ModelBuilder and Raster Math<i class="fa fa-check" style="color:green;"></i></h2>
+      <table border="1" align="center" cellpadding="5" cellspacing="10" class="acmnDashedAlert">
+        <tr>
+          <td rowspan="2" align="center" class="aquaBold">Submission to BBlearn</td>
+          <td align="center">To the Dropbox</td>
+          <td align="center">  RasterMath_jb3379.docx </td>
+        </tr>
+        <tr>
+          <td align="center">To the Poster folder</td>
+          <td align="center">completed  project poster PDF</td>
+        </tr>
+        <tr>
+          <td colspan="2" align="center" class="aquaBold">Due date</td>
+          <td align="center">Sunday, April 8, 2018, Midnight</td>
+        </tr>
+      </table>
+    </header>
+    
+    <article>
+      
+      <div class="acmnDashedAlert">
+        <h2>Deliverables</h2>
+        <ul type="disc">
+          <li>Your turd document, including answers, screen captures, and python scripts</li>
+          <li>Also paste screenshots and python scripts to Blackboard 'Dropbox'</li>
+          <li>Poster to the blog area</li>
+        </ul>
+      </div>
+      
+      <div class="acmnPurpleBorderSilver">
+        <span class="clsH6">Scenario</span><br><br>
+        It appears that the U.S. clandestine services have finally, FINALLY decided to help you instead of hindering you with babysitters, sidewalk 
+        agents, hacking shenanigans, and quirky decisions from big shots. They granted you an interview in Washington, DC, and you passed it. During the interview, 
+        they admitted that you are not crazy and that that was just a pretext to keep you on the Watch List, which you have been removed from. You have 
+        also been granted an application for a top security clearance, in preparation for your first assignment in New Mexico. However, because you have 
+        Asperger's Syndrome, and because you are a former target, the NSA requires that you pass a temporary internship before being hired.<br><br>
+        The Flagstaff Unidentified Flying Object Organization (FUFOO) is involved in an ongoing study of UFO sightings in Flagstaff and the surrounding 
+        area. As FUFOO's temporary GIS analyst, you've received, organized, and geocoded the data and created a 2011 feature class to use with 
+        the 2006 through 2010 feature classes already in your FUFOO_Study feature dataset 1. You also have already run the Kernel Density tool on the 
+        feature class using the same extent as the previous five years, a cell size of 100 feet, and a search radius of 3960 feet. Finally, you have a 
+        UFO2011 raster to compare to previous years. <br><br>
+        If you pass this internship, after you get your security clearance you will begin your first assignment with the NSA at one of the most 
+        secret bases in the American government.
+      </div>
+      
+      <div>
+        <span class="clsH6">Prep</span><i class="fa fa-check" style="color:green;"></i><br><br>
+        Download the <code class="blueHuang">Lab6.zip</code> file on the <span class="blueHuang">R drive</span>.  
+        It contains the data for this lab. 
+      </div>
+      
+      <br><br>
+
+      <span class="clsH6">Density and Raster Math Toolsets Review</span><i class="fa fa-check" style="color:green;"></i><br><br>
+      
+      <ol type="1">
+        
+        <li>
+          
+          <span class="clsH7">Density Toolset</span><br><br>
+          
+          Read all pages under 
+          <a href="http://desktop.arcgis.com/en/arcmap/10.5/tools/spatial-analyst-toolbox/an-overview-of-the-density-tools.htm" target="_blank">
+            this topic
+          </a>.
+          
+          <br><br><div class="acmnDashedAlert">
+            
+            <span class="greenGreen1">Then match questions 1 - 3 with A - C.</span><br><br>
+                
+            <table border="1" class="acmnDashedAlert">
+              <tr>
+                <td width="157" class="blueBold">1. Point Density</td>
+                <td width="829" class="blueBold">
+                  B. A neighborhood of a user selected shape is defined around each raster cell center, and the number of points that fall within 
+                  the neighborhood is totaled and divided by the area of the neighborhood.
+                </td>
+              </tr>
+              <tr>
+                <td class="blueBold">2. Line Density</td>
+                <td class="blueBold">
+                  C. A circle is drawn around each raster cell center using the search radius. The length of the portion of each line that falls 
+                  within the circle is multiplied by its population field value and totaled. The total is divided by the circle’s area.
+                </td>
+              </tr>
+              <tr>
+                <td class="blueBold">
+                  3. <a href="http://pro.arcgis.com/en/pro-app/tool-reference/spatial-analyst/how-kernel-density-works.htm" target="_blank">Kernel Density</a>
+                </td>
+                <td class="blueBold">A. Produces smoothly curved surface, only support circular neighborhood.</td>
+              </tr>
+            </table><br>
+            
+            Answer the following questions.
+            <br><br><div>
+              <span class="greenGreen1">Question 4</span>: What is the population field in the point or kernel density tool, and how does the population 
+              field affect the output density raster?
+              <br><br>
+              <div class="acmnMyAnswer blueBold">
+                The <em><a href="http://pro.arcgis.com/en/pro-app/tool-reference/spatial-analyst/point-density.htm" target="_blank">population field</a></em> is a field denoting population values for each point. The population field is the count or quantity to be used in the 
+                calculation of a continuous surface. <a href="http://desktop.arcgis.com/en/arcmap/10.5/tools/spatial-analyst-toolbox/how-point-density-works.htm" target="_blank">If a population field</a> setting other than NONE is used, the item's value determines the number of times to count the point. For example, an item with a value of 3 would cause the point to be counted as three points. The values can be integer or floating point. If an area unit is selected, the calculated density for the cell is multiplied by the appropriate factor before it is written to the output raster. For example, if the input ground units are meters, comparing a unit scale factor of meters to kilometers will result in the values being different by a multiplier of 1,000,000 (1,000 x 1,000).</div>
+            </div>
+            <br><br><div>
+              <span class="greenGreen1"><a href="https://blogs.esri.com/esri/arcgis/2013/05/28/how-should-i-interpret-the-output-of-density-tools/" title="Answer to this question, paragraph 7" target="_blank" class="greenGreen1">Question 5</a></span>: If the map units are meters and area units SQUARE_MAP_UNITS, the output density values 
+              will be 1 million times greater than if SQUARE_KILOMETERS is ussed. Is the statement true or false? Why?
+              <br><br>
+              <div class="acmnMyAnswer blueBold">
+                False, it's exactly the opposite. For example, if you run kernel density with output units of square meters and run it again on the same data with square kilometers, the cell values in square kilometers will be exactly 1 million times larger than the cells in square meters.  This is because there are 1 million square meters in a square kilometer.</div>
+            </div>
+            <br><br><div>
+              <span class="greenGreen1">Question 6</span>: Name three possible applications of density analysis.
+              <br><br><div class="acmnMyAnswer blueBold">
+                <ul type="disc">
+                  <li><a href="http://desktop.arcgis.com/en/arcmap/10.5/tools/spatial-analyst-toolbox/understanding-density-analysis.htm" target="_blank">Application 1</a>: A retail store chain has multiple stores in a particular district. For each store, management has sales figures on customers. Management assumes that customers patronize one store over another based on how far they have to travel. In this example, it is natural to assume that any single customer will always choose the closest store. The farther away from the closest store, the farther the customer will need to travel to that store. But shoppers farther away may also shop at other stores. Management wants to study the distribution of where the customers live. From the sales figures and the spatial distribution of the stores, management wants to create a surface of customers by intelligently spreading the customers out across the landscape.
+                  </li>
+                  <li><a href="http://ieeexplore.ieee.org/document/5969036/?reload=true" target="_blank">Application 2</a>: One of the primary challenges of Mine Action Programs is organizing and analysing the vast amounts of landmine incidents and other information required to make informed policy decisions for implementing Mine Action Activities, such as victim assistance, landmine impact, landmine clearance, etc., in war-torn countries. To assess the spatial distribution of landmine incidents, density analysis methods can be used together with spatial amalysis methods in the GIS environment.</li>
+                  <li><a href="" target="_blank">Application 3</a>: As an extremely high functioning Asperger's Syndrome older adult, I now have very little family left - only a sister in her 70s and her son. Without friends or support, I am alone. I want to apply density analysis to a nationwide dataset consisting of the addresses, and possibly functionality index, of as many high functioning Asperger's adults as possible nationwide. To please the dataset owners and the IRB, I will tell them that the first step I will take is to geocode the addresses to a point layer, thereby converting the PII to vector data and stripping away the identity. If the results show that there is a city in the U.S. that has an extremely high density of high functioning Asperger's adults, I want to live there.
+                  See an example possible result below.<br><br><div><img src="Lab6/AspieDensityAroundCities.png"></div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          
+          </div>
+        
+        </li>
+                
+        <li>
+          
+          <span class="clsH7">Advanced techniques in ModelBuilder</span><br><br>
+          
+          Read all pages under 
+          <a href="http://desktop.arcgis.com/en/arcmap/10.5/analyze/modelbuilder/a-quick-tour-of-advanced-techniques-in-modelbuilder.htm" target="_blank">
+            this topic
+          </a>
+          and answer questions. Pay special attention to "Using in-line variable substitution", "Using Lists", and Using "Iterators" for loops".
+          
+          <br><br>
+          
+          <div class="acmnDashedAlert">
+            <span class="greenGreen1">Question 7</span>: What is an inline variable substitution, and what are the two inline variable types?
+            <br><br>
+            <div class="acmnMyAnswer blueBold">
+              Inline substitution involves substituting the contents of an inline variable for a part or all of an item by enclosing the substituting variable in 
+              percent signs (%). Batch file scripts all use this technique as well. The two inline variable types are string and numeric.
+            </div>
+            <br><br>
+            <span class="greenGreen1">Question 8</span>: What is an iterator, and what does the Iterates Feature Classes contruct do?
+            <br><br><div class="acmnMyAnswer blueBold">
+              An iterator is a special kind of data structure similar to an array, list, or collection. It allows a loop construct in code to loop through the items
+              that the iterator points to - strings, numbers, objects, feature classes - and do something to or with them.
+            </div>
+          </div>
+          
+        </li>
+        
+        <li>
+          
+          <span class="clsH7">Raster Math toolset</span><br><br>
+          
+          Read all pages under 
+          <a href="http://desktop.arcgis.com/en/arcmap/10.5/tools/3d-analyst-toolbox/an-overview-of-the-raster-math-toolset.htm" target="_blank">
+            this topic
+          </a> 
+          and answer the following questions. 
+          
+          <br><br><div class="acmnDashedAlert">
+            <span class="greenGreen1">Question 9</span>: What numeric data type would result from dividing a raster with integer values by 2? By 2.0?
+            <br><br><div class="acmnMyAnswer blueBold">
+              integer, floating point
+            </div>
+            <br><br><span class="greenGreen1">Question 10</span>: What is the advantage of storing raster data as Integer as opposed to floating point?
+            <br><br>
+            <div class="acmnMyAnswer blueBold">
+              Data can be easily queried, categorized, classified</div>
+          </div>
+          
+        </li>
+        
+      </ol>
+      
+      <ol type="I">
+        
+        <li>
+          
+          <span class="clsH6">Part One</span><i class="fa fa-check" style="color:green;"></i><br><br>
+          
+          Open the <span class="blueHuang">RasterMath.mxd</span> document in your workspace. The document should have:
+          <br><br><ul type="disc">
+            <li>The Year2011 and MBR features classes</li>
+            <li>Two basemap layers</li>
+            <li>Enabled the 3D Analyst and Spatial Analyst extensions</li>
+            <li>Set your <span class="blueHuang">RastMath.gdb</span> as the default geodatabase</li>
+            <li>Set 'same as MBR' as the geoprocessing environments... | processing extent</li>
+            <li>Set 100 as the geoprocessing environments... | Raster Analysis | Cell Size</li>
+            <li>Set option: All options saved into the document</li>
+          </ul>
+          <br><br><div><img src="Lab6/Image_002.png" width="800"></div><br><br>
+          
+          By the end of each year, UFO witness locations are compiled into a point feature class which is then converted into a density raster using 
+          the <span class="blueHuang">kernel density geoprocessing tool</span>. For the time being, five UFO density rasters have been created, and 
+          you will be processing the 2011 observations.<br><br>
+          
+          <ol type="1">
+            
+            <li>
+              open the <code class="blueHuang">ArcToolbox | Spatial Analyst Tools | Density |</code>&nbsp;&nbsp;  
+              <a href="http://desktop.arcgis.com/en/arcmap/10.5/tools/spatial-analyst-toolbox/kernel-density.htm" target="_blank">Kernel Density</a> tool. 
+              Set <span class="blueHuang">Year2011</span> as an input point feature class, keep <span class="blueHuang">NONE</span> in the population 
+              field box, specify <span class="blueHuang">UFO2011</span> as the output raster name, specify <span class="blueHuang">cell size 100 (feet)</span>, 
+              <span class="blueHuang">search radius 3960 (feet)</span>, and select <span class="blueHuang">SQUARE_MAP_UNITS</span> in the area unit box. 
+              
+              <br><br><div><img src="Lab6/Image_003.png"></div>
+              <br><br><div class="acmnMyAnswer"> Python:
+                <blockquote>
+                  <pre>
+import arcpy
+from arcpy import env
+from arcpy.sa import KernelDensity
+env.workspace = "X:/Hostgator/homework/GSP537/labs/6/RasterMath.gdb"
+outKDens = KernelDensity("Year2011", "NONE", 100, 3960, "SQUARE_MAP_UNITS")
+outKDens.save("UFO2011")</pre>
+                </blockquote>
+              </div>
+              
+              <br><br><div>
+                <table>
+                  <tr>
+                    <td valign="top"><img src="Lab6/Image_004.png" width="300"></td>
+                    <td valign="top"><img src="Lab6/Image_005.png" width="300"></td>
+                    <td valign="top"><img src="Lab6/Image_009.png" width="302" height="296"></td>                    
+                    <td valign="top"><img src="Lab6/Image_008.png" width="300"></td>
+                  </tr>
+                  <tr>
+                    <td align="center" style="text-decoration:underline;">Result of Kernal Density Function</td>
+                    <td align="center" style="text-decoration:underline;">UFO2011</td>
+                    <td align="center" style="text-decoration:underline;">UFO_Year2011</td>
+                    <td align="center" style="text-decoration:underline;">Year2011</td>
+                  </tr>
+                </table>
+              </div>
+                            
+              <br><br>
+              
+              If you load a UFO density raster of any previous year (say UFO_Year2010), you will find this resulting raster is significantly different.  First, 
+              this raster has floating values while the UFO_Year2010, and all preceding years, have integer values. You need to create floating point values large 
+              enough to make a useful integers, make the values positive, then convert them to integers (as you've seen in prior labs, some geoprocessing tools 
+              only accept rasters with integer values so this could come in handy in a variety of circumstances). These tasks could be accomplished using 
+              individual tools and deleting the outputs of the processes, but since you have an obvious workflow with intermediate data, you'll create a model in 
+              <span class="blueHuang">modelbuilder</span> to complete this task with just the intermediate data in memory.
+            </li>
+            
+            <li>
+              Open the Model Builder. Save the model in a new toolbox named <span class="blueHuang">FufooModels</span> with model name 
+              <span class="blueHuang">TimesInt</span> in the lab GDB.
+            </li>
+            
+            <li>
+              Open <code class="blueHuang">ArcToolbox | 3D Analyst Tools | Raster Math</code>. Drag or add the <span class="blueHuang">Times</span> tool into the 
+              Model Builder window twice, and  an <span class="blueHuang">Int</span> tool once. Drag the <span class="blueHuang">UFO2011</span> raster 
+              into the model and use the <span class="blueHuang">Connect</span> tool to connect it to the first Times process as the Input raster, constant value 1. 
+              Open the first Times process and type the value 1 trillion for Input raster, constant value 2. Your model should look something like the diagram 
+              below. If your model doesn’t look exactly like this it’s ok; likely your raster inputs are hidden by the blue input circles.
+            </li>
+            
+            <li>
+              The output raster is going to be intermediate data so the name isn't important and it will inherit the default GDB from the MXD. Click OK, and you'll 
+              see that a new variable is connected to the Times process for the constant value. Connect the output from the first Times process to the second Times 
+              process as Input raster 1, and double click the second Times process and make the constant value -1. Don't bother naming the output raster, its 
+              intermediate data. Now, connect the output variable from the second Times process to the Int process. Name this output UFO_Year2011. The model should 
+              look something like this:
+              <br><br><div><img src="Lab6/Image_007.png" width="1100"></div><br><br>
+            </li>
+            
+            <li>
+              Right-click on the output from the first and second Times processes and make sure Intermediate is checked, and make sure the output of the Int process 
+              is NOT intermediate. Notice that your input values 1000000000000 and -1 are represented by 'Input raster or constant value' in blue circles separate from 
+              the input values that used to be rasters. Once you're happy with the model, run it.
+            </li>
+            
+            <li>
+              Once the model has completed its run, select <span class="blueHuang">Delete Intermediate Data</span> from the <span class="blueHuang">Model</span> menu. 
+              You should only have the <span class="blueHuang">UFO_Year2011</span> raster in your GDB now.
+            </li>
+            
+            <li class="acmnDashedAlert">
+              <span class="greenGreen1">Screenshot 1</span>: Capture a screenshot of your entire model and paste it into your turd document.
+            </li>
+            
+            <li>Add the <span class="blueHuang">UFO_Year2011</span> raster to your map document, and allow ArcMap to build pyramids if needed.</li>
+            
+            <li>
+              Right-click the layer and select <code class="blueHuang">Properties | Symbology</code>, select Classified, set the classes to 7, then click 
+              <span class="blueHuang">Classify</span>. 
+            </li>
+            
+            <li>
+              In the classification dialog box, make sure the classification method is <span class="blueHuang">Natural Breaks (Jenks)</span>, click 
+              <span class="blueHuang">Exclusion</span>, and set the excluded value to 0. Click OK and select Color Ramp  <span class="blueBold">green to 
+              red</span> (12<sup>th</sup> from the top). Click OK. Finally, you may need to set 30% transparency to the layer. 
+              <br><br><div>
+                <table>
+                  <tr><td valign="top"><img src="Lab6/Image_008.jpg"></td><td valign="top"><img src="Lab6/Image_010.png" width="700"></td></tr>
+                </table>
+              </div>
+            </li>
+            
+            <li class="acmnDashedAlert">
+              <span class="greenGreen1">Screenshot 2</span>: Capture a screenshot of UFO_Year2011 after the symbology is applied, and paste it into your turd document, 
+              making sure to include the table of contents.
+            </li>
+            
+          </ol>
+          
+        </li>
+        
+        <li>
+          
+          <span class="clsH6">Part Two</span><i class="fa fa-check" style="color:green;"></i><br><br>
+          
+          Now you want to see which areas have the highest density of UFO activity over the entire six year period by averaging the six density raster layers. This can 
+          be carried out by creating another model.
+          
+          <br><br><ol type="1">
+            
+            <li>
+              Add a <span class="blueHuang"><code class="blueHuang">ArcToolbox | Spatial Analyst Tools | Local |</code>
+              <a href="http://desktop.arcgis.com/en/arcmap/10.5/tools/spatial-analyst-toolbox/cell-statistics.htm" target="_blank">Cell Statistics</a> geoprocessing 
+              tool, and the six density rasters as input.
+            </li>
+            <li> 
+              Leave <span class="blueHuang">MEAN</span> as the overlay statistic method, and set the output raster name as <span class="blueHuang">Mean_UFO06_11</span>. 
+              Run the model.
+              <br><br><div>
+                <table width="1034">
+                  <tr><td valign="top"><img src="Lab6/Image_011.png"></td><td valign="top"><img src="Lab6/Image_012.png"></td></tr>
+                  <tr><td align="center">Parameters for the function</td>
+                  <td align="center">Mean_UFO06_11_CellStatistics</td></tr>                  
+                </table>
+              </div>
+              <br><br><div class="acmnMyAnswer"> Python:
+                <blockquote>
+                  <pre>
+import arcpy
+from arcpy import env
+from arcpy.sa import CellStatistics
+env.workspace = "X:/Hostgator/homework/GSP537/labs/6/RasterMath.gdb"
+outCellStatistics = CellStatistics(["UFO_Year2006", "UFO_Year2007", "UFO_Year2008", "UFO_Year2009", "UFO_Year2010", "UFO_Year2011"], "MEAN", "DATA")
+outCellStatistics.save("Mean_UFO06_11")</pre>
+                </blockquote>
+              </div>
+            </li>
+            
+            <li>
+              Another way to quickly achieve the same results (using python, hint hint) is by using the <span class="blueHuang">Raster Calculator</span>. Open <code class="blueHuang">ArcToolbox | Spatial Analyst Tools | Map Algebra | </code>&nbsp;&nbsp;
+              <a href="http://desktop.arcgis.com/en/arcmap/10.5/tools/spatial-analyst-toolbox/raster-calculator.htm" target="_blank">Raster Calculator</a>. Double-click 
+              each raster to add them to the expression and complete the expression as below, naming the output raster <span class="blueHuang">Mean_UFO06_11</span>.
+              <br><br>
+              <div>
+                <table width="860">
+                  <tr>
+                    <td valign="top"><img src="Lab6/Image_009.jpg" alt=""></td>
+                    <td valign="top"><img src="Lab6/Image_013.png" alt=""></td>
+                    </tr>
+                  <tr>
+                    <td align="center">Parameters for the function</td>
+                    <td align="center">Mean_UFO06_11_RasterCalculator</td>
+                    </tr>
+                  </table>
+                </div>
+              <br><br><div class="acmnMyAnswer"> Python:
+                <blockquote>
+                  <pre>
+Mean_UFO06_11_RasterCalculator = "X:\\Hostgator\\homework\\Courses\\GSP537\\labs\\6\\data\\RasterMath.gdb\\Mean_UFO06_11_RasterCalculator"
+UFO_Year2006 = "Raster\\UFO_Year2006"
+UFO_Year2007 = "Raster\\UFO_Year2007"
+UFO_Year2008 = "Raster\\UFO_Year2008"
+UFO_Year2009 = "Raster\\UFO_Year2009"
+UFO_Year2010 = "Raster\\UFO_Year2010"
+UFO_Year2011 = "Raster\\UFO_Year2011"
+arcpy.gp.RasterCalculator_sa("(\"UFO_Year2006\" + \"UFO_Year2007\" + \"UFO_Year2008\" + \"UFO_Year2009\" + \"UFO_Year2010\" +  \"UFO_Year2011\") / 6", Mean_UFO06_11_RasterCalculator)</pre>
+                  </blockquote>
+                </div>
+            </li>
+            
+            <li>
+              Apply the symbology as you did for the <span class="blueHuang">UFO_Year2011</span> raster, except leave the labels as values instead of changing them.
+              Compare this layer with each of the individual density raster layers.
+              <br><br><div><img src="Lab6/Image_014.png" alt=""></div>
+            </li>
+            
+            <li class="acmnDashedAlert">
+              <span class="greenGreen1">Screenshot 3</span>: Capture a screenshot of ArcMap showing raster Mean_UFO06_11 as well as its values in the Table of Contents.
+            </li>
+            
+          </ol>
+          
+        </li>
+        
+        <li>
+          
+          <span class="clsH6">Part Three</span><br><br>
+          
+          Suppose you accidentally deleted all the rasters in your working geodatabase (you've done this, haven't you John...). Instead of manually recreating them, 
+          you decide to make two models to accomplish all the tasks in this lab: one to recreate the missing density raster layers from the point feature classes, and 
+          the other to calculate a mean raster from the five resulting density raster layers.
+          
+          <br><br><ol type="A">
+            
+            <li>
+              
+              <span class="clsH7">UFO Density Model</span><br><br>
+              
+              This model will use an iterator to iterate over each point feature class whose name starts with <span class="blueHuang">Year</span> in the 
+              <span class="blueHuang">FUFOO_Study</span> feature dataset of the geodatabase. For each identified point feature class, the model will use the 
+              <span class="blueHuang">Kernel Density</span> geoprocessing tool to convert it into a raw density raster with tiny floating point values. Then the model 
+              uses a process used in the <span class="blueHuang">TimesInt</span> model to convert the raw density raster to an integer raster. To use an iterator, you 
+              need to know in-line variable substitution as well as using iterators for looping. If you are a programmer or administrator by trade, you will have done 
+              a lot of this already. 
+              
+              <br><br><ol type="1">
+                <li>Create a new model in your project toolbox and name it <span class="blueHuang">UFODensityModel</span>.</li>
+                <li>Click <code class="blueHuang">Insert | Create Variable</code>.</li>
+                <li>Select <span class="blueHuang">Feature Dataset</span> in the variable data type list. Click OK.</li>
+                <li>Double click the inserted Feature Dataset oval and specify the <span class="blueHuang">FUFOO_Study</span> feature dataset.</li>
+                <li>Click<code class="blueHuang"> Insert | Iterators | Feature Classes</code> to insert a feature class interator.</li>
+                <li>
+                  Draw a connection from the <span class="blueHuang">FUFOO_Study</span> feature dataset to the Iterator. Select 
+                  <span class="blueHuang">Workspace or Feature Dataset</span> when you draw the connection.
+                </li>
+                <li>
+                  Double click the iterator to enter <span class="blueHuang">Year*</span> in the wildcard box and select <span class="blueHuang">POINT</span> feature 
+                  type. Click OK.
+                  <br><br><div><img src="Lab6/Image_016.png"></div><br><br>
+                  This iterator produces two outputs: a feature class and a Name inline variable. In each iteration, a proper feature class will be selected. The inline 
+                  variable <span class="blueHuang">Name</span> will carry the name of the selected feature class in each iteration. You will use this variable as part of 
+                  the output raster names in succeeding geoprocessing steps.
+                </li>
+                <li>
+                  Insert a <span class="blueHuang">kernel density</span> geoprocessing tool and draw a connection from the <span class="blueHuang">Year2007</span> 
+                  feature class bubble in the iterator to the tool as <span class="blueHuang">Input point or polyline features.</span></li>
+                <li>
+                  Double-click the <span class="blueHuang">kernel density</span> tool to set up parameters as in the following screenshot. The output raster name 
+                  <code class="blueHuang">Kernel_%Name%</code> will be substituted as <code class="blueHuang">Kernel_whatever</code>, just like in shell scripts.
+                  <br><br><div><img src="Lab6/Image_015.png"></div><br>
+                  </li>
+                <li>Add two <span class="blueHuang">Times</span> geoprocessing tools and one <span class="blueHuang">Int</span> tool into the 
+                  model. Make sure you use the <code class="blueHuang">%Name%</code> variable in naming the transient and final raster layers when you add the tools. Use <span class="blueHuang">UFO_%Name%</span> for the final raster layers.
+                </li>
+                <li>To test the model, delete all imtermediate raster datasets from the geodatabase first (do not delete the feature classes and your toolbox).</li>
+                <li class="acmnDashedAlert">
+                  <span class="greenGreen1">Screenshot 4</span>: Once your model runs successfully, create a screenshot of the model and paste it in your turd document.
+                  <br><br><div><img src="Lab6/Image_017.png"></div>
+                  <br><br><span class="greenGreen1">Python Script 1</span>: Export the Python script for the Model and save it as <code class="blueHuang">Density_Model.py</code>
+                  <br><br><div class="acmnMyAnswer"> Python:
+                    <blockquote>
+                      <pre>
+# ---------------------------------------------------------------------------
+# Density_Model.py
+# Created on: 2018-04-02 16:11:17.00000
+#   (generated by ArcGIS/ModelBuilder)
+# Description: GSP 537 Sp 2018 Lab 6 Part 3
+# John Bonifas
+# ---------------------------------------------------------------------------
+
+# Import arcpy module
+import arcpy
+
+# Load required toolboxes
+arcpy.ImportToolbox("Model Functions")
+
+# Local variables:
+FUFOO_Study = "X:\\Hostgator\\homework\\Courses\\GSP537\\labs\\6\\data\\RasterMath.gdb\\FUFOO_Study"
+Name = "Year2011"
+Times_Kernel2 = ""
+Times_Kernel1 = ""
+Year2007 = "X:\\Hostgator\\homework\\Courses\\GSP537\\labs\\6\\data\\RasterMath.gdb\\FUFOO_Study\\Year2011"
+Kernel__Name_ = "X:\\Hostgator\\homework\\Courses\\GSP537\\labs\\6\\data\\RasterMath.gdb\\Kernel_%Name%"
+UFO__Name_ = "X:\\Hostgator\\homework\\Courses\\GSP537\\labs\\6\\data\\RasterMath.gdb\\UFO_%Name%"
+
+# Process: Iterate Feature Classes
+arcpy.IterateFeatureClasses_mb(FUFOO_Study, "Year*", "POINT", "NOT_RECURSIVE")
+
+# Process: Kernel Density
+arcpy.gp.KernelDensity_sa(Year2007, "NONE", Kernel__Name_, "100", "", "SQUARE_MILES", "DENSITIES", "PLANAR")
+
+# Process: Times
+arcpy.gp.Times_sa("", "", Times_Kernel2)
+
+# Process: Times (2)
+arcpy.gp.Times_sa("", "", Times_Kernel1)
+
+# Process: Int
+arcpy.gp.Int_sa(Kernel__Name_, UFO__Name_)</pre>
+                    </blockquote>
+                  </div>
+                </li>
+                
+              </ol>
+              
+            </li>
+            
+            <li>
+              
+              <span class="clsH7">Raster Mean Model</span><br><br>
+              
+              To create a model that calculates a mean raster of UFO densities of six density rasters, you could follow guidelines presented in the first paragraph of 
+              Part Two. However, that procedure entails you to manually add six input rasters into the model. The following procedure introduces a method that 
+              automatically finds all relevant rasters in a GDB and uses them to calculate a mean raster.<br><br>              
+              An iterator can identify all rasters or feature classes in a workspace or feature dataset, but it processes each layer separately at each iteration. 
+              Therefore, it produces multiple output layers for one input workspace. To use all layers identified by an iterator to compute one mean raster, use the 
+              <span class="blueHuang">Collect Values</span> tool.
+              
+              <br><br><ol type="1">
+                <li>Create a new model and save it as <span class="blueHuang">RasterMeanModel</span> in your toolbox.</li>
+                <li>Choose <code class="blueHuang"> Insert | Create Variable | Workspace.</code></li>
+                <li>Double click the Workspace oval to set your GDB as the workspace.</li>
+                <li>
+                  Choose <code class="blueHuang">Insert | Iterators | Rasters</code>, then add a connection from the workspace to the iterator. 
+                </li>
+                <li>
+                  Double click the iterator to set the wildcard <span class="blueHuang">UFO_Year*</span>. This will allow all rasters whose names start with 
+                  <span class="blueHuang">UFO_Year</span> to be iterated.
+                </li>
+                <li>
+                  Choose <code class="blueHuang">Insert | Model Only Tools | Collect Values</code>. Then draw a connection from the iterator 
+                  output raster to this tool as input.
+                </li>
+                <li>
+                  Insert <code class="blueHuang">Spatial Analyst Tools | Local | Cell Statistics</code>, set the output values from the collect values tool as input, 
+                  specify the output raster name as <span class="blueHuang">UFO_Mean</span>, and select <span class="blueHuang">MEAN</span> in the overlay 
+                  statistic box if it isn't selected already.
+                  <br><br><div><img src="Lab6/Image_018.png"></div> 
+                </li>
+                <li>
+                  Click OK. If your model passes validation, you can run it to produce a mean raster of UFO densities. 
+                  <br><br><div><img src="Lab6/Image_019.png"></div>
+                  <div class="acmnMyAnswer"> Python:
+                    <blockquote>
+                      <pre>
+# ---------------------------------------------------------------------------
+# Raster_Mean.py
+# Created on: 2018-04-02 16:52:33.00000
+#   (generated by ArcGIS/ModelBuilder)
+# Description: GSP 537 Sp 2018 Lab 6 Part 3
+# John Bonifas
+# ---------------------------------------------------------------------------
+
+# Import arcpy module
+import arcpy
+
+# Load required toolboxes
+arcpy.ImportToolbox("Model Functions")
+
+# Local variables:
+RasterMath_gdb = "X:\\Hostgator\\homework\\Courses\\GSP537\\labs\\6\\data\\RasterMath.gdb"
+Name = "UFO_Year2007"
+UFO_Year2007 = "X:\\Hostgator\\homework\\Courses\\GSP537\\labs\\6\\data\\RasterMath.gdb\\UFO_Year2007"
+Output_Values = UFO_Year2007
+UFO_Mean = "X:\\Hostgator\\homework\\Courses\\GSP537\\labs\\6\\data\\RasterMath.gdb\\UFO_Mean"
+
+# Process: Iterate Rasters
+IterateRasters_mb(RasterMath_gdb, "UFO_Year*", "", "NOT_RECURSIVE")
+
+# Process: Collect Values
+CollectValues_mb("X:\\Hostgator\\homework\\Courses\\GSP537\\labs\\6\\data\\RasterMath.gdb\\UFO_Year2007")
+
+# Process: Cell Statistics
+gp.CellStatistics_sa(Output_Values, UFO_Mean, "MEAN", "DATA")</pre>
+                    </blockquote>
+                  </div>
+                </li>
+                <li class="acmnDashedAlert">
+                  <span class="greenGreen1">Screenshot 5</span>: capture a screenshot of the raster mean model and paste it in your turd document.<br><br>
+                  <span class="greenGreen1">Python script 2</span>: export the model as a python script named <span class="blueHuang">Raster_Mean.py</span>
+                </li>
+              </ol>
+              
+              <br><br><address class="acmnPurpleBorderSilver">
+                <span class="blueBold">Bonus!</span> You can create one model (and thus one python script) to recreate this entire lab. To do so, you use a 
+                <span class="blueHuang">Collect Values</span> tool in the<span class="blueHuang"> UFODensityModel</span>  to collect the output of the model, 
+                then perform cell statistics on the collected raster layers. I won't have anybody turn this in, except for John, because he has a programming 
+                background.
+              </address>
+              
+            </li>
+            
+          </ol>
+          
+        </li>
+        
+        <li class="acmnDashedAlert">
+          
+          Create your project poster. Your poster must:
+          <br><br><ul type="disc">
+            <li>Briefly introduce the project and present objectives</li>
+            <li>Explain the workflow and key techniques</li>
+            <li>Present key intermediate maps and a final map</li>
+          </ul>
+          
+        </li>
+        
+      </ol>
+          
+    </article>
+    
+  </td></tr></table>
+  </td></tr></table>
+  
+</body>
+</html>
