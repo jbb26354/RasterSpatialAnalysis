@@ -1,0 +1,1998 @@
+
+
+<!DOCTYPE html>
+
+<html xml:lang="en-US" dir="ltr" lang="en-US">
+
+  <head>
+    
+    <!-- Slowly's Standard Webpage Bootstrap last updated 07-27-2017 -->
+        
+    <title>GSP 537 Sp 2018 Lab 3</title>
+
+    <meta name="generator" content="Dreamweaver CC 2015">
+    <meta name="author" content="John Bonifas">
+    <meta name="created" content="As the pyramids were being built">
+    <meta name="changedby" content="Slowly">
+    <meta name="changed" content="09-08-2017">
+    
+    <meta charset="utf-8">
+        
+    <meta name="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="content-language" content="en-us">
+    
+    <!-- for devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="800">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="cleartype" content="on">
+    
+    <!-- default - nosharing -->
+    <meta name="robots" content="noindex, nofollow, noarchive, nocache, nosnippet, noodp, noydir">
+    <meta name="Googlebot" content="noindex, nofollow, noarchive, nocache, nosnippet, noodp, noydir">
+    <meta name="google" content="notranslate">
+    
+    <!-- uncomment this and the next 2 comment lines for sharing  
+    <meta name="robots" content="index, follow, archive, cache, snippet, odp, ydir">
+    <meta name="googlebot" content="index, follow, archive, cache, snippet, odp, ydir">
+    <meta name="google" content="notranslate">
+    
+    <!-- 
+      Facebook/Google OpenGraph for sharing posts -- see ogp.me. og:url and canonical must be the same 
+      Facebook Sharing Debugger: https://developers.facebook.com/tools/debug/ 
+      all the og: properties can be found at: http://ogp.me/ns/ogp.me.ttl
+    
+    <meta property="fb:app_id"       content="874872455992127"
+    <link rel="canonical"            href="http://www.deckerd26354.net/shared/MyFonts.htm">
+    <meta property="og:url"          content="http://www.deckerd26354.net/shared/MyFonts.htm">
+    <meta property="og:site_name"    content="Pudnik's Virtual Server">
+    <meta property="og:type"         content="article">
+    <meta property="og:title"        content="My Online Fonts">
+    <meta property="og:description"  content="For web developers">
+    <meta property="og:image"        content="http://www.deckerd26354.net/shared/assets/canonical_graduate.png">
+    <meta property="og:image:type"   content="image/png">
+    <meta property="og:image:height" content="320">
+    <meta property="og:image:width"  content="200">
+    <meta property="og:locale"       content="en_US">
+    <meta property="article:author"  content="Slowly">
+    
+    <link rel="icon" type="image/x-icon"          href="http://www.deckerd26354.net/shared/assets/favicon_graduate.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="http://www.deckerd26354.net/shared/assets/favicon_graduate.ico">
+    <link rel="apple-touch-icon"                  href="http://www.deckerd26354.net/shared/assets/favicon_graduate.ico">     
+    <link rel="apple-touch-icon" sizes="48x48"    href="http://www.deckerd26354.net/shared/assets/favicon_graduate.ico"> 
+    <link rel="apple-touch-icon" sizes="76x76"    href=""> 
+    <link rel="apple-touch-icon" sizes="120x120"  href=""> 
+    <link rel="apple-touch-icon" sizes="152x152"  href=""> 
+    <link rel="apple-touch-icon" sizes="180x180"  href="">  
+    -->
+    
+    <!-- My OpenAuth...I'll fix this someday -->
+    <!-- <link rel="openid.server" href="http://www.myopenid.com/server"> -->
+    <!-- <link rel="openid.delegate" href="http://Pudnik.myopenid.com/"> -->
+    
+   <!-- ***************************************************************************** 
+    ONLINE DHTML EDITORS
+      pagedemos.com
+      codepen.io
+      jsfiddle.net
+  ******************************************************************************** -->
+    
+    
+   <!-- ***************************************************************************** 
+    FRAMEWORKS AND INCLUDES
+      servers
+        cdnjs.cloudflare.com
+        apis.google.com
+  ******************************************************************************** -->
+    
+  <!-- My Webfonts Collection for HTML 5 10-16-2016 -->
+  <link rel="stylesheet" type="text/css" href="http://www.deckerd26354.net/shared/MyFonts.css"> 
+  
+  <!-- Normalizer: 'normalizes' certain HTML tags to make it even better looking and printing. Crashes my Dreamweaver for OSX, and was removed.
+
+  <!-- bootstrap. NOTE: bootstrap.js will steal your fonts and font sizes; use IDs to override it. 
+       css crashes my Dreamweaver for OSX, and was removed. --> 
+
+  <!-- a much lighter CSS reset system than bootstrap. But it messes with my borders and puts an unwanted HR, and was removed. -->
+  <!-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/shoelace-css/1.0.0-beta9/shoelace.css"> -->
+  
+  <!-- Wenk: a tooltip API. Crashed my Dreamweaver for OSX, and was removed. -->
+  
+  <!-- Kute: an HTML5 animation API. Error in javascript version 1.6.2, so removed -->
+  
+  <!-- 
+    font-awesome: 675 icons and SVG fonts (current version as of 06-02-2017) 
+    CDN: https://www.bootstrapcdn.com/fontawesome/ 
+    HOM: http://fontawesome.io
+    
+    USAGE
+    -----
+    with font-awesome version 4, a new syntax for icon usage is presented, and is incompatible with version 3 syntax. It is:
+    <i class="fa {IconClassName} {modifier, i.e. fa-3x} {...}"></i>
+  -->
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <!-- jQuery -->
+  <script language="javascript" type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script> 
+  
+  <!-- Angular JS: a huge popular front-end framework but has the best messageboxes in the world -->
+  <script language="javascript" type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
+  
+  <!-- PushJs: Send notifications just like legit spammers and pavlov dogs do -->
+  <script language="javascript" type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/push.js/1.0.4/push.min.js"></script>
+  
+    <!-- fotorama jquery-based photo gallery instructions are at fotorama.io -->
+  <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css">
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
+
+  <!-- Velocity: jQuery plugin for high performance animation -->
+  <script language="javascript" type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.min.js"></script> 
+  
+  <!-- Vue: front-end framework -->
+  <script language="javascript" type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.2/vue.min.js"></script> 
+  
+  <!-- ExtJS: front-end framework -->
+  <script language="javascript" type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/extjs/6.2.0/ext-all.js"></script>
+  
+  <!-- Ionic: mobile framework -->
+  <script language="javascript" type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ionic/1.3.2/js/ionic.min.js"></script>
+  
+  <!-- Google+ -->
+  <script language="javascript" type="application/javascript" src="https://apis.google.com/js/plusone.js"></script> 
+  
+  <!-- mootools: An Object-Oriented JavaScript framework designed for the intermediate to advanced JavaScript developer -->
+  <script language="javascript" type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mootools/1.6.0/mootools-core.js"></script> 
+    
+  <!-- Gauge: HTML 5 canvas gauges -->
+  <script language="javascript" type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gauge.js/1.2.1/gauge.min.js"></script> 
+       
+  <!-- Three: HTML 5 WebGL 3D framework -->
+  <script language="javascript" type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/three.js/87/three.min.js"></script> 
+       
+  <!-- MY CUSTOM CSS ---------------------------------------------------------------------------------------------------------- -->
+     
+  <style type="text/css">
+   
+  /* 
+      Last Updated for HTML 5 09-08-2017 
+    
+      Online WYSIWYG CSS Editors
+      
+      http://selfcss.org/
+        
+  */
+  
+    @charset "utf-8";
+    
+    /* Redefines */
+    
+    BODY{font-family:Arial;max-width:800px;font-size:10pt;}
+    P, TD, TH{font-family:Arial;font-size:10pt;}
+    ASIDE{display:block;margin:15px;}
+    HEADER{display:block;text-align:center;}
+    NAV
+    {
+      display:block;
+      padding:10px;
+      font-size:10px;
+      margin:5px;
+      text-align:center;
+      background-color:transparent;
+    }
+    SECTION{max-width:98%;padding:10px;}
+    ARTICLE{margin: 10px;padding: 10px;border-radius: 10px;}
+    FOOTER{clear: both;display: block;padding: 15px;}
+    H1,H2,H3,H4,H5,H6{page-break-after:avoid;}
+    LI{padding:5px;}
+    CODE{font-family:courier;font-size:10pt;}
+    PRE{font-size:9pt; padding:2px;width:600px;}
+    FIGURE{padding:8px;}
+    FIGIMAGE{break-after:always;}
+    FIGCAPTION{margin: 2px;font-size: 11px;font-style:italic;color:#444;}
+    
+    A:LINK{}    /* normal */
+    A:VISITED{} /* visited */
+    A:HOVER{}   /* hovering */
+    A:ACTIVE{}  /* click */
+
+    /* IDs */
+    
+    #container{width: 1024px;}
+    #content{width: 99%; border: 1px solid green;}
+    #rootCell{ text-align:left; vertical-align:text-top;}
+    
+    /* 
+      The bootstrap framework steals your custom fonts and font sizes.
+      Using IDs here will override bootstrap's changes because IDs have
+      the highest CSS priority.
+    */
+    #bootstrap-font-override{font-family: Arial;}
+        
+    /* Classes */
+        
+    /* My classes that I've developed myself */
+    
+    /* classes I use all the time */
+    .acmnSnippet {font-weight:bold;font-style:italic;}
+    .acmnMyAssignment{border:1px green solid;font-weight:bold;}
+    .classDate{border:2px red solid;font-weight:bolder;text-decoration:underline;}
+    .acmnMyAnswer{border:1px black solid;}
+    .acmnDone{background-color: LightGrey;}
+    .acmnGroupProject{background-color: rgb(170, 255, 170);}
+    .acmnCodeIt{font-family:courier;}
+    .acmnUnderlineIt{text-decoration:underline;}
+    .acmnImportant1{color:red; font-weight:bold; font-size:12pt;font-family:sans-serif;}
+    .acmnImportant2{font-family:verdana;font-weight:bold;color:red;}
+    .acmnKeywords {color: #D31242;font-size: 14pt;}
+    
+    .redSmall{line-height:18.0pt;font-size:8pt;color:#A81817;}
+    .redLight{color:#ff3300;}
+    .greyBehind 
+    {
+      background-color: #555;
+      display:block;
+      margin: 10px;
+      padding: 10px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      border-radius: 10px;
+      -webkit-box-shadow: 2px 2px 20px #888;
+      -webkit-transform: rotate(0deg);
+      -moz-box-shadow: 2px 2px 20px #888;
+      -moz-transform: rotate(0deg);
+    }
+
+    /* for backward compatibility only. Use figure and figcaption instead */
+    .acmnImageCaption{margin: 2px;font-size: 12px;font-style:italic;}  
+    .greyAddressNormal{font-size:8pt;color:gray;}
+    .greyAddressItalic{font-size:12px;font-weight: 300;color:gray;font-style:italic}
+    .LimeLine{border-bottom: 2px solid #0bce7e;width:200px;}
+    .pinkItalic{font-style:italic;color:#EF118C;}
+    .acmnCursiveHandwriting{font-family: 'Edwardian Script ITC'; font-size:18pt; color: Navy;}
+    .greenGreen1{font-weight:bold; color:#3B783B;}
+    .asideLeft{float:left;border:1px solid #999;}
+    .asideRight{float:right;border:1px solid #999;}
+    .blueCornflower{background-color: #8CA4D4;color: #2F2F65;font-weight: bold;font-size: 18px;}
+    
+    /* My header classes */
+    
+    .clsH0{font-size:72pt;font-weight:bolder;}
+    .clsH1{font-size:64pt;font-weight:bolder;}
+    .clsH2{font-size:48pt;font-weight:bolder;}
+    .clsH3{font-size:24pt;font-weight:bolder;}
+    .clsH4{font-size:18pt;font-weight:bolder;}
+    .clsH5{font-size:16pt;font-weight:bolder;}
+    .clsH6{font-size:14pt;font-weight:bold;}
+    .clsH7{font-size:12pt;font-weight:bold;}
+    .clsH8{font-size:10pt;font-weight:bold;}
+    .clsH9{font-size:8pt;font-weight:bold;}
+
+    /* stolen from CPI111 ASU Fall 2013 */
+    .greenLightBig{color: #92C500;font-family: serif;font-weight: bold;font-size: 18pt;}
+    .greenOliveForeground{color:#556B2F;}
+    .greenOliveBackground{color:white; background-color:#556B2F;}
+    .paleBackgroundPink{background-color:#ffe1ff;}
+    .paleBackgroundLightGrey{background-color:#eff0f1;}
+    .paleBackgroundGold{background-color:#fff7e5;}
+    .pinkyDashed{background-color:#ffe1ff;border:1px dashed fuchsia;}
+    
+    /* webkit complex style class-is-broken indicators */
+    .acmnDropShadow 
+    {
+      -moz-box-shadow: 3px 3px 4px #999; /* Firefox */
+      -webkit-box-shadow: 3px 3px 4px #999; /* Safari/Chrome */
+      box-shadow: 3px 3px 4px #999; /* Opera and other CSS3 supporting browsers */
+    }
+
+    .acmnRaisedBox 
+    {
+      -moz-box-shadow: 3px 3px 4px #999; /* Firefox */
+      -webkit-box-shadow: 3px 3px 4px #999; /* Safari/Chrome */
+      box-shadow: 3px 3px 4px #999; /* Opera and other CSS3 supporting browsers */
+      border-top: 1px solid #CCC;
+      border-left: 1px solid #CCC;
+    }
+
+    .SlapStamp
+    {
+      color: #F47D31;
+      background-color: #fff;
+      -webkit-box-shadow: 2px 2px 20px #888;
+      -webkit-transform: rotate(-45deg);
+      -moz-box-shadow: 2px 2px 20px #888;
+      -moz-transform: rotate(-45deg);
+      position: absolute;
+      padding: 0px 150px;
+      text-align:center;
+    }
+    
+    /* Stolen from Eric Meyer meyerweb.com */
+    .blueSky{background: #B4D5FF; font-weight: bold;}
+    .yellowWarning {background: #FF8; color: red; border: 2px solid; padding: 1em;}
+    
+    /* Stolen from Stack Overflow */
+    .acmnDashedAlert
+    {
+      padding:5px;
+      font-weight:bold;
+      margin-bottom:10px;
+      margin-top:5px;
+      border:2px dotted #AE0000;
+    }
+    .btn_StackOverflow
+    {
+      color:#3E6D8E;
+      background-color:#E0EAF1;
+      border-top: 1px solid #DDD;
+      border-left: 1px solid #DDD;
+      border-radius: 5px;
+      border-bottom:1px solid #3E6D8E;
+      border-right:1px solid #7F9FB6;
+      padding:3px 4px 3px 4px;
+      margin:2px 2px 2px 0;
+    }
+    .whiteBlack
+    {
+      color:#fff;
+      background-color:#333;
+      border:1px solid #333;
+      margin:0 3px 3px 0;
+      padding:0px 6px 0px 3px;
+      display:inline-block;
+    }
+    .orangeYellowBack{background-color:#ffefc6;}
+    .orangeLightBack{background-color:#ff9900;color:white;}
+    .orangeDarkBack{background-color:#df5c13;color:white;}
+    .orangeLightFore{color:#ff9900;}
+    .orangeDarkFore{color:#df5c13;}
+    
+    .redWarning
+    {
+      background-color:#E23535;
+      color:#FFFFFF;
+      font-size:10px;
+      padding:0 5px 1px;
+    }
+    
+    /* Stolen from javadoc */
+    .mauveDarkBack{background:#BBBBFF;}
+    .mauveLightBack{background:#DDDDFF;}
+    .mauveDarkFore{color:#5555FF;}
+    .mauveLightFore{color:#BBBBFF;}    
+    .blueDark{background-color:#00008B;color:#FFFFFF;}
+    
+    /* Stolen from John Urbanek */
+    .blueBlack{background-color: #333333;color:#00CCFF;text-align:center;font-style:italic;}
+    .blueBold{color:#3366FF;font-weight:bolder;}
+    .navy{color:navy;}
+    .navyBold{color:navy;font-weight:bold;}
+    .aquaCyanNormal{color:#2b91af;}
+    .aquaCyanBold{color:#2b91af;font-weight:bold;}
+    .aquaNormal{color:#0078C0;}
+    .aquaBold{color:#0078C0;font-weight:bold;}
+    
+    /* Stolen from Adobe */
+    .adobe_s1 {color: #58595B;font-size: 6pt;}
+    .adobe_s2 {color: #58595B;font-size: 8pt;}
+    .adobe_s3 {color: #58595B;font-size: 12pt;}
+    .adobe_s4 {color: #58595B;font-size: 14pt;}
+    .adobe_s5 {color: #58595B;font-size: 18pt;}
+    .adobe_s6 {color: #D31242;font-size: 8pt;}
+    .adobe_s7 {color: #D31242;font-size: 12pt;}
+    .adobe_s8 {color: #D31242;font-size: 14pt;}
+    .adobe_s9 {color: #D31242;font-size: 18pt;}
+    .adobe_s10 {color: #BE2D00; font-size: 24pt;}
+    .adobe_s11 {color: #BE2D00; font-size: 32pt;}
+    .adobe_s12 {color: #007DC5;font-weight: bold;font-size: 6pt;}
+    .adobe_s13 {color: #007DC5;font-weight: bold;font-size: 8pt;}
+    .adobe_s14 { color: #40458C; font-size: 8pt; }
+    .adobe_s15 { color: #40458C; font-size: 10pt; }
+    .adobe_s16 { color: #40458C; font-size: 12pt; }
+    .adobe_s17 { color: #40458C; font-style: italic; font-weight: bold; font-size: 12pt; }
+    .adobe_s18 { color: #40458C; font-size: 18pt; }
+    .adobe_s31 {color: #231F20; font-weight: normal; font-size: 8pt; }
+    .adobe_s41 {color: #00ADEF; font-weight: normal; font-size: 10pt; }
+    .adobe_s51 {color: #00ADEF; font-weight: normal; font-size: 8pt; }
+    
+    /* stolen from Radek Suski and Protostar */
+    
+    .aqua1 {color:white;background-color:#61b6ff}
+    .aqua2 {color:white;background:#2892ff!important;}
+    .aqua3{color:yellow;background:#2e9fff;}
+    .aquaComplex
+    {
+      color:Yellow;
+      text-shadow:0 -1px 0 rgba(0,0,0,.25);
+      background-color:#49afcd;
+      background-image:-webkit-linear-gradient(to bottom, #5bc0de, #2f96b4);
+      background-image:linear-gradient(to bottom, #5bc0de, #2f96b4);
+      background-repeat:repeat-x;  
+      filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff5bc0de', endColorstr='#ff2f96b4', GradientType=0);
+      border-color:#2f96b4 #2f96b4 #1f6377;
+      border-color:rgba(0,0,0,.1) rgba(0,0,0,.1) rgba(0,0,0,.25);
+      filter:progid:DXImageTransform.Microsoft.gradient(enabled=false)
+    }
+    .aqua5{color:white;background-color:#2f96b4;}
+    .greenTeal1{background:#6fa42a;}
+    .greenTeal2{background-color:#51a351;}
+    .greenWhite1{color:white;background:#4bad00;}
+    .goldBlack{background:#ffc62e;}
+    .btn_Blue
+    {
+      text-shadow:0 -1px 0 rgba(0,0,0,.25);
+      color: #999;
+      border-radius: 5px;
+      background-color:#004cd6;
+      background-image:-webkit-linear-gradient(to bottom, #0069d6, #0022d6);
+      background-image:linear-gradient(to bottom, #0069d6, #0022d6);
+      background-repeat:repeat-x;
+      filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0069d6', endColorstr='#ff0022d6', GradientType=0);
+      border-color:#0022d6 #0022d6 #00168a;
+      border-color:rgba(0,0,0,.1) rgba(0,0,0,.1) rgba(0,0,0,.25);
+      filter:progid:DXImageTransform.Microsoft.gradient(enabled=false);
+      padding:3px 4px 3px 4px;
+    }
+
+    .btn_LightFlesh
+    {
+      text-shadow:0 -1px 0 rgba(0,0,0,.25);
+      border-radius: 5px;
+      background-color:#ff855c;
+      background-image:-webkit-linear-gradient(to bottom, #ff9c7b, #ff632e);
+      background-image:linear-gradient(to bottom, #ff9c7b, #ff632e);
+      background-repeat:repeat-x;
+      filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffff9c7b', endColorstr='#ffff632e', GradientType=0);
+      border-color:#ff632e #ff632e #e13900;
+      border-color:rgba(0,0,0,.1) rgba(0,0,0,.1) rgba(0,0,0,.25);
+      filter:progid:DXImageTransform.Microsoft.gradient(enabled=false);
+      padding:3px 4px 3px 4px;
+    }
+    .btn_DarkFlesh
+    {
+      text-shadow:0 -1px 0 rgba(0,0,0,.25);
+      border-radius: 5px;
+      background-color:#ff632e;
+      background-image:-webkit-linear-gradient(to bottom, #ff9c7b, #ff632e);
+      background-image:linear-gradient(to bottom, #ff9c7b, #ff632e);
+      background-repeat:repeat-x;
+      filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffff9c7b', endColorstr='#ffff632e', GradientType=0);
+      border-color:#ff632e #ff632e #e13900;
+      border-color:rgba(0,0,0,.1) rgba(0,0,0,.1) rgba(0,0,0,.25);
+      filter:progid:DXImageTransform.Microsoft.gradient(enabled=false);
+      padding:3px 4px 3px 4px;
+    }
+    .btn_Sunburn
+    {
+      text-shadow:0 -1px 0 rgba(0,0,0,.25);
+      background-color:#da4f49;
+      background-image:-webkit-linear-gradient(to bottom, #ee5f5b, #bd362f);
+      background-image:linear-gradient(to bottom, #ee5f5b, #bd362f);
+      background-repeat:repeat-x;
+      filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffee5f5b', endColorstr='#ffbd362f', GradientType=0);
+      border-color:#bd362f #bd362f #802420;
+      border-color:rgba(0,0,0,.1) rgba(0,0,0,.1) rgba(0,0,0,.25);
+      filter:progid:DXImageTransform.Microsoft.gradient(enabled=false);
+      padding:3px 4px 3px 4px;
+      border-radius: 5px;
+    }
+    .btn_Inverse
+    {
+      text-shadow:0 -1px 0 rgba(0,0,0,.25);
+      background-color:#363636;
+      background-image:-webkit-linear-gradient(to bottom, #444, #222);
+      background-image:linear-gradient(to bottom, #444, #222);
+      background-repeat:repeat-x;
+      filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff444444', endColorstr='#ff222222', GradientType=0);
+      border-color:#222 #222 #000;
+      border-color:rgba(0,0,0,.1) rgba(0,0,0,.1) rgba(0,0,0,.25);
+      filter:progid:DXImageTransform.Microsoft.gradient(enabled=false);
+      padding:3px 4px 3px 4px;
+      border-radius: 5px;      
+    }
+    .btn_PinkDark
+    {
+      text-shadow:0 -1px 0 rgba(0,0,0,.25);
+      background-color:#bd362f;
+      background-image:-webkit-linear-gradient(to bottom, #ee5f5b, #bd362f);
+      background-image:linear-gradient(to bottom, #ee5f5b, #bd362f);
+      background-repeat:repeat-x;
+      filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffee5f5b', endColorstr='#ffbd362f', GradientType=0);
+      border-color:#bd362f #bd362f #802420;
+      border-color:rgba(0,0,0,.1) rgba(0,0,0,.1) rgba(0,0,0,.25);
+      filter:progid:DXImageTransform.Microsoft.gradient(enabled=false);
+      padding:3px 4px 3px 4px;
+      border-radius: 5px;
+    }
+    .btn_Darkie
+    {
+      text-shadow:0 -1px 0 rgba(0,0,0,.25);
+      background-color:#222;
+      background-image:-webkit-linear-gradient(to bottom, #ee5f5b, #bd362f);
+      background-image:linear-gradient(to bottom, #ee5f5b, #bd362f);
+      background-repeat:repeat-x;
+      filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffee5f5b', endColorstr='#ffbd362f', GradientType=0);
+      border-color:#bd362f #bd362f #802420;
+      border-color:rgba(0,0,0,.1) rgba(0,0,0,.1) rgba(0,0,0,.25);
+      filter:progid:DXImageTransform.Microsoft.gradient(enabled=false);
+      padding:3px 4px 3px 4px;
+      border-radius: 5px;
+    }
+
+        
+    /* stolen from waves.com */
+    .fleshBox1
+    {
+      background-color: #ffc4c4;
+      border: 1px solid #7b0812;
+      border-radius: 5px;
+      color: #7b0812;
+      padding: 5px 10px;
+    }
+    
+    /* stolen from net-tuts */
+    .btn_BlueBlueBig
+    {
+      width:400px;
+      margin: 200px auto;
+      background: #014464;
+      background: -moz-linear-gradient(top, #0D658E, #0C577A 50%, #014D71 51%, #003E5C);
+      background: -webkit-gradient(linear, left top, left bottom, 
+                  color-stop(0, #0E658E), color-stop(.5, #0C577A), 
+                  color-stop(.5, #014D71), to(#003E5C));
+      -moz-border-radius: 10px;
+      -webkit-border-radius: 10px;
+      border-radius: 10px;
+      border: 1px solid #368DBE;
+      border-top: 1px solid #C3D6DF;
+      -moz-box-shadow: 0 1px 3px black;
+      -webkit-box-shadow: 0 1px 3px black;
+      -box-shadow: 0 1px 3px black;  
+      height: 100px;
+      text-align: center;
+      line-height: 100px;
+      color:blue;
+      font-size: 50px;
+      font-weight: bold;
+      text-shadow: 0 1px 0 #99FFFF;
+      padding:3px 4px 3px 4px;
+      border-radius: 5px;      
+    }
+    .btn_BlueYellowBig
+    {
+      width:400px;
+      margin: 200px auto;
+      background: #014464;
+      background: -moz-linear-gradient(top, #0D658E, #0C577A 50%, #014D71 51%, #003E5C);
+      background: -webkit-gradient(linear, left top, left bottom, 
+                  color-stop(0, #0E658E), color-stop(.5, #0C577A), 
+                  color-stop(.5, #014D71), to(#003E5C));
+      -moz-border-radius: 10px;
+      -webkit-border-radius: 10px;
+      border-radius: 10px;
+      border: 1px solid #368DBE;
+      border-top: 1px solid #22D6DF;
+      -moz-box-shadow: 0 1px 3px black;
+      -webkit-box-shadow: 0 1px 3px black;
+      -box-shadow: 0 1px 3px black;  
+      height: 100px;
+      text-align: center;
+      line-height: 100px;
+      color:Yellow;
+      font-size: 50px;
+      font-weight: bold;
+      text-shadow: 0 1px 0 #EE0000;
+      padding:3px 4px 3px 4px;
+      border-radius: 5px;      
+    }
+    .btn_BlueSmall 
+    {
+      line-height: 1;
+      padding: 7px 10px;
+      font-weight: bold;
+      color: white;
+      background-color: #39c;
+      -moz-border-radius: 5px;
+      -webkit-border-radius: 5px;
+      -khtml-border-radius: 5px;
+      border-radius: 5px;
+      -moz-box-shadow: 0 1px 3px black;
+      -webkit-box-shadow: 0 1px 3px black;
+      -khtml-box-shadow: 0 1px 3px black;
+      -box-shadow: 0 1px 3px black;  
+      text-shadow: 0 1px 0 black;
+    }
+     
+    /* stolen from ASU GPH 211 syllabus Spring 2014 Updated for NAU Fall 2016*/
+    
+    .Estilo29ASU {font-size: 30px;color: #F7C709;}
+    .Estilo31ASU {color: #87140E;}
+    .Estilo32ASU {font-size: 15px;color: #87140E;font-weight: bold;}
+    .Estilo34ASU {color: #87140E; font-weight: bold;}
+    .Estilo40ASU {font-size: 26px; color: #660000; font-weight: bold;}
+    .Estilo42ASU {color: #660000;}
+    .Estilo44ASU {color: #660000; font-weight: bold;}
+    .Estilo47ASU {color: #AA0000;}
+    .Estilo50ASU {font-size: 22px; color: #660000; font-weight: bold;}
+
+    .Estilo29NAU {font-size: 30px;color: yellow;}
+    .Estilo31NAU {color: #003E7E;}
+    .Estilo32NAU {font-size: 15px;color: #003E7E;font-weight: bold;}
+    .Estilo34NAU {color: #003E7E; font-weight: bold;}
+    .Estilo40NAU {font-size: 26px; color: #003E7E; font-weight: bold;}
+    .Estilo42NAU {color: #003E7E;}
+    .Estilo44NAU {color: #003E7E; font-weight: bold;}
+    .Estilo47NAU {color: #AA0000;}
+    .Estilo50NAU {font-size: 22px; color: #003E7E; font-weight: bold;}
+
+    /* stolen from Torrent Freak */
+    .pinky0{color:#ff4794;}
+    .pinky1{color:#e0005e;font-weight:bold;}
+    .pinky2{background:#ff7ab2;}
+    .pinky3{background:#ff4794;}
+    .pinky4{background:#e0005e;}
+    .pinky5{color:white;background-color:#ff4794;border-bottom:2px solid #ff4794;}
+    .pinky5bold{background:#ff4794;color:white;margin:0 0 1em;text-shadow:0px 1px 1px #ad0048;font-size:1.1em;font-weight:600;}
+    .pinky6{background:#ff1476;border-bottom:2px solid #ad0048;}
+    .pinky7{background:#ff4794;color:silver;}
+    .pinky8{background:#ff7ab2;color:yellow;}
+        
+    /* stolen from Scala */
+    .aquaSlider 
+    {
+      color:#666666;
+      text-shadow: 0 1px 2px rgba(0,0,0,.5);
+      background:url(http://scala-ide.org/resources/images/bg.jpg) no-repeat top center #a6e5ec;
+      padding-top:15px;padding-bottom:15px;
+      -webkit-box-shadow: inset 0 10px 60px rgba(0,0,0,.5);
+      -moz-box-shadow: inset 0 10px 60px rgba(0,0,0,.5);
+    }
+    
+    /* stolen from Paige Hector */
+    .orangeYellow2 {background-color: #f3de7e;}    
+    .greenDarkBig {color: #006300; font-size: 21.5pt;}
+
+    /* stolen from msn */
+    .greenGreen2{font-weight:bold; color:#4a844a; font-size:1.3rem; line-height:1.384;}
+    .greenGreen4{color:#0b893e;}
+    .greenGreen5{color:#3ab161;}
+    .greenWhite2{color: White; background:#00924d; height:4.4rem; font-size:1.3rem; line-height:1.384;}
+    .greenBlack1{ background:#00924d; width:100%; height:18rem;}
+    
+    /* stolen from domyownpestcontrol.com */
+    .btn_fancy
+    {
+      background-image: -webkit-gradient(linear,left top,left bottom,from(#eee),to(#ccc));
+      background-image: -webkit-linear-gradient(top,#eee,#ccc);
+      background-image: -moz-linear-gradient(top,#eee,#ccc);
+      background-image: -o-linear-gradient(top,#eee,#ccc);
+      background-image: linear-gradient(top,#eee,#ccc);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#eeeeee', EndColorStr='#cccccc');
+      border: 1px solid #777;
+      padding: 0 1.5em;
+      margin: .5em;
+      font: 700 1em/2em Arial,Helvetica;
+      color: #333;
+      text-shadow: 0 1px 0 rgba(255,255,255,.8);
+      -webkit-border-radius: .2em;
+      border-radius: .2em;
+      -webkit-box-shadow: 0 0 1px 1px rgba(255,255,255,.8) inset,0 1px 0 rgba(0,0,0,.3);
+      box-shadow: 0 0 1px 1px rgba(255,255,255,.8) inset,0 1px 0 rgba(0,0,0,.3)
+    }
+    .btn_fancy_gold
+    {
+      background-image: -webkit-gradient(linear,left top,left bottom,from(#eee),to(#E5C06B));
+      background-image: -webkit-linear-gradient(top,#eee,#E5C06B);
+      background-image: -moz-linear-gradient(top,#eee,#E5C06B);
+      background-image: -o-linear-gradient(top,#eee,#E5C06B);
+      background-image: linear-gradient(top,#eee,#E5C06B);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#eeeeee', EndColorStr='#E5C06B');
+      border: 1px solid #777;
+      padding: 0 1.5em;
+      margin: .5em;
+      font: 700 1em/2em Arial,Helvetica;
+      color: #333;
+      text-shadow: 0 1px 0 rgba(255,255,255,.8);
+      -webkit-border-radius: .2em;
+      border-radius: .2em;
+      -webkit-box-shadow: 0 0 1px 1px rgba(255,255,255,.8) inset,0 1px 0 rgba(0,0,0,.3);
+      box-shadow: 0 0 1px 1px rgba(255,255,255,.8) inset,0 1px 0 rgba(0,0,0,.3)
+    }
+    .btn_fancy_teal
+    {
+      background-image: -webkit-gradient(linear,left top,left bottom,from(#eee),to(#2dbe60));
+      background-image: -webkit-linear-gradient(top,#eee,#2dbe60);
+      background-image: -moz-linear-gradient(top,#eee,#2dbe60);
+      background-image: -o-linear-gradient(top,#eee,#2dbe60);
+      background-image: linear-gradient(top,#eee,#2dbe60);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#eeeeee', EndColorStr='#2dbe60');
+      border: 1px solid #777;
+      padding: 0 1.5em;
+      margin: .5em;
+      font: 700 1em/2em Arial,Helvetica;
+      color: #333;
+      text-shadow: 0 1px 0 rgba(255,255,255,.8);
+      -webkit-border-radius: .2em;
+      border-radius: .2em;
+      -webkit-box-shadow: 0 0 1px 1px rgba(255,255,255,.8) inset,0 1px 0 rgba(0,0,0,.3);
+      box-shadow: 0 0 1px 1px rgba(255,255,255,.8) inset,0 1px 0 rgba(0,0,0,.3)
+    }
+    .btn_fancy_blue
+    {
+      background-image: -webkit-gradient(linear,left top,left bottom,from(#eee),to(#004cd6));
+      background-image: -webkit-linear-gradient(top,#eee,#004cd6);
+      background-image: -moz-linear-gradient(top,#eee,#004cd6);
+      background-image: -o-linear-gradient(top,#eee,#004cd6);
+      background-image: linear-gradient(top,#eee,#004cd6);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#eeeeee', EndColorStr='#004cd6');
+      border: 1px solid #777;
+      padding: 0 1.5em;
+      margin: .5em;
+      font: 700 1em/2em Arial,Helvetica;
+      color: #333;
+      text-shadow: 0 1px 0 rgba(255,255,255,.8);
+      -webkit-border-radius: .2em;
+      border-radius: .2em;
+      -webkit-box-shadow: 0 0 1px 1px rgba(255,255,255,.8) inset,0 1px 0 rgba(0,0,0,.3);
+      box-shadow: 0 0 1px 1px rgba(255,255,255,.8) inset,0 1px 0 rgba(0,0,0,.3)
+    }
+    .btn_fancy_flesh
+    {
+      background-image: -webkit-gradient(linear,left top,left bottom,from(#eee),to(#ff632e));
+      background-image: -webkit-linear-gradient(top,#eee,#ff632e);
+      background-image: -moz-linear-gradient(top,#eee,#ff632e);
+      background-image: -o-linear-gradient(top,#eee,#ff632e);
+      background-image: linear-gradient(top,#eee,#ff632e);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#eeeeee', EndColorStr='#ff632e');
+      border: 1px solid #777;
+      padding: 0 1.5em;
+      margin: .5em;
+      font: 700 1em/2em Arial,Helvetica;
+      color: #333;
+      text-shadow: 0 1px 0 rgba(255,255,255,.8);
+      -webkit-border-radius: .2em;
+      border-radius: .2em;
+      -webkit-box-shadow: 0 0 1px 1px rgba(255,255,255,.8) inset,0 1px 0 rgba(0,0,0,.3);
+      box-shadow: 0 0 1px 1px rgba(255,255,255,.8) inset,0 1px 0 rgba(0,0,0,.3)
+    }
+    .greyTitle{color: #666;font-size: 20px;font-weight: 700;}
+    .greenbox{background-color: #dcf5d7!important;border-top-color: #dcf5d7!important;}
+    .bluebox{background-color: #D6EFFE;}
+    .limeBanner
+    {
+      font-size: 12px;
+      background: #0f0;
+      color: black;
+      font-weight: 700;
+      text-align: center;
+    }
+    infoBoxHeading  
+    {
+      font-size: 12px;
+      font-weight: 700;
+      background: #bbc3d3;
+      color: #a52020
+    }
+    .aquaCyanDark
+    {
+      font-size: 14px;
+      color: #069;
+      font-weight: 700;
+    }
+    .navyOnYellow{color: #00F;background: #FF3;}
+    .greyBigHeading{font-size: 20px;font-weight: 700;color: #666;}
+    .orangeTiny{font-size: 10pt;font-weight: 700;color: #C60;}
+    .barInsideRed{color:#C00;background-color: #C00;}
+    .barInsideBlack{color:black;background-color: black;}
+    .barInsideYellow{color:gold;background-color:gold;}
+    .barInsideLime{color:#0f0;background-color:#0f0;}
+    .barInsideGrey{color: #595959;background-color: #595959;}
+    .barInsideBlue{color: blue;background-color:blue;}
+    .barInsideGreen{background: #2F9512;color: #2F9512;}
+    .barInsideGold{background: #ebb73d;color: #ebb73d;}
+
+    /* stolen from Ian Webster (textbelt)*/
+    .greyLightTinyMute {color: #909090;font-size: 10px;}
+
+    /* stolen from my committee chair, Dr. Huang */
+    .blueHuang{color: #00C;font-weight:bold;}
+    .blueHuangLight{color:#3366FF;}
+    
+    /* stolen from amethystwebsitedesign.com */
+    .acmnSteelDashedBox 
+    {
+      border: 4px dashed #046ca3;
+      padding: 10px;
+      box-shadow: inset 0 -1px 0 0 #046ca3, inset 0 1px 0 0 #046ca3, 0 1px 0 0 #046ca3, 0 -1px 0 0 #046ca3;
+    }
+    .acmnPurpleBorderSilver
+    {
+      border: 1px solid silver;
+      border-right: 1px solid darkgray;
+      border-bottom: 1px solid darkgray;
+      -moz-box-shadow: inset 0 0 0 3px #7b6dc0;
+      -webkit-box-shadow: inset 0 0 0 3px #7b6dc0;
+      box-shadow: inset 0 0 0 3px #7b6dc0; 
+      padding: 24px 20px;
+      margin: 24px 0;
+      
+    }
+    
+    /* Stolen from NBC News */
+    nav
+    {
+      background-color:transparent;
+      padding-bottom:.375em
+    }
+    .asidePullQuote
+    {
+      content:" ";
+      display:table;
+      float:right;
+      width:50%;
+      color:#232323;
+      font-family:'Lucida Console', Monaco, monospace;
+      line-height:1.0534979424;
+      margin-bottom:0;
+      margin-top:6px;
+      border-left: 1px solid grey;
+    }
+    .greyLightTiny
+    {
+      color:#969696;
+      font-size:10pt;
+    }
+    .pointerTriangleLeft
+    {
+      vertical-align:middle;
+      display:inline-block;
+      -webkit-transform:rotate(360deg);
+      -ms-transform:rotate(360deg);
+      transform:rotate(360deg);
+      border-width:1.0678710938em .5339355469em;
+      border-style:solid;
+      border-color:transparent;
+      border-left-color:#940006;
+      border-right-width:2;
+      height:0;
+    }
+    .bodyClassThemeDark
+    {
+      color:#ccc;
+      background-color:#111;
+      margin-bottom:1.125em;
+      padding-top:1.125em;
+      margin-top:-1.125em
+    }
+    .divClassThemeWeather
+    {
+      background:-webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,0)), color-stop(40%, #fff), to(rgba(197,209,228,.75)));
+      background:-webkit-linear-gradient(top, rgba(255,255,255,0)0, #fff 40%, rgba(197,209,228,.75)100%);
+      background:linear-gradient(to bottom, rgba(255,255,255,0)0, #fff 40%, rgba(197,209,228,.75)100%)
+    }
+    .divClassThemeNightly
+    {
+      color:#ccc;
+      padding-top:1.125em;
+      margin-top:-1.125em;
+      background:-webkit-gradient(linear, left top, left bottom, from(rgba(17,17,17,0)), color-stop(40%, #111), to(#111));
+      background:-webkit-linear-gradient(top, rgba(17,17,17,0)0, #111 40%, #111 100%);
+      background:linear-gradient(to bottom, rgba(17,17,17,0)0, #111 40%, #111 100%)
+    }
+    .divClassThemeFeature
+    {
+      background:#E9EDF0;
+      background:-webkit-gradient(linear, left top, left bottom, from(#FFF), color-stop(40%, #E9EDF0));
+      background:-webkit-linear-gradient(top, #FFF 0, #E9EDF0 40%);
+      background:linear-gradient(to bottom, #FFF 0, #E9EDF0 40%)
+    }
+    .blueSteelIndentDark
+    {
+      color:#5172a0;
+      padding-bottom:1.3333333333em;
+      padding-top:1.3333333333em;
+      font-size:1.125em;
+      line-height:1.6666666667
+    }
+    .blueSteelIndentLight
+    {
+      color:#4372b8;
+      margin-right:.474609375em;
+      font-size:.7901234568em;
+      line-height:1.8984375
+    }
+    .btn_Gold
+    {
+      margin-bottom:1.3333333333em;
+      font-weight:700;
+      padding-right:1.25em;
+      padding-left:1.25em;
+      padding-top:.46875em;
+      color:#1f1f1f;
+      background-color:#E5C06B;
+      -webkit-border-radius:0 0 5px 5px;
+      border-radius:0 0 5px 5px;
+      font-size:.7023319616em;
+      line-height:1.2013549805
+    }
+    
+    /* Stolen from Wordpress */
+    .btn_Green
+    {
+      background-color: #4DB24C;
+      color: white;
+      padding:3px 4px 3px 4px;
+      border-radius: 5px;      
+      font-weight: bold;
+      text-shadow: 0 0.05em 0.05em #1b7a1a;
+      border-left: solid 1px #49a346;
+      border-top: solid 1px #49a346;
+      border-right: solid 1px #1f7c1e;
+      border-bottom: solid 1px #1f7c1e;
+    }
+    .btn_Aqua
+    {
+      background-color: #4F97C9;
+      color: white;
+      padding:3px 4px 3px 4px;
+      border-radius: 5px;      
+      font-weight: bold;
+      text-shadow: 0 0.05em 0.05em #1b7a1a;
+      border-left: solid 1px #49a346;
+      border-top: solid 1px #49a346;
+      border-right: solid 1px #1f7c1e;
+      border-bottom: solid 1px #1f7c1e;
+    }
+    
+    /* stolen from Evernote */
+    .Btn_LightGreen
+    {
+      font-weight: 500;
+      color: White;
+      background-color: #2dbe60;
+      border-color: #1fae52;
+      padding:3px 4px 3px 4px;
+      border-radius: 5px;            
+    }
+    .fleshbox2
+    {
+      list-style: none;
+      border: 1px solid #b92219;
+      background-color: #ffd1d1;
+      padding: 8px;
+      overflow-wrap: break-word;
+      word-wrap: break-word;
+      word-break: break-word
+    }
+    .greenBlack2
+    {
+      background-color: #2dbe60;
+      width: 100%;
+      height: 48px;
+      border-bottom: 1px solid #259d4f
+    }
+    .navBarOneLetterLeft
+    {
+      filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe5f6fb', GradientType=0);
+      -webkit-border-radius: 50px;
+      -moz-border-radius: 50px;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: -moz-none;
+      -ms-user-select: none;
+      border: 1px solid #88b9c9;
+      border-radius: 50px;
+      color: #747474;
+      background-color: #f5fbfd;
+      background-image: -moz-linear-gradient(top, #fff, #e5f6fb);
+      background-repeat: repeat-x;
+      line-height: 1.41666667;
+      font-size: 1em;
+      font-weight: 400;
+      
+      text-overflow: clip;
+      padding: 0 4px;
+      width: 10px;
+      display: inline-block;
+    }
+    .greyDark
+    {
+      height: auto;
+      overflow: hidden;
+      background-color: #484848;
+      color:white;
+      margin-top: 60px
+    }
+    .greenOlive
+    {
+      background-color: #95d162;
+      border-color: #2b7143
+    }
+    .creamWarning
+    {
+      background-color: #fef4d1;
+      border: 1px solid #ebd174;
+      margin-bottom: 16px;
+      padding: 5px 16px 5px 16px;
+      color: red;
+      font-weight: bold;
+    }
+    .blueSteelCyanBold{color: #4183c4;font-weight: bold;}
+    .blueSteelNormal{color:#5172a0;}
+    .blueSteelUnderlineBorder
+    {
+      color: #5172a0;
+      text-decoration: underline;
+      outline: thin dotted #4a8db8;
+    }
+    .blueSteelUnderline
+    {
+      color: #5172a0;
+      text-decoration: underline;
+    }
+
+    /* Stolen from Microsoft */
+    .brownCodeBox
+    {
+      font-family: Consolas;
+      font-size:13px;
+      color: rgb(125, 39, 39); 
+      background-color: rgb(239, 240, 241);
+      display: block;
+      width:600px;
+    }
+    
+    /* Stolen from it-ebooks */
+    .aquaHeading
+    {
+      font-family: Verdana, Geneva, sans-serif;
+      color: #08c;
+    }
+    
+    /* Stolen from Dana Mandino, NAU */
+    .purpleBig{font-size:20pt;color:#BD1398;}
+    .purpleMed{font-size:16pt;color:#BD1398;}
+    .purpleSml{font-size:12pt;color:#BD1398;}
+
+    /* stolen from github */
+    .purpleText{color: #6f42c1;}
+    .purpleOutline{padding: .9em 1.25em; color: #9f7be1; background: transparent; border: 1px solid purple; border-radius: .3em;}
+    .purpleDivBackground{color:white; background-color: #643ab0; background-image: linear-gradient(-180deg, #7e55c7 0%, #643ab0 90%); }
+    .purpleTextBackground{color:white; background-color: #6f42c1;}
+
+    /* stolen from Thibaut Courouble (http://www.cssflow.com) 
+       btnGlossyBlue is the master. You have to include it in order to use
+       the other colors.
+    */
+    
+    .btn_GlossyBlue
+    {
+      display: inline-block;
+      vertical-align: top;
+      overflow: hidden;
+      min-width: 96px;
+      line-height: 46px;
+      padding: 0 24px;
+      font-size: 14px;
+      color: white;
+      text-align: center;
+      text-shadow: 0 1px #154c86;
+      background-color: #247edd;
+      background-clip: padding-box;
+      border: 1px solid;
+      border-color: #1c65b2 #18589c #18589c;
+      border-radius: 4px;
+      -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.4), 0 1px 2px rgba(0, 0, 0, 0.2);
+      box-shadow: inset 0 1px rgba(255, 255, 255, 0.4), 0 1px 2px rgba(0, 0, 0, 0.2);
+      background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.12) 51%, rgba(0, 0, 0, 0.04));
+      background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.12) 51%, rgba(0, 0, 0, 0.04));
+      background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.12) 51%, rgba(0, 0, 0, 0.04));
+      background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.12) 51%, rgba(0, 0, 0, 0.04)); 
+    }
+    .btn_GlossyBlue:before  
+    {
+      content: '';
+      position: absolute;
+      top: -25%;
+      bottom: -25%;
+      left: -20%;
+      right: -20%;
+      border-radius: 50%;
+      background: transparent;
+      -webkit-box-shadow: inset 0 0 38px rgba(255, 255, 255, 0.5);
+      box-shadow: inset 0 0 38px rgba(255, 255, 255, 0.5);
+    }
+    
+    .btn_GlossyBlue:hover { background-color: #1a74d3; }
+    
+    .btn_GlossyBlue:active 
+    {
+      color: rgba(255, 255, 255, 0.9);
+      text-shadow: 0 -1px #154c86;
+      background: #1f71c8;
+      border-color: #113f70 #154c86 #1c65b2;
+      -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2), 0 1px rgba(255, 255, 255, 0.4);
+      box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2), 0 1px rgba(255, 255, 255, 0.4);
+      background-image: -webkit-linear-gradient(top, #1a5da5, #3a8be0);
+      background-image: -moz-linear-gradient(top, #1a5da5, #3a8be0);
+      background-image: -o-linear-gradient(top, #1a5da5, #3a8be0);
+      background-image: linear-gradient(to bottom, #1a5da5, #3a8be0);
+    }
+    
+    .btn_GlossyBlue:active:before 
+    {
+      top: -50%;
+      bottom: -125%;
+      left: -15%;
+      right: -15%;
+      -webkit-box-shadow: inset 0 0 96px rgba(0, 0, 0, 0.2);
+      box-shadow: inset 0 0 96px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* Green */
+    .btn_GlossyGreen
+    {
+      text-shadow: 0 1px #0d4d09;
+      background-color: #1ca913;
+      border-color: #147b0e #11640b #11640b;
+    }
+    
+    .btn_GlossyGreen:hover { background-color: #159b0d; }
+    
+    .btn_GlossyGreen:active 
+    {
+      text-shadow: 0 -1px #0d4d09;
+      background: #189210;
+      border-color: #093606 #0d4d09 #147b0e;
+      background-image: -webkit-linear-gradient(top, #126d0c, #20c016);
+      background-image: -moz-linear-gradient(top, #126d0c, #20c016);
+      background-image: -o-linear-gradient(top, #126d0c, #20c016);
+      background-image: linear-gradient(to bottom, #126d0c, #20c016);
+    }
+    
+    /* Red */
+    .btn_GlossyRed 
+    {
+      text-shadow: 0 1px #72100d;
+      background-color: #cd1d18;
+      border-color: #9f1713 #891310 #891310;
+    }
+    
+    .btn_GlossyRed:hover { background-color: #c01511; }
+    
+    .btn_GlossyRed:active
+    {
+      text-shadow: 0 -1px #72100d;
+      background: #b61a15;
+      border-color: #5b0d0b #72100d #9f1713;
+      background-image: -webkit-linear-gradient(top, #921511, #e4201b);
+      background-image: -moz-linear-gradient(top, #921511, #e4201b);
+    }
+    
+    /* stolen from foliovision.com */
+    
+    .blackCircle 
+    {
+      background-color: #000;
+      color: #fff;
+      width: 120px;
+      height: 120px;
+      display: block;
+      margin: 0 auto 18px;
+      text-align: center;
+      overflow: hidden;
+      -webkit-border-radius: 60px;
+      -moz-border-radius: 60px;
+      border-radius: 60px;
+      position: relative
+    }
+    
+    .fleshBackgroundPale
+    {
+      color: #a94442;
+      background-color: #f2dede;
+      border-color: #ebccd1
+    }
+    .aquaBackgroundPale 
+    {
+      color: #31708f;
+      background-color: #d9edf7;
+      border-color: #bce8f1
+    }
+    .greenBackgroundPale  
+    {
+      background-color: #dff0d8;
+      border-color: #d6e9c6;
+      color: #3c763d
+    }
+    .creamBackgroundPale
+    {
+      color: #8a6d3b;
+      background-color: #fcf8e3;
+      border-color: #faebcc
+    }
+    .btn_Cyan 
+    {
+      padding:3px 4px 3px 4px;
+      border-radius: 5px;      
+      font-size: 14px;
+      border: 1px solid #046a9e;
+      background: #9ecce2;
+      color: #333;
+      margin: 8px 0;
+    }
+    .greenBannerPale
+    {
+      padding: 6px 9px;
+      margin: 0 auto 25px;
+      box-sizing: border-box;
+      background: #e7f7d3;
+      border: 1px solid #6c3;
+      color: green;
+    }
+    .redBannerPale
+    {
+      padding: 6px 9px;
+      margin: 0 auto 25px;
+      box-sizing: border-box;
+      background: #ffebe8;
+      border: 1px solid #C00;
+      color: red; 
+    }
+    .redBannerPalePlusBlue
+    {
+      padding: 6px 9px;
+      margin: 0 auto 25px;
+      box-sizing: border-box;
+      background: #ffebe8;
+      border: 1px solid #C00;
+      color: #007acc;
+    }
+    
+    /* stolen from slashdot */
+    
+    .greenWhite3 
+    {
+      height: 30px;
+      color: white;
+      background-color: #004d4d;
+      z-index: 4; 
+      padding: 0 5px;
+      line-height: 20px;
+      border-radius: 4px;
+      transition: background-color 0.2s ease-in-out; 
+    }
+    .orangeDarkerBack 
+    {
+      height: 30px;
+      color: white;
+      z-index: 4; 
+      padding: 0 5px;
+      line-height: 20px;
+      border-radius: 4px;
+      transition: background-color 0.2s ease-in-out; 
+      background-color: #b7590b; 
+    }
+              
+  </style>
+  
+  <!-- blinking text (must be in its own style tag) -->
+  <style>   
+    .blinkMe 
+    {
+      animation-duration: 1s;
+      animation-name: blink;
+      animation-iteration-count: infinite;
+      animation-timing-function: steps(2, start);
+    }
+    @keyframes blink 
+    {
+      80% 
+      {
+        visibility: hidden;
+      }
+    }
+  </style>
+
+  <!-- strobing effect fill. The class to get it to work is called "thumb", it only works when this stylesheet is enabled, and it's only in grey color -->  
+  <!--<link rel="stylesheet" type="text/css" href="http://cdn.gatehousemedia.com/assets/css/20170705-1707/default.min.css"> -->
+
+  <script language="javascript" type="text/javascript">
+      function commentToggle(objInID)
+        {
+           var panel = document.getElementById(objInID); 
+      if (panel.style.display === "block") 
+            {
+        panel.style.display = "none";
+      } 
+            else 
+            {
+        panel.style.display = "block";
+      }
+        }
+    </script>
+
+</head>
+    
+<body>
+  
+  <table id="container">
+  <tr><td>
+  <table id="content">
+  <tr><td id="rootCell">
+    
+    <header>
+      <h1>GSP 537</h1>
+      <h1>Lab 3: Hydrology<i class="fa fa-check" style="color:green;"></i></h1>
+      <table width="494" border="1" align="center" cellpadding="5" cellspacing="10" class="acmnDashedAlert">
+        <tr>
+          <td rowspan="2" align="center" class="aquaBold">Submission to BBlearn</td>
+          <td align="center">To the Dropbox</td>
+          <td align="center">
+            Lab3_xxx.docx and the watershed JPG image 
+          </td>
+        </tr>
+        <tr>
+          <td align="center">To the Poster folder</td>
+          <td align="center">completed hydrology project poster</td>
+      </tr>
+        <tr>
+          <td colspan="2" align="center" class="aquaBold">Due date</td>
+          <td align="center">Sunday, February 25, 2018, Midnight</td>
+        </tr>
+      </table>
+    </header>
+    
+    <article>
+      
+      <div>
+        <h2>Scenario</h2>
+        <p>
+          The Arizona Department of Environmental Quality is preparing to conduct a study of water quality within the Oak Creek watershed. 
+          Before researchers go into the field to collect samples a map is needed to define the watershed boundaries. As a GIS specialist 
+          with ADEQ you have been given the task of producing a watershed map to support the study.
+        </p>
+      </div>
+      
+      <br><div><img src="Lab3/SFbEOka.jpg" width="600"></div><br>
+      
+      <ol type="1">
+        
+        <li>
+          
+          <span class="clsH7">Review of Hydrology Terms</span><i class="fa fa-check" style="color:green;"></i><br><br>
+          <div class="acmnDashedAlert">
+            <p>
+              Complete the review exercise below by matching each term/tool to the appropriate definition/output, by listing the letter and 
+              its corresponding number (b3, for example ~ whoops, just gave one away). Then, convert your answers from standard HTML5 by 
+              battling Microsoft Turd to get it to display correctly on Blackboard. I know that you are the only student in the entire NAU 
+              student body that has a problem with Turd, but do your best anyway. Name your Turd document 
+              <code class="blueHuang">Lab3_jb3379.docx</code>.
+            </p>
+            
+            <table border="1" cellpadding="5" cellspacing="3">
+              <tr>
+                <td colspan="2" align="center">Read <a href="http://edndoc.esri.com/arcobjectsonline/samples/spatial%20analyst/hydrology%20modeling/hydrologyanalysis.doc">
+              "Surface Hydrologic Analysis"
+                </a></td>
+                </tr>
+              <tr><td width="150">a. Pour point</td><td width="721" class="blueBold">2. The lowest point of elevation in a drainage system</td></tr>    
+              <tr><td>b. Watershed</td><td class="blueBold">3. An area of land in which all water drains to the lowest point</td></tr>
+              <tr><td>c. Sink</td><td class="blueBold">1. An area of undefined or internal drainage</td></tr>
+              <tr>
+                <td colspan="2"><hr width="600" color="#0000FF"></td>
+                </tr>
+              <tr>
+                <td colspan="2" align="center">Read <a href="http://pro.arcgis.com/en/pro-app/tool-reference/spatial-analyst/an-overview-of-the-hydrology-tools.htm" 
+                                                       target="_blank">"Hydrology Toolset Overview"</a>
+                </td>
+              </tr>
+              <tr><td>d. <a href="http://pro.arcgis.com/en/pro-app/tool-reference/spatial-analyst/basin.htm" target="_blank">Basin</a></td><td class="blueBold">7. Creates a raster delineating all drainage basins</td></tr>
+              <tr>
+                <td>e. <a href="http://pro.arcgis.com/en/pro-app/tool-reference/spatial-analyst/fill.htm" target="_blank">Fill</a></td>
+                <td class="blueBold">9. Fills sinks in a surface raster to remove small imperfections in the data</td>
+              </tr>
+              <tr>
+                <td>f. <a href="http://pro.arcgis.com/en/pro-app/tool-reference/spatial-analyst/flow-accumulation.htm" target="_blank">Flow accumulation</a></td>
+                <td class="blueBold">8. Creates a raster of accumulated flow to each cell, as determined by accumulating the weight for all cells that flow 
+                  into each down-slope cell </td>
+              </tr>
+              <tr><td>g. <a href="http://pro.arcgis.com/en/pro-app/tool-reference/spatial-analyst/stream-order.htm" target="_blank">Stream Order</a></td><td class="blueBold">10. Assigns a numeric order to segments of a raster representing branches of a linear network</td></tr>
+              <tr>
+                <td>h. <a href="http://pro.arcgis.com/en/pro-app/tool-reference/spatial-analyst/flow-direction.htm" target="_blank">Flow direction</a></td>
+                <td class="blueBold">6. Creates a raster of flow direction from each cell to its steepest down-slope neighbor</td>
+              </tr>
+              <tr><td>i. <a href="http://pro.arcgis.com/en/pro-app/tool-reference/spatial-analyst/watershed.htm" target="_blank">Watershed</a></td><td class="blueBold">4. Determines the contributing area above a particular set of cells in a raster</td></tr>
+              <tr>
+                <td>j. <a href="http://pro.arcgis.com/en/pro-app/tool-reference/spatial-analyst/snap-pour-point.htm" target="_blank">Snap Pour Point</a></td>
+                <td class="blueBold">5. Creates an integer raster where the original pour point locations have been snapped to locations of higher accumulated 
+                  flow </td>
+              </tr>
+            </table>
+            
+        </div>
+            
+        </li>
+        
+        <li>
+          
+          <span class="clsH7">Preparing to work with data</span><br><br>
+          
+          <ol type="A">
+            <li>Get the data in <code class="blueHuang">R:\GSP537\Lab3</code><i class="fa fa-check" style="color:green;"></i></li>
+            <li>Create a new blank Arcmap document and ensure that the Spatial Analyst is checked<i class="fa fa-check" style="color:green;"></i></li>
+            <li>
+              Create a new personal geodatabase and make it the default geodatabase for this lab, call it 
+              <span class="blueHuang">hydrology</span><i class="fa fa-check" style="color:green;"></i>
+            </li>
+            <li>
+              To add ArcGIS Online base maps to your map:
+              <ol type="1">
+                <li>
+                  Open ArcCatalog, expand the <span class="blueHuang">GIS Servers</span> node and double click on 
+                  <span class="blueHuang">Add ArcGIS Server</span><br><br>
+                  <div><img src="Lab3/fig1.png"></div><br>
+                </li>
+                <li>
+                  Select <span class="blueHuang">Use GIS Services</span> and click Next.<br><br>
+                  <div><img src="Lab3/fig2.png"></div><br>
+                </li>
+                <li>
+                  Enter 
+                  http://services.arcgisonline.com/ArcGIS/services</a> in the Server URL box, keep the user name and password boxes 
+                  blank, and click Finish.<br><br>
+                  <div><img src="Lab3/fig3.png"></div>
+                  <nav>
+                    <a href="http://www.arcgis.com/home/group.html?id=702026e41f6641fb85da88efe79dc166&start=1&view=list&sortOrder=asc&sortField=title#content" 
+                    target="_blank">Gallery</a>&nbsp;|&nbsp;
+                    <a href="http://pro.arcgis.com/en/pro-app/help/projects/connect-to-a-gis-server.htm" target="_blank">Connect to a gis server</a>
+                  </nav>
+                </li>
+                <li>
+                  After a few seconds, the server link will have been added to the <span class="blueHuang">GIS Servers</span> category.<br><br>
+                  <div><img src="Lab3/fig4.png" width="600"></div><br>
+                </li>
+              </ol>
+            </li>
+          </ol>
+          
+        </li>
+        
+        <li>
+          
+          <span class="clsH7">Working With the Hydrology toolset</span><br><br>
+          
+          <p class="acmnSnippet">
+            Add DEM (oakcreek) to the hydrology geodatabase, then add it from there to your map document, 
+            clicking OK to build pyramids if required.<i class="fa fa-check" style="color:green;"></i>
+          </p>
+          
+          <ol type="A">
+            
+            <li>
+              <span class="clsH8" style="text-decoration:underline;">The Fill Tool</span><i class="fa fa-check" style="color:green;"></i><br><br>
+              <ol type="1">
+                <li>
+                  Open the <code class="blueHuang">ArcToolbox | Spatial Analyst | Hydrology | </code>
+                  <a href="http://desktop.arcgis.com/en/arcmap/latest/tools/spatial-analyst-toolbox/fill.htm" target="_blank">Fill Tool</a>.
+                </li>
+                <li>
+                  Assign inputs and outputs:<br><br>
+                  <div><img src="Lab3/Image_001.jpg"></div><br>
+                </li>
+                <li>
+                  <div class="acmnMyAnswer">
+                    Python:
+                    <blockquote>
+                      <pre>
+from arcpy import env
+from arcpy.sa import *
+env.workspace = "X:/Hostgator/homework/GSP537/labs/3/hydrology.mdb"
+outFill = Fill("oakcreek") 
+outFill.save("Fill")</pre>
+                    </blockquote>
+                  </div>
+                </li>
+              </ol>
+              <br>
+            </li>
+            
+            <li>
+              <span class="clsH8" style="text-decoration:underline;">The Flow Direction Tool</span><i class="fa fa-check" style="color:green;"></i><br><br>
+              <ol type="1">
+                <li>
+                  Open the <code class="blueHuang">ArcToolbox | Spatial Analyst | Hydrology | </code>
+                  <a href="http://desktop.arcgis.com/en/arcmap/latest/tools/spatial-analyst-toolbox/flow-direction.htm" target="_blank">
+                    Flow Direction Tool</a>.
+                </li>
+                <li>
+                  Assign inputs and outputs:<br><br>
+                  <div><img src="Lab3/Image_002.jpg"></div><br>
+                </li>
+                <li>
+                  <div class="acmnMyAnswer">
+                    Python:
+                    <blockquote>
+                      <pre>from arcpy import env<br>from arcpy.sa import *<br>env.workspace = &quot;X:/Hostgator/homework/GSP537/labs/3/hydrology.mdb&quot;<br>outFlowDirection = FlowDirection(&quot;Fill&quot;)<br>outFlowDirection.save(&quot;FlowDir&quot;)</pre>
+                    </blockquote>
+                  </div><br>
+                </li>
+                <li class="acmnDashedAlert">
+                  Take a screenshot of the FlowDir output raster and <span class="acmnSnippet">paste it</span> (do not link it) 
+                  into your <span class="blueHuang">Lab3_xxx.docx</span> document. Then answer this question:
+                  <blockquote>
+                    What do the eight colors in the Flow Direction output raster represent?
+                    <br><br><div class="acmnMyAnswer">
+                      answer
+                    </div>
+                  </blockquote>
+                </li>  
+              </ol>  
+            </li>
+            
+            <li>
+              <span class="clsH8" style="text-decoration:underline;">The Flow Accumulation Tool</span><i class="fa fa-check" style="color:green;"></i><br><br>
+              <ol type="1">
+                <li>
+                  Open the <code class="blueHuang">ArcToolbox | Spatial Analyst | Hydrology | </code>
+                  <a href="http://desktop.arcgis.com/en/arcmap/latest/tools/spatial-analyst-toolbox/flow-accumulation.htm" target="_blank">
+                    Flow Accumulation Tool</a>.
+                </li>
+                <li>
+                  Assign inputs and outputs:<br><br>
+                  <div><img src="Lab3/Image_003.jpg"></div><br>
+                </li>
+                <li>
+                  <div class="acmnMyAnswer">
+                    Python:
+                    <blockquote>
+                      <pre>from arcpy import env<br>from arcpy.sa import *<br>env.workspace = &quot;X:/Hostgator/homework/GSP537/labs/3/hydrology.mdb&quot;<br>outFlowAccumulation = FlowAccumulation(&quot;FlowDir&quot;, &quot;&quot;, &quot;FLOAT&quot;)<br>outFlowAccumulation.save(&quot;FlowAcc&quot;)</pre>
+                    </blockquote>
+                  </div><br>
+                </li>
+                <li class="acmnDashedAlert">
+                  Take a screenshot of the FlowAcc output raster and <span class="acmnSnippet">paste it</span> (do not link it) 
+                  into your <span class="blueHuang">Lab3_xxx.docx</span> document. Then answer this question:
+                  <blockquote>
+                    What do the <span class="p">lightest-colored cells in the Flow accumulation raster represent?</span>
+                    <br><br><div class="acmnMyAnswer">
+                      answer
+                    </div>
+                  </blockquote>
+                </li>  
+              </ol>  
+            </li>
+            
+            <li>
+              <span class="clsH8" style="text-decoration:underline;">Create Stream Raster</span><i class="fa fa-check" style="color:green;"></i><br><br>
+              Now that we have obtained a raster of flow accumulation, the next step is to define stream channels by reclassifying the 
+              flow accumulation raster into 1 and 0 using threshold (20000). 
+              <br><br><div class="acmnMyAnswer">
+                    Python:
+                  <blockquote>
+                      <pre>import arcpy<br>from arcpy.sa import *<br>streams = Con(Raster(&quot;FlowAcc&quot;) &gt; 20000, 1, 0)<br>streams.save(&quot;streams&quot;)</pre>
+                  </blockquote>
+              </div><br>
+              After the code has executed, use <span class="blueHuang">Unique Values</span> to symbolize the streams raster. Use blue color 
+              to render value 1 and transparent for value 0.
+              <br><br>
+              <div class="acmnDashedAlert">
+                Zoom into the area where Oak Creek joins the Verde River, and take a screenshot of the stream raster similar to the 
+                following, and paste it into your Turd document.<br><br>
+                <div><img src="Lab3/Image_005.jpg"></div>
+              </div>
+            </li>
+            
+            <li>
+              <span class="clsH8" style="text-decoration:underline;">Create Stream Order</span><i class="fa fa-check" style="color:green;"></i><br><br>
+              With a stream channel raster and a flow direction raster, you can now use the <br>
+              <code class="blueHuang">ArcToolbox | Spatial Analyst | Hydrology | </code>
+                  <a href="http://desktop.arcgis.com/en/arcmap/latest/tools/spatial-analyst-toolbox/stream-order.htm" target="_blank">
+                    Stream Order Tool</a> to create a stream order.
+              
+              <br><br>
+              <div><img src="Lab3/Image_006.jpg"></div>
+              <br><br>
+              <div class="acmnMyAnswer">
+                    Python:
+                  <blockquote>
+                      <pre>from arcpy import env<br>from arcpy.sa import *<br>env.workspace = &quot;X:/Hostgator/homework/GSP537/labs/3/hydrology.mdb&quot;<br>outStreamOrder = StreamOrder(&quot;streams&quot;, &quot;FlowDir&quot;, &quot;STRAHLER&quot;)<br>outStreamOrder.save(&quot;StreamOrder&quot;)</pre>
+                  </blockquote>
+              </div>
+              <br><br>
+              <div class="acmnDashedAlert">
+                After the code has executed, answer these questions:
+                How many zones are in the StreamOrder raster? What does each zone value stand for?
+                <br>
+                <br><div class="acmnMyAnswer">
+                  answer
+                </div><br><br>
+              </div>
+            </li>
+            
+            <li>
+              <span class="clsH8" style="text-decoration:underline;">Create Stream Feature Class</span><i class="fa fa-check" style="color:green;"></i><br><br>
+              With the StreamOrder raster, you can now use the <br>
+              <code class="blueHuang">ArcToolbox | Conversion Tools | From Raster | </code>
+              <a href="http://desktop.arcgis.com/en/arcmap/latest/tools/conversion-toolbox/raster-to-polyline.htm" target="_blank">
+              Raster to Polyline tool</a> to create a feature class of the stream channels.               
+              <br><br>
+              <div><img src="Lab3/Image_007.jpg"></div>
+              <br><br>
+              <div class="acmnMyAnswer">
+                    Python:
+                  <blockquote>
+                      <pre>from arcpy import env<br>env.workspace = &quot;X:/Hostgator/homework/GSP537/labs/3/hydrology.mdb&quot;<br>RasterToPolyline_conversion(&quot;StreamOrder&quot;, &quot;channels&quot;, &quot;ZERO&quot;, &quot;&quot;, &quot;NO_SIMPLIFY&quot;, &quot;VALUE&quot;)</pre>
+                  </blockquote>
+              </div>
+              <br><br>
+              <div class="acmnDashedAlert">
+                After the code has executed, create a map of the resulting channel feature class by rendering channel orders using 
+                different line widths. To do this, navigate to the Symbology tab and choose Quantities | Proportional Symbols. Choose grid_code for the field. Then create a screenshot of the channel map and paste it in your Turd document.
+                <br><br><div class="acmnMyAnswer">
+                  answer
+                </div><br><br>
+              </div>
+            </li>
+            
+            <li>
+              <span class="clsH8" style="text-decoration:underline;">Create Pour Point Feature Class</span><i class="fa fa-check" style="color:green;"></i><br><br>
+              With a raster of flow accumulation, we need to find the cell with the highest accumulated flow for the watershed, called 
+              the pour point. In order to select the specific pour point cell we need to create and place a point as 
+              a marker.
+              <br><br>
+              <ol type="1">
+                <li>Save your work and close ArcMap.</li>
+                <li>
+                  In ArcCatalog, navigate to your personal geodatabase. Right-click and choose 
+                  <code class="blueHuang">New | Feature Class</code>. Name it <span class="blueHuang">pourpoint</span>, and leave the 
+                  <span class="blueHuang">Alias</span> box blank.
+                </li>
+                <li>
+                  Select <span class="blueHuang">Point Features</span> from the <span class="blueHuang">Type</span> drop down menu, 
+                  leaving the geometry properties unchecked.
+                </li>
+                <li>Click Next.</li>
+                <li>
+                  Click the <span class="blueHuang">globe</span> icon and select <span class="blueHuang">Import</span>. Navigate to your 
+                  personal geodatabase and select any raster in it. Click <span class="blueHuang">Add</span> if required, then click Next.
+                </li>
+                <li>Leave tolerance at the default setting and Click Next.</li>
+                <li>Click Finish. You have now imported the correct coordinate system and created the Pour Point feature for this lab.</li>
+              </ol>
+              <br><br>
+              <div class="acmnMyAnswer">
+                Python:
+                <blockquote>
+                    <pre>
+# for some reason, attempting to create the feature class directly into the personal geodatabase will not work, 
+# and currently the code below will not work either. So for the project we just use the same feature class.
+# http://desktop.arcgis.com/en/arcmap/10.5/tools/data-management-toolbox/create-feature-class.htm
+# http://desktop.arcgis.com/en/arcmap/10.5/tools/data-management-toolbox/copy-features.htm
+from arcpy import env, CreateFeatureclass_management, CopyFeatures_management 
+env.workspace = "X:/Hostgator/homework/GSP537/labs/3"  
+CreateFeatureclass_management("data", "pourpoint.shp", "POINT", "", "DISABLED", "DISABLED", "hydrology.mdb/Fill")
+CopyFeatures_management ("data/pourpoint.shp", hydrology.mdb/pourpoint")</pre>
+                </blockquote>
+              </div>
+              <br><br>
+              <a href="http://desktop.arcgis.com/en/arcmap/10.5/manage-data/geodatabases/feature-class-basics.htm" target="_blank">Feature Class Basics</a>
+              <br><br>
+            </li>
+            
+            <li>
+              <span class="clsH8" style="text-decoration:underline;">Edit Pour Point Feature Class</span><i class="fa fa-check" style="color:green;"></i><br><br>
+              <ol type="1">
+                <li>Reopen your map in ArcMap, and enable the <span class="blueHuang">editor</span> toolbar.</li>
+                <li>
+                  Start an editing session and select the <span class="blueHuang">pourpoint</span> feature to edit. Click OK. If a warning box appears, click 
+                  continue. </li>
+                <li>
+                  Select <span class="blueHuang">pourpoint</span> in the <span class="blueHuang">Create Features</span> window if it isn't already selected, then 
+                  select <span class="blueHuang">point</span> at the bottom of the window if it isn't already selected.
+                </li>
+                <li>
+                  To add a point feature near the lowest point in the drainage, you will need to zoom in very close to the area where 
+                  Oak Creek meets the Verde River in order to accurately place the pour point. 
+                  <u>The pour point should be placed within the center of a cell just upstream of the confluence</u>. See below.
+                  <br><br><div><img src="Lab3/Image_008.png"></div><br><br>
+                </li>
+                <li>
+                  Save your edits, and stop the editing session.<br><br>
+                  <div class="acmnDashedAlert">
+                    Zoom out to the full extent, and increase the size of the point so that it’s visible. Then create a screen capture of 
+                    the pour point, and include it in your turd document, along with the answer to this question:
+                    Why does the pour point need to be located so close to the confluence?
+                    <br><br>
+                    <div class="acmnMyAnswer">
+                      answer
+                    </div>
+                    <br><br>
+                  </div>
+                </li>
+              </ol>
+            </li>
+            
+            <li>
+              <span class="clsH8" style="text-decoration:underline;">Snap Pour Point</span><i class="fa fa-check" style="color:green;"></i><br><br>
+              Now we run the <code class="blueHuang">ArcToolbox | Spatial Analyst | Hydrology | </code>
+              <a href="http://desktop.arcgis.com/en/arcmap/latest/tools/spatial-analyst-toolbox/snap-pour-point.htm" target="_blank">
+                Snap Pour Point Tool
+              </a>.
+              <br><br><div><img width="600" src="Lab3/Image_009.jpg"></div>
+              <br><br>
+              <div class="acmnMyAnswer">
+                Python:
+                <blockquote>
+                  <pre>from arcpy import env<br>from arcpy.sa import *<br>env.workspace = &quot;X:/Hostgator/homework/GSP537/labs/3/hydrology.mdb&quot;<br>outSnapPour = SnapPourPoint(&quot;pourpoint&quot;, &quot;FlowAcc&quot;, &quot;0&quot;, &quot;OBJECTID&quot;)<br>outSnapPour.save(&quot;SnapPour&quot;)</pre>
+                </blockquote>
+              </div>
+              <br><br>
+              <div class="acmnDashedAlert">
+                Answer the following questions: What is the location column,  location row, and value  of the snapped cell?
+                <br><br>
+                <div class="acmnMyAnswer">
+                  answer
+                </div>
+                <br><br>
+              </div>
+            </li>
+            
+            <li>
+              <span class="clsH8" style="text-decoration:underline;">Create the Watershed</span><i class="fa fa-check" style="color:green;"></i><br><br>
+              We are now ready to create the watershed. We will use the 
+              <code class="blueHuang">ArcToolbox | Spatial Analyst | Hydrology | </code>
+              <a href="http://desktop.arcgis.com/en/arcmap/latest/tools/spatial-analyst-toolbox/watershed.htm" target="_blank">
+              Watershed Tool</a> to determine the contributing area above a specified cell (pour point). This tool determines the 
+              geographic extent of the watershed using the flow direction output raster and the snap pour point output raster.
+              <br><br>
+              <div><img width="591" src="Lab3/Image_010.jpg"></div>
+              <br><br>
+              <div class="acmnMyAnswer">
+                Python:
+                <blockquote>
+                  <pre>from arcpy import env<br>from arcpy.sa import *<br>env.workspace = &quot;X:/Hostgator/homework/GSP537/labs/3/hydrology.mdb&quot;<br>outWatershed = Watershed(&quot;FlowDir&quot;, &quot;SnapPour&quot;, &quot;VALUE&quot;)  <br>outWatershed.save(&quot;Watersh&quot;)</pre>
+                </blockquote>
+              </div>
+              <br><br>
+              <div class="acmnDashedAlert">
+                Turn off all layers except watershed and the original DEM (oakcreek), create a screen capture of the watershed overlaying 
+                the DEM, and include it in your turd document, along with the answer to this question:
+                Why does the watershed output raster only contain 1 value?
+                <br><br>
+                <div class="acmnMyAnswer">
+                  answer 
+                </div>
+                <br><br>
+              </div>
+            </li>
+            
+            <li>
+              <span class="clsH8" style="text-decoration:underline;">Extract by Mask</span><i class="fa fa-check" style="color:green;"></i><br><br>
+              The watershed output is really just a footprint of the watershed area. In order to do any future analysis of the watershed we 
+              need to extract it from the DEM, using the <code class="blueHuang">ArcToolbox | Spatial Analyst | Extraction | </code>
+              <a href="http://desktop.arcgis.com/en/arcmap/10.5/tools/spatial-analyst-toolbox/extract-by-mask.htm" target="_blank">
+              Extract by Mask Tool</a>.
+              <br><br>
+              <div><img width="591" src="Lab3/Image_011.jpg"></div>
+              <br><br>
+              <div class="acmnMyAnswer">
+                Python:
+                <blockquote>
+                  <pre>from arcpy import env
+from arcpy.sa import *
+env.workspace = "X:/Hostgator/homework/GSP537/labs/3/hydrology.mdb"
+outExtractByMask = ExtractByMask(&quot;oakcreek&quot;, &quot;Watersh&quot;)
+outExtractByMask.save("Oak_Creek_Watershed")</pre>
+                </blockquote>
+              </div>
+              <br>Now we have a useful raster of the Oak Creek Watershed!
+            </li>
+            
+            <li class="acmnDashedAlert">
+              <span class="clsH8" style="text-decoration:underline;">Oak Creek Map Layout</span><i class="fa fa-check" style="color:green;"></i><br><br>
+              Create a map layout using the <span class="blueHuang">Oak_Creek_Watershed</span> layer and the 
+              <span class="blueHuang">stream channel</span> feature class clipped to the watershed. Remember that you cannot clip a vector feature class 
+              with a raster, so you must convert the raster to a polygon feature. The Raster to Polygon tool requires  use of the unmasked version of the 
+              watershed. It would be helpful to place a base map beneath the extracted watershed layer (and make the watershed slightly transparent) for 
+              location reference. Include an appropriate title, scale bar, north arrow, neatline, and legend. Remember give the watershed layer an appropriate 
+              name in the legend. <span class="blueHuang">Export the map layout as <code>watershed_jb3379.jpg</code></span>. 
+              <br><br>
+              <div class="acmnMyAnswer">
+                Python:
+                <blockquote>
+                  <pre>
+# http://desktop.arcgis.com/en/arcmap/10.5/tools/conversion-toolbox/raster-to-polygon.htm
+from arcpy import env, RasterToPolygon_conversion, Clip_analysis
+env.workspace = "X:/Hostgator/homework/GSP537/labs/3/hydrology.mdb"
+RasterToPolygon_conversion("Oak Creek Watershed - Not Masked", 
+                           "WatershedUnmaskedRasterToPolygon", 
+                           "NO_SIMPLIFY", "VALUE")
+
+# http://desktop.arcgis.com/en/arcmap/10.5/tools/analysis-toolbox/clip.htm
+Clip_analysis("channels", "WatershedUnmaskedRasterToPolygon", channels_clipped, "", "")</pre>
+                </blockquote>
+              </div>
+              
+            </li>
+            
+          </ol>
+          
+        </li>
+        
+        <li class="acmnDashedAlert">
+          
+          <span class="clsH7">Your Hydrology Analysis Project</span><br><br>
+          Perform a hydrology analysis for an area of your choice (except the Oak Creek area) and create a poster in PDF format. You do 
+          not need to choose a large area for your project; a few to one hundred square miles will be good enough. A 10 meter or 30 meter 
+          resolution NED DEM will be good for your project. &quot;Each 7.5-minute DEM is based on 30- by 30-meter data spacing. The 7.5-minute 
+          DEM data are stored as profiles in which the spacing of the elevations along and between each profile is 30 meters.&quot; 
+          <a href="http://web.archive.org/web/20080308061006/http:/eros.usgs.gov/guides/dem.html" target="_blank"><em>- USGS DEM Description</em></a><br><br>
+          Download a DEM of your project area by using the 
+          <a href="https://viewer.nationalmap.gov/basic" target="_blank">USGS National Map Viewer</a>.
+          I will not cover how to prepare your DEM for this project because that was covered in detail in 
+          <a href="http://www.deckerd26354.net/homework/Courses/GSP533/labs/lab7/Lab7.htm" target="_blank">GSP 533 Lab 7</a>.<br><br>
+          
+          <div class="acmnMyAnswer">
+            <ol type="1">
+              <li>
+                <span class="acmnSnippet">Obtain the Wenatchee W 1 degree NED DEM from the non-intuitive USGS National Map Viewer above:</span><br>
+                <ol type="a">
+                  <li>Zoom in to the North Skykomish River area by using Draw Rectangle (square icon below garbage can)</li>
+                  <li>
+                    Click &quot;Elevation Products (3DEP)&quot;, &quot;1/3 arc-second DEM&quot; (if not already), then click the blue button 
+                    &quot;find products&quot;
+                  </li>
+                  <li>
+                    Download &quot;USGS NED 1/3 arc-second n48w122 1 x 1 degree ArcGrid 2018&quot; and unzip into the lab 3 data folder. Note that even 
+                    though USGS labels it as a 1X1 degree, it is really a 1 degree longitude by *2* degrees latitude.</li>
+                </ol>
+              </li>
+              <li><em>
+                Obtain the Wenatchee W 1X2 degree topographic map from the University of Washington GIS area, and unzip the TIF file into the data folder</em>:
+<blockquote>
+                  <a href="http://gis.ess.washington.edu/data/raster/drgclip/wenatchee/z47121.zip">
+                    http://gis.ess.washington.edu/data/raster/drgclip/wenatchee/z47121.zip
+                  </a>
+                </blockquote>
+              </li>
+              <li>
+                Open ArcCatalog, and import the DEM and the topographic map into the hydrology geodatabase. This may take a few minutes as they are 
+                huge. After completion, delete the huge files after confirming they are in the geodatabase.<br><br>
+                <div class="acmnMyAnswer">
+                  Python:
+                  <blockquote>
+                    <pre>
+# http://desktop.arcgis.com/en/arcmap/10.5/tools/conversion-toolbox/raster-to-geodatabase-multiple-.htm
+# the following code has not been tested
+from arcpy import env, RasterToGeodatabase_conversion      
+env.workspace = "X:/Hostgator/homework/GSP537/labs/3/hydrology.mdb"
+RasterToGeodatabase_conversion("X:\Hostgator\homework\Courses\GSP537\labs\3\data\UW_1x2degree_topo/z47121.tif;
+                 &quot;X:\Hostgator\homework\Courses\GSP537\labs\3\data\USGS_NED_13_n48w122_ArcGrid\grdn48w122_13",
+                               "X:/Hostgator/homework/GSP537/labs/3/hydrology.mdb")</pre>
+                  </blockquote>
+                </div>
+              </li>
+              <li>
+                Close ArcCatalog, Open ArcMap, and save a new map document, with the workspace pointing to the hydrology.mdb database, the scratch 
+                database as the default, the spatial analyst extension checked, all options saved in the document, and the appropriate toolbars. 
+              </li>
+              <li>Add both rasters to the map, building pyramids if necessary. Rename them to something meaningful, and save the document.</li>
+              <li>
+                Because the topo is in a planar coordinate system, we have to reproject it to the same geographic coordinate system as the DEM. 
+                It will take approximately 5.5 minutes to complete because the topo is so big.
+                <br><br>
+                <div class="acmnMyAnswer">
+                  Python:
+                  <blockquote>
+                    <pre>
+# http://desktop.arcgis.com/en/arcmap/10.5/tools/data-management-toolbox/project-raster.htm
+# the following code has not been tested. Raster names cannot have spaces.
+from arcpy import env, ProjectRaster_management      
+env.workspace = "X:/Hostgator/homework/GSP537/labs/3/hydrology.mdb"
+ProjectRaster_management("Wenatchee_W_topo", "Wenatchee_W_topo_projected", "GCS_North_American_1983.prj",\
+                         "NEAREST", "5", "NAD_1927_To_NAD_1983_NADCON")</pre>
+                  </blockquote>
+                </div>
+              </li>
+              <li>
+                In the table of contents, right-click on the layers tab, choose properties, and change the 
+                display units tab to Decimal Degrees. If a warning appears, choose no. Ensure the DEM and topo still match.
+              </li>
+              <li>
+                With only the topo selected, zoom in to the North Fork Skykomish River watershed area. We will need to choose SW and NE bounding 
+                coordinates for the clipping function. The SW vertex needs to be far enough south to include the entire Trout Creek watershed. We can 
+                set the NE vertex to be far enough north to include the Monte Cristo Massif, but situated on the Continental Divide 
+                (Pacific Crest Trail). Use the Identify tool when you click so that the coordinates can be copied and pasted without having to remember 
+                what the status bar showed. Remember to click on the tiny little arrow next to the coordinates in the Identify Dialog Box, and switch 
+                to Decimal Degrees. You should come up with coordinates similar to the following:
+                <blockquote><code>
+                SW coordinates: -121.585884 47.792454<br>
+                NE coordinates: -121.129878 47.987598
+                </code></blockquote>
+              </li>
+              <li>
+                Now that we have the coordinates, we can run the clip tool to clip the huge DEM to only our watershed area. The coordinate order is:
+                Xmin, Ymin, Xmax, Ymax. After the tool completes, zoom to the clipped DEM extent, and ensure that it matches the topo. 
+                <br><br>
+                <div class="acmnMyAnswer">
+                  Python:
+                  <blockquote>
+                    <pre>
+# http://desktop.arcgis.com/en/arcmap/10.5/tools/data-management-toolbox/clip.htm
+# the following code has not been tested
+from arcpy import env, Clip_management      
+env.workspace = "X:/Hostgator/homework/GSP537/labs/3/hydrology.mdb"
+Clip_management("grdn48w122_13","-121.129878 47.792454 -121.585884 47.987598", "NED_DEM", "#", "#", "NONE")</pre>
+                  </blockquote>
+                </div>              
+              </li>
+              <li>
+                We now have the correct DEM, and can run all the arcpy functions of the lab up to the creation and placing of the pour point. Remember 
+                to rename intermediate rasters and feature classes so they don't overwrite earlier versions for the Turd document and the Oak Creek Map.
+                You can remove the topo and original DEM rasters from the map as they are no longer needed.
+                <br><br>
+                <div class="acmnMyAnswer">
+                  Python:
+                  <blockquote>
+                    <pre>
+import arcpy 
+from arcpy import env, RasterToPolyline_conversion 
+from arcpy.sa import * 
+env.workspace = &quot;I:\Documents\ArcGIS\Default.gdb&quot; 
+# Fill tool outFill = Fill(&quot;NED_DEM&quot;)  
+outFill.save(&quot;Project_Fill&quot;) 
+# Flow Direction Tool outFlowDirection = FlowDirection(&quot;Project_Fill&quot;) 
+outFlowDirection.save(&quot;Project_FlowDir&quot;) 
+# Flow Accumulation Tool 
+outFlowAccumulation = FlowAccumulation(&quot;Project_FlowDir&quot;, &quot;&quot;, &quot;FLOAT&quot;) 
+outFlowAccumulation.save(&quot;Project_FlowAcc&quot;) 
+# Create Stream Raster streams = Con(Raster(&quot;Project_FlowAcc&quot;) &gt; 20000, 1, 0) 
+streams.save(&quot;Project_Streams&quot;) 
+# Stream Order Tool 
+outStreamOrder = StreamOrder(&quot;Project_Streams&quot;, &quot;Project_FlowDir&quot;, &quot;STRAHLER&quot;) 
+outStreamOrder.save(&quot;Project_StreamOrder&quot;) 
+# Stream Channels 
+RasterToPolyline_conversion(&quot;Project_StreamOrder&quot;, &quot;Project_Channels&quot;, &quot;ZERO&quot;, &quot;&quot;, &quot;NO_SIMPLIFY&quot;, &quot;VALUE&quot;)</pre>
+                  </blockquote>
+                </div>                            
+              </li>
+              <li>
+                After creating and placing the pour point, we can run the remaining arcpy functions.
+                <br><br>
+                <div class="acmnMyAnswer">
+                  Python:
+                  <blockquote>
+                    <pre>
+import arcpy 
+from arcpy import env 
+from arcpy.sa import * 
+env.workspace = &quot;I:\Documents\ArcGIS\Default.gdb&quot; 
+# Snap Pour Point 
+outSnapPour = SnapPourPoint(&quot;Project_Pourpoint&quot;, &quot;Project_FlowAcc&quot;, &quot;0&quot;, &quot;OBJECTID&quot;) 
+outSnapPour.save(&quot;Project_SnapPour&quot;) 
+# Create the Watershed 
+outWatershed = Watershed(&quot;Project_FlowDir&quot;, &quot;Project_SnapPour&quot;, &quot;VALUE&quot;)   
+outWatershed.save(&quot;Project_Watershed&quot;)
+# Mask out the other rivers<br>outExtractByMask = ExtractByMask(&quot;NED_DEM&quot;, &quot;Project_Watershed&quot;)<br>outExtractByMask.save(&quot;NorthForkSkykomishRiver_Watershed&quot;)</pre>
+                  </blockquote>
+                </div>                            
+              </li>
+            </ol>
+          </div>
+        </li>
+        <li>
+          Now we add a File | Add Data... | Add Basemap...  -  and create the map for the poster.
+        </li>
+      </ol>
+      
+    </article>
+    
+  </td></tr></table>
+  </td></tr></table>
+  
+</body>
+</html>

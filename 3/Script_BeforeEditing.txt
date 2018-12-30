@@ -1,0 +1,38 @@
+
+import arcpy
+from arcpy import env
+from arcpy.sa import *
+env.workspace = "I:\Documents\ArcGIS\Default.gdb"
+
+# Fill tool
+outFill = Fill("NED_DEM") 
+outFill.save("Project_Fill")
+# Flow Direction Tool
+outFlowDirection = FlowDirection("Project_Fill")
+outFlowDirection.save("Project_FlowDir")
+# Flow Accumulation Tool
+outFlowAccumulation = FlowAccumulation("Project_FlowDir", "", "FLOAT")
+outFlowAccumulation.save("Project_FlowAcc")
+# Create Stream Raster
+streams = Con(Raster("Project_FlowAcc") > 20000, 1, 0)
+streams.save("Project_Streams")
+# Stream Order Tool
+outStreamOrder = StreamOrder("Project_Streams", "Project_FlowDir", "STRAHLER")
+outStreamOrder.save("Project_StreamOrder")
+# Stream Channels
+arcpy.RasterToPolyline_conversion("Project_StreamOrder", "Project_Channels", "ZERO", "", "NO_SIMPLIFY", "VALUE")
+
+######################
+# Edit Pour Point here
+######################
+
+import arcpy
+from arcpy import env
+from arcpy.sa import *
+env.workspace = "I:\Documents\ArcGIS\Default.gdb"
+# Snap Pour Point
+outSnapPour = SnapPourPoint("Project_Pourpoint", "Project_FlowAcc", "0", "OBJECTID")
+outSnapPour.save("Project_SnapPour")
+# Create the Watershed
+outWatershed = Watershed("Project_FlowDir", "Project_SnapPour", "VALUE")  
+outWatershed.save("Project_Watershed")          
